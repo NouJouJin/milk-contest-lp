@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
+  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。">
+  <style>
+    :root {
+      --milk: #fffdf7;
+      --cream: #f8f2df;
+      --blue: #2f78b7;
+      --blue-soft: #eaf5ff;
+      --green: #2f6f55;
+      --green-soft: #e8f5ee;
+      --yellow: #f4c95d;
+      --yellow-soft: #fff6d9;
+      --berry: #b64b6b;
+      --ink: #1e2a32;
+      --muted: #60717d;
+      --line: #dce8e2;
+      --shadow: 0 18px 48px rgba(30, 42, 50, 0.12);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      background: var(--milk);
+    }
+
+    body::selection {
+      color: #fff;
+      background: var(--green);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(220, 232, 226, 0.9);
+      background: rgba(255, 253, 247, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 210px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      color: var(--green);
+      font-size: 14px;
+      border: 2px solid var(--green);
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--green);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      border: 0;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 12px 28px rgba(47, 111, 85, 0.24);
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: #245f48;
+      box-shadow: 0 14px 34px rgba(47, 111, 85, 0.3);
+    }
+
+    .button.secondary {
+      color: var(--green);
+      border: 1px solid rgba(47, 111, 85, 0.22);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: none;
+    }
+
+    .button.secondary:hover {
+      background: var(--green-soft);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 680px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(14, 38, 33, 0.78), rgba(14, 38, 33, 0.34) 52%, rgba(14, 38, 33, 0.12)),
+        url("https://cdn.pixabay.com/photo/2020/05/05/12/19/milk-5132870_1280.jpg") center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 150px;
+      background: linear-gradient(180deg, transparent, var(--milk));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 92px 0 128px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      padding: 7px 12px;
+      color: #12342a;
+      font-size: 13px;
+      font-weight: 800;
+      border-radius: 999px;
+      background: rgba(255, 246, 217, 0.96);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 1.08;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 710px;
+      margin: 24px 0 0;
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.92);
+      text-wrap: balance;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 34px 0 0;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 0;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 13px;
+      color: #12342a;
+      font-size: 13px;
+      font-weight: 800;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+    }
+
+    main {
+      position: relative;
+      z-index: 3;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section.compact {
+      padding: 56px 0;
+    }
+
+    .band {
+      background: #fff;
+    }
+
+    .band-soft {
+      background: linear-gradient(180deg, var(--milk), var(--green-soft));
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.55fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.22;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(30, 42, 50, 0.06);
+    }
+
+    .card strong {
+      color: var(--green);
+    }
+
+    .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 14px;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 900;
+      border: 1px solid rgba(47, 111, 85, 0.22);
+      border-radius: 50%;
+      background: var(--green-soft);
+    }
+
+    .theme-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 188px;
+      padding: 22px;
+      border: 1px solid rgba(47, 120, 183, 0.18);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #fff, var(--blue-soft));
+    }
+
+    .theme-card:nth-child(2n) {
+      border-color: rgba(47, 111, 85, 0.18);
+      background: linear-gradient(180deg, #fff, var(--green-soft));
+    }
+
+    .theme-card:nth-child(3n) {
+      border-color: rgba(244, 201, 93, 0.38);
+      background: linear-gradient(180deg, #fff, var(--yellow-soft));
+    }
+
+    .format-table {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(30, 42, 50, 0.06);
+    }
+
+    .format-row {
+      display: grid;
+      grid-template-columns: 0.75fr 1fr 1.2fr;
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .format-row > div {
+      padding: 18px;
+      background: #fff;
+    }
+
+    .format-row.header > div {
+      color: #fff;
+      font-weight: 900;
+      background: var(--green);
+    }
+
+    .media-split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.72fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .photo-frame {
+      overflow: hidden;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .steps {
+      counter-reset: steps;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      position: relative;
+      padding: 30px 24px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(30, 42, 50, 0.06);
+    }
+
+    .step::before {
+      counter-increment: steps;
+      content: "Step " counter(steps);
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 4px 10px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 999px;
+      background: var(--green-soft);
+    }
+
+    .value-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .value-list li {
+      padding: 15px 16px;
+      border: 1px solid rgba(47, 111, 85, 0.18);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .award {
+      min-height: 190px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(30, 42, 50, 0.06);
+    }
+
+    .award .label {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 5px 10px;
+      color: #12342a;
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 999px;
+      background: var(--yellow-soft);
+    }
+
+    .criteria {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .criterion {
+      padding: 20px;
+      border-left: 5px solid var(--blue);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .timeline-date {
+      display: grid;
+      place-items: center;
+      min-height: 68px;
+      padding: 12px;
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      border-radius: 16px;
+      background: var(--blue);
+    }
+
+    .timeline-body {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .requirements {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .req-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .req-list li {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 16px;
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .req-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .req-list b {
+      color: var(--green);
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(30, 42, 50, 0.04);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-weight: 900;
+    }
+
+    details p {
+      padding: 0 20px 18px;
+      color: var(--muted);
+    }
+
+    .entry {
+      border-radius: 28px;
+      padding: 44px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(47, 111, 85, 0.98), rgba(47, 120, 183, 0.96)),
+        url("https://cdn.pixabay.com/photo/2024/07/21/08/53/cow-8910940_1280.jpg") center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .entry p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-frame {
+      overflow: hidden;
+      margin-top: 28px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 34px rgba(19, 41, 35, 0.22);
+    }
+
+    .airtable-embed {
+      display: block;
+      width: 100%;
+      min-height: 533px;
+      border: 1px solid rgba(220, 232, 226, 0.9) !important;
+      background: transparent;
+    }
+
+    .footer {
+      padding: 44px 0;
+      color: #d4e8dc;
+      background: #132923;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer .small {
+      color: #b7cdc4;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .section-head,
+      .media-split {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .grid-4,
+      .steps,
+      .award-grid,
+      .criteria,
+      .requirements {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .brand {
+        min-width: 0;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 620px;
+        background-position: center;
+      }
+
+      .hero-inner,
+      .container,
+      .footer-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .hero-inner {
+        padding: 74px 0 98px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .grid-3,
+      .grid-4,
+      .steps,
+      .award-grid,
+      .criteria,
+      .requirements,
+      .value-list {
+        grid-template-columns: 1fr;
+      }
+
+      .format-row {
+        grid-template-columns: 1fr;
+      }
+
+      .format-row.header {
+        display: none;
+      }
+
+      .format-row > div {
+        padding: 14px 16px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .req-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .entry {
+        padding: 28px 18px;
+        border-radius: 22px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="ページ上部へ">
+        <span class="brand-mark">MILK</span>
+        <span>牛乳月間2026</span>
+      </a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="#about">企画について</a>
+        <a href="#themes">募集テーマ</a>
+        <a href="#howto">応募方法</a>
+        <a href="#faq">FAQ</a>
+        <a class="button" href="#entry">応募する</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">2026年6月1日から受付開始</p>
+      <h1>未来のミルク画像投稿キャンペーン2026</h1>
+      <p class="hero-copy">
+        牛乳のある暮らし、未来の牛乳、牛さんへの想い。
+        写真でも、イラストでも、親子で描いた作品でも。
+        あなたの1枚を、未来の牛乳へ届けませんか。
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#entry">応募する</a>
+        <a class="button secondary" href="#themes">募集テーマを見る</a>
+      </div>
+      <div class="hero-meta" aria-label="キャンペーン概要">
+        <span class="pill">応募期間: 2026年6月1日から6月30日</span>
+        <span class="pill">写真・イラスト・手描き・AI画像 OK</span>
+        <span class="pill">親子参加歓迎</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2>牛乳月間を、参加する月へ。</h2>
+          </div>
+          <p class="lead">
+            6月は牛乳月間。2026年は、牛乳にまつわる画像とコメントを通じて、
+            生活者の声を集めます。投稿された作品や自由記述は、発信や分析に活用します。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <span class="icon">01</span>
+            <h3>画像で気軽に参加</h3>
+            <p>写真、イラスト、手描き作品、AI生成画像で応募できます。牛乳に詳しくなくても大丈夫です。</p>
+          </article>
+          <article class="card">
+            <span class="icon">02</span>
+            <h3>牛乳への声も届ける</h3>
+            <p>作品説明とあわせて、牛乳への意見や疑問も自由に書けます。素朴な一言も歓迎です。</p>
+          </article>
+          <article class="card">
+            <span class="icon">03</span>
+            <h3>投稿後も活用される</h3>
+            <p>投稿作品はLP、SNS、展示、川上牧場の発信、AI分析などに活用される場合があります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes" class="section band-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Theme</p>
+            <h2>あなたの牛乳にまつわる1枚を募集します。</h2>
+          </div>
+          <p class="lead">
+            テーマは自由です。迷ったときは、以下の切り口から考えてみてください。
+            日常の一場面でも、未来のアイデアでも応募できます。
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="theme-card">
+            <h3>わたしの牛乳時間</h3>
+            <p>朝食、おやつ、休憩時間など、日常の中の牛乳を切り取る。</p>
+          </article>
+          <article class="theme-card">
+            <h3>牛乳のある食卓</h3>
+            <p>家族の食卓、料理、スイーツ、乳製品の楽しみ方を表現する。</p>
+          </article>
+          <article class="theme-card">
+            <h3>未来の牛乳</h3>
+            <p>こんな牛乳があったらいいな、というアイデアを描く。</p>
+          </article>
+          <article class="theme-card">
+            <h3>牛さんに伝えたいこと</h3>
+            <p>応援、ありがとう、素朴な疑問。言葉と絵で届ける。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Works</p>
+            <h2>写真でも、絵でも、AI画像でもOK。</h2>
+          </div>
+          <p class="lead">
+            応募しやすさを大切にしています。既存キャラクターや第三者の権利に触れるものは避けて、
+            あなた自身の表現でご応募ください。
+          </p>
+        </div>
+
+        <div class="format-table" role="table" aria-label="応募できる作品形式">
+          <div class="format-row header" role="row">
+            <div role="columnheader">形式</div>
+            <div role="columnheader">OK例</div>
+            <div role="columnheader">注意点</div>
+          </div>
+          <div class="format-row" role="row">
+            <div role="cell"><strong>写真</strong></div>
+            <div role="cell">牛乳のある食卓、乳製品、牧場体験</div>
+            <div role="cell">人物が写る場合は本人同意が必要です。</div>
+          </div>
+          <div class="format-row" role="row">
+            <div role="cell"><strong>イラスト</strong></div>
+            <div role="cell">未来の牛乳、牛さんへのメッセージ</div>
+            <div role="cell">他者のキャラクターやロゴの無断使用はできません。</div>
+          </div>
+          <div class="format-row" role="row">
+            <div role="cell"><strong>手描き作品</strong></div>
+            <div role="cell">子どもの絵、親子で描いた作品</div>
+            <div role="cell">18歳未満は保護者の同意をお願いします。</div>
+          </div>
+          <div class="format-row" role="row">
+            <div role="cell"><strong>AI生成画像</strong></div>
+            <div role="cell">未来の牛乳、空想の牧場、牛乳のある未来</div>
+            <div role="cell">商用利用可能なツールで作成し、使用ツール名を記載してください。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">How to Apply</p>
+            <h2>応募は3ステップ。</h2>
+          </div>
+          <p class="lead">
+            LINE登録やDiscord参加は不要です。LPから応募フォームに進み、そのまま応募できます。
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <h3>画像を用意する</h3>
+            <p>牛乳にまつわる写真、イラスト、手描き作品、AI生成画像のいずれかを用意します。</p>
+          </article>
+          <article class="step">
+            <h3>フォームに入力する</h3>
+            <p>ニックネーム、年代、作品タイトル、作品説明、画像を登録します。</p>
+          </article>
+          <article class="step">
+            <h3>送信して応募完了</h3>
+            <p>投稿作品は、LP・SNS・展示・分析レポートなどで紹介される場合があります。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-soft">
+      <div class="container media-split">
+        <div>
+          <p class="section-kicker">Use Case</p>
+          <h2>あなたの1枚が、牛乳月間の発信に。</h2>
+          <p class="lead">
+            投稿された作品やコメントは、LPやSNSでの紹介、展示、川上牧場や協力酪農家の発信、
+            AIによる傾向分析などに活用されます。応募して終わりではなく、
+            牛乳への思いや疑問を、未来の牛乳づくりにつなげていきます。
+          </p>
+          <ul class="value-list">
+            <li>LPでの作品紹介</li>
+            <li>SNSでの投稿紹介</li>
+            <li>展示やイベントでの紹介</li>
+            <li>AIによる傾向分析</li>
+            <li>川上牧場や協力酪農家の発信</li>
+            <li>牛乳への疑問や期待の可視化</li>
+          </ul>
+        </div>
+        <figure class="photo-frame">
+          <img src="https://cdn.pixabay.com/photo/2024/07/21/08/53/cow-8910940_1280.jpg" alt="牧場にいる乳牛">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Awards</p>
+            <h2>すてきな投稿を表彰します。</h2>
+          </div>
+          <p class="lead">
+            技術的な上手さだけでなく、牛乳への思い、親しみやすさ、未来への広がりを大切に選考します。
+          </p>
+        </div>
+
+        <div class="award-grid">
+          <article class="award">
+            <span class="label">最優秀賞</span>
+            <h3>最も印象的な作品</h3>
+            <p>企画全体を通じて、特に思いが伝わる作品を選びます。</p>
+          </article>
+          <article class="award">
+            <span class="label">優秀賞</span>
+            <h3>テーマ性のある作品</h3>
+            <p>牛乳月間らしさや、表現の魅力がある作品を選びます。</p>
+          </article>
+          <article class="award">
+            <span class="label">親子賞</span>
+            <h3>親子参加ならでは</h3>
+            <p>親子の視点や会話が感じられる作品を選びます。</p>
+          </article>
+          <article class="award">
+            <span class="label">Metagri賞</span>
+            <h3>未来への広がり</h3>
+            <p>未来の牛乳や酪農への広がりを感じる作品を選びます。</p>
+          </article>
+        </div>
+
+        <p class="small" style="margin-top: 18px;">
+          副賞は乳製品セット、川上牧場の牛乳を使ったカヌレ、協力酪農家の乳製品、牧場体験、特設ページ掲載、デジタル参加証などを想定しています。正式内容は確定後に更新します。
+        </p>
+      </div>
+    </section>
+
+    <section class="section compact band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Criteria</p>
+            <h2>審査で大切にすること。</h2>
+          </div>
+          <p class="lead">上手さだけで決めるのではなく、牛乳への思いや参加しやすさも大切にします。</p>
+        </div>
+        <div class="criteria">
+          <div class="criterion"><strong>牛乳月間らしさ</strong><br>牛乳や乳製品とのつながりが伝わるか。</div>
+          <div class="criterion"><strong>思いが伝わるか</strong><br>作品説明やコメントに気持ちがあるか。</div>
+          <div class="criterion"><strong>親しみやすさ</strong><br>見た人が参加したくなる空気があるか。</div>
+          <div class="criterion"><strong>未来への広がり</strong><br>牛乳や酪農の未来につながる視点があるか。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Schedule</p>
+            <h2>スケジュール</h2>
+          </div>
+          <p class="lead">募集開始から結果発表、AI分析結果の公開までの流れです。</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2026年5月中旬</div>
+            <div class="timeline-body"><strong>告知開始・LP公開</strong><br>募集概要、応募フォーム、注意事項を公開します。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026年6月1日</div>
+            <div class="timeline-body"><strong>応募受付開始</strong><br>世界牛乳の日に合わせてキャンペーンを開始します。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026年6月</div>
+            <div class="timeline-body"><strong>投稿募集・中間発信</strong><br>投稿作品の紹介や、集まった声の傾向を発信します。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026年6月30日</div>
+            <div class="timeline-body"><strong>応募締切</strong><br>締切後、審査と投稿内容の整理に入ります。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026年7月</div>
+            <div class="timeline-body"><strong>結果発表・AI分析結果公開</strong><br>受賞作品と、自由記述の傾向分析を公開します。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Requirements</p>
+            <h2>応募要項</h2>
+          </div>
+          <p class="lead">
+            応募点数、ファイルサイズ、正式な副賞などは確定後に更新します。
+          </p>
+        </div>
+        <div class="requirements">
+          <ul class="req-list">
+            <li><b>募集作品</b><span>牛乳にまつわる画像</span></li>
+            <li><b>対象形式</b><span>写真・イラスト・手描き作品・AI生成画像</span></li>
+            <li><b>ファイル形式</b><span>JPG / PNG など</span></li>
+            <li><b>応募点数</b><span>確定後に記載</span></li>
+          </ul>
+          <ul class="req-list">
+            <li><b>自由記述</b><span>作品説明、牛乳への意見や疑問</span></li>
+            <li><b>AI画像</b><span>商用利用可能なツールで作成。使用ツール名を記載</span></li>
+            <li><b>人物写真</b><span>本人同意が必要。未成年は保護者同意</span></li>
+            <li><b>応募条件</b><span>LINE登録やDiscord参加は不要</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Notes</p>
+            <h2>応募前にご確認ください。</h2>
+          </div>
+          <p class="lead">
+            詳細は正式な参加規約を優先します。応募フォーム公開時に規約ページへのリンクを設置します。
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>権利について</h3>
+            <p>応募作品の著作権は応募者に帰属します。主催者はLP、SNS、展示、広報等で紹介する場合があります。</p>
+          </article>
+          <article class="card">
+            <h3>人物写真について</h3>
+            <p>実在人物が写る画像は、本人の同意を得てください。18歳未満の応募は保護者同意が必要です。</p>
+          </article>
+          <article class="card">
+            <h3>AI生成画像について</h3>
+            <p>商用利用可能なツールで作成してください。他者の著作物、ロゴ、キャラクター等の無断使用はできません。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">FAQ</p>
+            <h2>よくある質問</h2>
+          </div>
+          <p class="lead">応募前に迷いやすい点をまとめました。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>牛乳や酪農に詳しくなくても応募できますか？</summary>
+            <p>はい。どなたでも応募できます。日常の牛乳時間や、牛乳への素朴な疑問も歓迎です。</p>
+          </details>
+          <details>
+            <summary>子どもが描いた絵でも応募できますか？</summary>
+            <p>応募できます。18歳未満の場合は、保護者の同意をお願いします。</p>
+          </details>
+          <details>
+            <summary>AIで作った画像でも応募できますか？</summary>
+            <p>応募できます。ただし、商用利用可能なツールを使用し、応募時に使用ツール名を記載してください。</p>
+          </details>
+          <details>
+            <summary>写真に人が写っていてもよいですか？</summary>
+            <p>写っている本人の同意がある場合は応募できます。子どもの写真を掲載する場合は、保護者の同意が必要です。</p>
+          </details>
+          <details>
+            <summary>商品ロゴやキャラクターが写っていてもよいですか？</summary>
+            <p>第三者の権利を侵害する可能性があるため、ブランドロゴや既存キャラクターが目立つ画像は避けてください。</p>
+          </details>
+          <details>
+            <summary>投稿した自由記述はどのように使われますか？</summary>
+            <p>個人が特定されない形で、牛乳への意見・疑問・期待として整理し、AI分析や発信に活用する場合があります。</p>
+          </details>
+          <details>
+            <summary>応募作品は必ず掲載されますか？</summary>
+            <p>すべての作品の掲載を保証するものではありません。主催者が選定した作品をLPやSNS等で紹介します。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="entry" class="section compact">
+      <div class="container">
+        <div class="entry">
+          <p class="section-kicker" style="color: #fff6d9;">Entry</p>
+          <h2>あなたの1枚を、未来の牛乳へ。</h2>
+          <p>
+            写真でも、イラストでも、親子で描いた作品でも。
+            牛乳にまつわるあなたの1枚をお待ちしています。
+          </p>
+          <div class="form-frame">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/pagVO82kDOh6GuPwy/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>未来のミルク画像投稿キャンペーン2026</strong>
+        <p class="small">
+          主催: Metagri研究所（株式会社農情人）<br>
+          問い合わせ先、参加規約URL、応募フォームURLは確定後に差し替えてください。
+        </p>
+      </div>
+      <p class="small">
+        画像素材: Pixabay<br>
+        作成日: 2026-04-25
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
