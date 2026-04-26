@@ -211,24 +211,18 @@
 
     .hero {
       position: relative;
-      min-height: 680px;
-      display: grid;
-      align-items: end;
       overflow: hidden;
-      color: #fff;
-      background: #132923;
+      color: var(--ink);
+      background: #f7f2df;
       isolation: isolate;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      background:
-        linear-gradient(90deg, rgba(14, 38, 33, 0.78), rgba(14, 38, 33, 0.34) 52%, rgba(14, 38, 33, 0.12)),
-        url("https://cdn.pixabay.com/photo/2020/05/05/12/19/milk-5132870_1280.jpg") center/cover no-repeat;
-      transform: scale(1.035);
+    .hero-visual {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 420px;
+      background: url("image/世界牛乳の日コンテスト2026LP用V1.png") center/cover no-repeat;
+      transform-origin: center;
       animation: heroDrift 18s ease-in-out infinite alternate;
     }
 
@@ -236,27 +230,56 @@
       content: "";
       position: absolute;
       inset: auto 0 0;
-      height: 150px;
+      height: 90px;
       background: linear-gradient(180deg, transparent, var(--milk));
       pointer-events: none;
     }
 
     @keyframes heroDrift {
       from {
-        transform: scale(1.035) translate3d(0, 0, 0);
+        transform: scale(1.01) translate3d(0, 0, 0);
       }
 
       to {
-        transform: scale(1.08) translate3d(-1.2%, 0.8%, 0);
+        transform: scale(1.035) translate3d(-0.8%, 0.6%, 0);
       }
     }
 
     .hero-inner {
       position: relative;
       z-index: 2;
+      padding: 0 0 42px;
+      background: linear-gradient(180deg, rgba(255, 253, 247, 0), var(--milk) 18%);
+    }
+
+    .hero-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
       width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 92px 0 128px;
+      margin: -22px auto 0;
+      padding: 18px 20px;
+      border: 1px solid rgba(220, 232, 226, 0.9);
+      border-radius: 18px;
+      background: rgba(255, 253, 247, 0.96);
+      box-shadow: 0 18px 48px rgba(30, 42, 50, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero .eyebrow,
+    .hero h1,
+    .hero-copy,
+    .hero-meta {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .eyebrow {
@@ -294,7 +317,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin: 34px 0 0;
+      margin: 0;
     }
 
     .hero-meta {
@@ -309,7 +332,8 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 14px;
-      margin-top: 30px;
+      justify-content: flex-end;
+      margin: 0;
     }
 
     .countdown-card {
@@ -321,9 +345,7 @@
       color: #12342a;
       border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.86);
-      box-shadow: 0 14px 34px rgba(19, 41, 35, 0.2);
-      backdrop-filter: blur(10px);
+      background: var(--green-soft);
     }
 
     .countdown-card span {
@@ -340,10 +362,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255, 255, 255, 0.86);
+      color: var(--green);
       font-size: 13px;
       font-weight: 800;
       text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(47, 111, 85, 0.14);
     }
 
     .scroll-cue::after {
@@ -775,8 +801,8 @@
       padding: 44px;
       color: #fff;
       background:
-        linear-gradient(135deg, rgba(47, 111, 85, 0.98), rgba(47, 120, 183, 0.96)),
-        url("https://cdn.pixabay.com/photo/2024/07/21/08/53/cow-8910940_1280.jpg") center/cover no-repeat;
+        linear-gradient(135deg, rgba(19, 41, 35, 0.92), rgba(47, 111, 85, 0.82), rgba(47, 120, 183, 0.72)),
+        url("image/牛の赤ちゃん.jpg") center 42%/cover no-repeat;
       box-shadow: var(--shadow);
     }
 
@@ -888,8 +914,14 @@
         display: none;
       }
 
-      .hero {
-        min-height: 620px;
+      .hero-visual {
+        min-height: 520px;
+        background-position: 28% center;
+      }
+
+      .hero-panel {
+        grid-template-columns: 1fr;
+        margin-top: -14px;
       }
 
       .section-head,
@@ -917,8 +949,10 @@
         font-size: 14px;
       }
 
-      .hero {
-        min-height: 620px;
+      .hero-visual {
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+        background-position: 30% center;
       }
 
       .hero-inner,
@@ -928,7 +962,24 @@
       }
 
       .hero-inner {
-        padding: 74px 0 98px;
+        padding: 0 0 44px;
+      }
+
+      .hero-actions,
+      .hero-footer {
+        width: 100%;
+      }
+
+      .hero-actions {
+        justify-content: stretch;
+      }
+
+      .hero-actions .button {
+        flex: 1 1 180px;
+      }
+
+      .hero-footer {
+        justify-content: flex-start;
       }
 
       h1 {
@@ -1008,6 +1059,7 @@
   </header>
 
   <section id="top" class="hero">
+    <div class="hero-visual" role="img" aria-label="未来のミルク画像投稿キャンペーン2026のキービジュアル"></div>
     <div class="hero-inner">
       <p class="eyebrow">2026年6月1日から受付開始</p>
       <h1>未来のミルク画像投稿キャンペーン2026</h1>
@@ -1016,21 +1068,25 @@
         写真でも、イラストでも、親子で描いた作品でも。
         あなたの1枚を、未来の牛乳へ届けませんか。
       </p>
-      <div class="hero-actions">
-        <a class="button" href="#entry">応募する</a>
-        <a class="button secondary" href="#themes">募集テーマを見る</a>
-      </div>
-      <div class="hero-meta" aria-label="キャンペーン概要">
-        <span class="pill">応募期間: 2026年6月1日から6月30日</span>
-        <span class="pill">写真・イラスト・手描き・AI画像 OK</span>
-        <span class="pill">親子参加歓迎</span>
-      </div>
-      <div class="hero-footer">
-        <div class="countdown-card" aria-live="polite">
-          <span>応募受付まで</span>
-          <strong data-countdown>日程を確認中</strong>
+      <div class="hero-panel">
+        <div>
+          <div class="hero-actions">
+            <a class="button" href="#entry">応募する</a>
+            <a class="button secondary" href="#themes">募集テーマを見る</a>
+          </div>
+          <div class="hero-meta" aria-label="キャンペーン概要">
+            <span class="pill">応募期間: 2026年6月1日から6月30日</span>
+            <span class="pill">写真・イラスト・手描き・AI画像 OK</span>
+            <span class="pill">親子参加歓迎</span>
+          </div>
         </div>
-        <a class="scroll-cue" href="#about">企画を見る</a>
+        <div class="hero-footer">
+          <div class="countdown-card" aria-live="polite">
+            <span>応募受付まで</span>
+            <strong data-countdown>日程を確認中</strong>
+          </div>
+          <a class="scroll-cue" href="#about">企画を見る</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1195,7 +1251,7 @@
           </ul>
         </div>
         <figure class="photo-frame">
-          <img src="https://cdn.pixabay.com/photo/2024/07/21/08/53/cow-8910940_1280.jpg" alt="牧場にいる乳牛">
+          <img src="image/川上牧場の牛舎.jpg" alt="川上牧場の牛舎で乳牛の世話をしている様子">
         </figure>
       </div>
     </section>
@@ -1418,7 +1474,7 @@
         </p>
       </div>
       <p class="small">
-        画像素材: Pixabay<br>
+        画像素材: Metagri研究所 / 川上牧場<br>
         作成日: 2026-04-25
       </p>
     </div>
