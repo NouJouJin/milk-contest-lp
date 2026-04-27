@@ -221,7 +221,7 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       min-height: 420px;
-      background: url("image/世界牛乳の日コンテスト2026LP用V1.png") center/cover no-repeat;
+      background: url("image/LP掲載/世界牛乳の日コンテスト2026LP用V1.png") center/cover no-repeat;
       transform-origin: center;
       animation: heroDrift 18s ease-in-out infinite alternate;
     }
@@ -544,6 +544,52 @@
       background: linear-gradient(180deg, #fff, var(--yellow-soft));
     }
 
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.72fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .gallery-preview-copy {
+      max-width: 620px;
+    }
+
+    .gallery-preview-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .gallery-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .gallery-preview-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .gallery-preview-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .gallery-preview-card figcaption {
+      padding: 12px 14px 14px;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
     .format-table {
       overflow: hidden;
       border: 1px solid var(--line);
@@ -801,8 +847,7 @@
       padding: 44px;
       color: #fff;
       background:
-        linear-gradient(135deg, rgba(19, 41, 35, 0.92), rgba(47, 111, 85, 0.82), rgba(47, 120, 183, 0.72)),
-        url("image/牛の赤ちゃん.jpg") center 42%/cover no-repeat;
+        linear-gradient(135deg, rgba(19, 41, 35, 0.96), rgba(47, 111, 85, 0.92), rgba(47, 120, 183, 0.88));
       box-shadow: var(--shadow);
     }
 
@@ -925,7 +970,8 @@
       }
 
       .section-head,
-      .media-split {
+      .media-split,
+      .gallery-preview {
         grid-template-columns: 1fr;
       }
 
@@ -996,7 +1042,8 @@
       .award-grid,
       .criteria,
       .requirements,
-      .value-list {
+      .value-list,
+      .gallery-preview-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1052,6 +1099,7 @@
         <a href="#about">企画について</a>
         <a href="#themes">募集テーマ</a>
         <a href="#howto">応募方法</a>
+        <a href="gallery.html">参考ギャラリー</a>
         <a href="#faq">FAQ</a>
         <a class="button" href="#entry">応募する</a>
       </nav>
@@ -1073,6 +1121,7 @@
           <div class="hero-actions">
             <a class="button" href="#entry">応募する</a>
             <a class="button secondary" href="#themes">募集テーマを見る</a>
+            <a class="button secondary" href="gallery.html">参考ギャラリーを見る</a>
           </div>
           <div class="hero-meta" aria-label="キャンペーン概要">
             <span class="pill">応募期間: 2026年6月1日から6月30日</span>
@@ -1202,6 +1251,34 @@
       </div>
     </section>
 
+    <section class="section band-soft">
+      <div class="container gallery-preview">
+        <div class="gallery-preview-copy">
+          <p class="section-kicker">Reference Gallery</p>
+          <h2>作品づくりに迷ったら、牛の写真を眺めてみる。</h2>
+          <p class="lead">
+            牛の表情、距離感、リラックスした姿は、写真・イラスト・手描き・AI画像のヒントになります。
+            参考ギャラリーでは、参加前に見ておきたい牛の写真をまとめています。
+          </p>
+          <div class="gallery-preview-actions">
+            <a class="button" href="gallery.html">参考ギャラリーを見る</a>
+            <a class="button secondary" href="#howto">応募方法へ進む</a>
+          </div>
+        </div>
+
+        <div class="gallery-preview-grid" aria-label="参考ギャラリーのイメージ例">
+          <figure class="gallery-preview-card">
+            <img src="image/牛の写真イメージ.jpeg" alt="牛の写真イメージ例" loading="lazy">
+            <figcaption>牛を主役にした写真イメージ</figcaption>
+          </figure>
+          <figure class="gallery-preview-card">
+            <img src="image/牛のリラックス.jpg" alt="リラックスしている牛の写真" loading="lazy">
+            <figcaption>リラックスしている牛の様子</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section id="howto" class="section">
       <div class="container">
         <div class="section-head">
@@ -1251,7 +1328,7 @@
           </ul>
         </div>
         <figure class="photo-frame">
-          <img src="image/川上牧場の牛舎.jpg" alt="川上牧場の牛舎で乳牛の世話をしている様子">
+          <img src="image/LP掲載/川上牧場の牛舎.jpg" alt="川上牧場の牛舎で乳牛の世話をしている様子">
         </figure>
       </div>
     </section>
@@ -1471,6 +1548,7 @@
         <p class="small">
           主催: Metagri研究所（株式会社農情人）<br>
           問い合わせ先、参加規約URL、応募フォームURLは確定後に差し替えてください。
+          <br><a href="gallery.html">参考ギャラリーを見る</a>
         </p>
       </div>
       <p class="small">
@@ -1489,7 +1567,7 @@
       const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
       const sections = [...document.querySelectorAll("main section[id], .hero[id]")];
       const revealTargets = document.querySelectorAll(
-        ".section-head, .card, .theme-card, .format-table, .step, .photo-frame, .award, .criterion, .timeline-item, .req-list, details, .entry"
+        ".section-head, .card, .theme-card, .format-table, .gallery-preview-copy, .gallery-preview-card, .step, .photo-frame, .award, .criterion, .timeline-item, .req-list, details, .entry"
       );
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
