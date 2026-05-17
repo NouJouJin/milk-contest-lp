@@ -635,6 +635,76 @@
       object-fit: cover;
     }
 
+    .partner-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.66fr);
+      gap: 34px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid rgba(47, 111, 85, 0.16);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #fff, var(--green-soft));
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cooperation-title {
+      font-size: clamp(27px, 3.5vw, 42px);
+      line-height: 1.28;
+    }
+
+    .partner-feature h3 {
+      margin-top: 0;
+    }
+
+    .partner-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      color: var(--green);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .partner-link::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    .partner-visuals {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 118px;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .partner-logo,
+    .partner-character {
+      display: grid;
+      place-items: center;
+      min-height: 150px;
+      padding: 18px;
+      border: 1px solid rgba(47, 111, 85, 0.14);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .partner-logo img {
+      max-height: 92px;
+      object-fit: contain;
+    }
+
+    .partner-character img {
+      width: 92px;
+      height: 92px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
     .steps {
       counter-reset: steps;
       display: grid;
@@ -970,7 +1040,8 @@
 
       .section-head,
       .media-split,
-      .gallery-preview {
+      .gallery-preview,
+      .partner-feature {
         grid-template-columns: 1fr;
       }
 
@@ -1082,6 +1153,14 @@
       .footer-inner {
         grid-template-columns: 1fr;
       }
+
+      .partner-feature {
+        padding: 22px 18px;
+      }
+
+      .partner-visuals {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -1126,6 +1205,7 @@
             <span class="pill">応募期間: 2026年6月1日から6月30日</span>
             <span class="pill">写真・イラスト・手描き・AI画像 OK</span>
             <span class="pill">親子参加歓迎</span>
+            <span class="pill">地域交流牧場全国連絡会・近畿中国四国ブロック 協力</span>
             <span class="pill">牛乳月間2026 参加証NFT プレゼント</span>
           </div>
         </div>
@@ -1170,6 +1250,42 @@
             <h3>参加の証が残る</h3>
             <p>希望者には、参加者限定特典として「牛乳月間2026 参加証NFT」を無料で配布します。</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cooperation" class="section band">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Cooperation</p>
+            <h2 class="cooperation-title">交牧連（近畿・中国・四国ブロック）<br>の協力企画です。</h2>
+          </div>
+          <p class="lead">
+            本企画は、酪農家による全国的なネットワーク組織である地域交流牧場全国連絡会の近畿・中国・四国ブロックの活動として、牛乳や酪農への理解を広げる取り組みに位置づけています。
+          </p>
+        </div>
+
+        <div class="partner-feature">
+          <div>
+            <h3>地域に開かれた牧場活動と、生活者の声をつなぐ企画へ。</h3>
+            <p class="lead">
+              地域交流牧場全国連絡会（交牧連）は、酪農家同士が交流し、都市生活者や地域住民との交流活動・教育的活動を通じて、日本酪農への理解や支援を広げることを目的に活動する全国ネットワークです。1999年に設立され、全国7ブロックで構成されています。
+            </p>
+            <ul class="value-list">
+              <li>近畿・中国・四国ブロックは、滋賀県から高知県までの会員が参加する広域ブロックです。</li>
+              <li>会員牧場の視察研修や、六次産業化・消費者交流に取り組む酪農家の活動が紹介されています。</li>
+            </ul>
+            <a class="partner-link" href="https://www.dairy-farm.jp/" target="_blank" rel="noopener">地域交流牧場全国連絡会 公式HPを見る</a>
+          </div>
+          <div class="partner-visuals" aria-label="地域交流牧場全国連絡会のロゴとイメージキャラクター">
+            <div class="partner-logo">
+              <img src="image/地域交流牧場全国連絡会ロゴ.png" alt="地域交流牧場全国連絡会ロゴ" loading="lazy">
+            </div>
+            <div class="partner-character">
+              <img src="image/まきばっこ.jpg" alt="地域交流牧場全国連絡会イメージキャラクター まきばっこ" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1549,13 +1665,11 @@
         <strong>未来のミルク画像投稿キャンペーン2026</strong>
         <p class="small">
           主催: Metagri研究所（株式会社農情人）<br>
-          協力: 川上牧場、協力酪農家の皆様
+          協力: 地域交流牧場全国連絡会・近畿中国四国ブロック、川上牧場、協力酪農家の皆様
           <br><a href="gallery.html">参考ギャラリーを見る</a>
+          <br><a href="https://www.dairy-farm.jp/" target="_blank" rel="noopener">地域交流牧場全国連絡会 公式HP</a>
         </p>
       </div>
-      <p class="small">
-        画像素材: Metagri研究所 / 川上牧場<br>
-      </p>
     </div>
   </footer>
   <a class="floating-entry" href="#entry" aria-label="応募フォームへ移動">応募フォームへ</a>
@@ -1568,7 +1682,7 @@
       const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
       const sections = [...document.querySelectorAll("main section[id], .hero[id]")];
       const revealTargets = document.querySelectorAll(
-        ".section-head, .card, .theme-card, .format-table, .gallery-preview-copy, .gallery-preview-card, .step, .photo-frame, .award, .criterion, .timeline-item, .req-list, details, .entry"
+        ".section-head, .card, .theme-card, .partner-feature, .format-table, .gallery-preview-copy, .gallery-preview-card, .step, .photo-frame, .award, .criterion, .timeline-item, .req-list, details, .entry"
       );
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
