@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>参考ギャラリー | 未来のミルク画像投稿キャンペーン2026</title>
   <meta name="description" content="未来のミルク画像投稿キャンペーン2026に参加する方向けの、牛の写真参考ギャラリーです。">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicon-512.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
   <style>
     :root {
       --milk: #fffdf7;
@@ -91,16 +94,12 @@
     }
 
     .brand-mark {
-      display: inline-grid;
-      place-items: center;
       width: 36px;
       height: 36px;
-      color: var(--green);
-      font-size: 14px;
-      border: 2px solid var(--green);
+      flex: 0 0 36px;
       border-radius: 50%;
-      background: #fff;
-      box-shadow: inset 0 -5px 0 rgba(47, 120, 183, 0.1);
+      background: #fff url("image/favicon-512.png") center/cover no-repeat;
+      box-shadow: 0 4px 12px rgba(47, 111, 85, 0.16);
     }
 
     .nav {
@@ -438,7 +437,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html#top" aria-label="LPトップへ">
-        <span class="brand-mark">MILK</span>
+        <span class="brand-mark" aria-hidden="true"></span>
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
@@ -578,7 +577,12 @@
     <div class="footer-inner">
       <div>
         <strong>未来のミルク画像投稿キャンペーン2026</strong>
-        <p class="small">主催: Metagri研究所（株式会社農情人）</p>
+        <p class="small">
+          主催: Metagri研究所（株式会社農情人）<br>
+          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック<br>
+          協力: 川上牧場、協力酪農家の皆様
+          <br><a href="https://www.dairy-farm.jp/" target="_blank" rel="noopener">地域交流牧場全国連絡会 公式HP</a>
+        </p>
       </div>
       <p class="small">
         <a href="index.html">LPへ戻る</a>

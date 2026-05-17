@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="未来のミルク画像投稿キャンペーン2026 favicon">
+  <rect width="512" height="512" rx="108" fill="#e8f5ee"/>
+  <circle cx="120" cy="112" r="64" fill="#f4c95d" opacity=".95"/>
+  <path d="M400 78c-72 18-126 57-162 113 68-35 125-48 190-39 28 4 47-24 35-49-10-21-34-31-63-25z" fill="#fffdf7" opacity=".78"/>
+  <path d="M173 168c0-37 30-67 67-67h32c37 0 67 30 67 67v26c0 16 7 30 17 43 24 31 37 69 37 108v28c0 58-47 105-105 105h-64c-58 0-105-47-105-105v-28c0-39 13-77 37-108 10-13 17-27 17-43v-26z" fill="#fffdf7"/>
+  <path d="M220 101h72v78h-72z" fill="#fffdf7"/>
+  <path d="M225 65h62c16 0 29 13 29 29v24H196V94c0-16 13-29 29-29z" fill="#ffffff"/>
+  <path d="M225 65h62c16 0 29 13 29 29v24H196V94c0-16 13-29 29-29zM220 101h72v78m-119-11c0-37 30-67 67-67h32c37 0 67 30 67 67v26c0 16 7 30 17 43 24 31 37 69 37 108v28c0 58-47 105-105 105h-64c-58 0-105-47-105-105v-28c0-39 13-77 37-108 10-13 17-27 17-43v-26z" fill="none" stroke="#1e2a32" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M129 340c41-34 83-46 126-34 52 14 90 4 131-34 5 22 7 46 7 73v28c0 58-47 105-105 105h-64c-58 0-105-47-105-105v-28c0-2 0-4 1-6z" fill="#2f6f55"/>
+  <path d="M164 262c20-31 50-44 86-36 26 6 49-2 70-23 12 28 27 47 36 59-35 33-68 44-101 33-41-13-71-4-103 25-3-22 1-42 12-58z" fill="#ffffff"/>
+  <ellipse cx="224" cy="244" rx="33" ry="25" transform="rotate(-24 224 244)" fill="#1e2a32"/>
+  <ellipse cx="304" cy="334" rx="38" ry="29" transform="rotate(30 304 334)" fill="#1e2a32"/>
+  <circle cx="207" cy="382" r="18" fill="#1e2a32"/>
+  <path d="M183 351c36-27 69-32 105-17 33 14 59 7 87-18" fill="none" stroke="#fffdf7" stroke-width="20" stroke-linecap="round"/>
+  <g transform="translate(350 362)">
+    <circle cx="52" cy="52" r="16" fill="#f4c95d"/>
+    <ellipse cx="52" cy="18" rx="12" ry="22" fill="#fffdf7"/>
+    <ellipse cx="52" cy="86" rx="12" ry="22" fill="#fffdf7"/>
+    <ellipse cx="18" cy="52" rx="22" ry="12" fill="#fffdf7"/>
+    <ellipse cx="86" cy="52" rx="22" ry="12" fill="#fffdf7"/>
+  </g>
+</svg>

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
   <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicon-512.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
   <style>
     :root {
       --milk: #fffdf7;
@@ -121,16 +124,12 @@
     }
 
     .brand-mark {
-      display: inline-grid;
-      place-items: center;
       width: 36px;
       height: 36px;
-      color: var(--green);
-      font-size: 14px;
-      border: 2px solid var(--green);
+      flex: 0 0 36px;
       border-radius: 50%;
-      background: #fff;
-      box-shadow: inset 0 -5px 0 rgba(47, 120, 183, 0.1);
+      background: #fff url("image/favicon-512.png") center/cover no-repeat;
+      box-shadow: 0 4px 12px rgba(47, 111, 85, 0.16);
     }
 
     .nav {
@@ -1179,7 +1178,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="ページ上部へ">
-        <span class="brand-mark">MILK</span>
+        <span class="brand-mark" aria-hidden="true"></span>
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
