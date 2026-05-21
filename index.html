@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
-  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。">
+  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="image/favicon-512.png" type="image/png">
   <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
@@ -597,7 +597,7 @@
 
     .theme-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
     }
 
@@ -653,6 +653,11 @@
       background: linear-gradient(150deg, var(--berry), var(--coral));
     }
 
+    .theme-card.t5 {
+      color: var(--ink);
+      background: linear-gradient(150deg, #eaf5ff, #d9eadf);
+    }
+
     .theme-card__num {
       margin-bottom: 12px;
       color: rgba(255, 255, 255, 0.55);
@@ -662,6 +667,10 @@
     }
 
     .theme-card.t2 .theme-card__num {
+      color: rgba(30, 42, 50, 0.42);
+    }
+
+    .theme-card.t5 .theme-card__num {
       color: rgba(30, 42, 50, 0.42);
     }
 
@@ -1355,6 +1364,7 @@
         <a href="#about">企画について</a>
         <a href="#themes">募集テーマ</a>
         <a href="#howto">応募方法</a>
+        <a href="#benefits">特典</a>
         <a href="gallery.html">参考ギャラリー</a>
         <a href="#faq">FAQ</a>
         <a class="button" href="#entry">応募する</a>
@@ -1384,7 +1394,8 @@
             <span class="pill blue">写真・イラスト・手描き・AI画像 OK</span>
             <span class="pill yellow">親子参加歓迎</span>
             <span class="pill berry">地域交流牧場全国連絡会・近畿中国四国ブロック 協賛</span>
-            <span class="pill">牛乳月間2026 参加証NFT プレゼント</span>
+            <span class="pill">島根県の牛乳・乳製品詰め合わせをプレゼント</span>
+            <span class="pill">参加証NFTは希望者に無料配布</span>
           </div>
         </div>
         <div class="hero-footer">
@@ -1425,8 +1436,8 @@
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>参加の証が残る</h3>
-            <p>希望者には、参加者限定特典として「牛乳月間2026 参加証NFT」を無料で配布します。</p>
+            <h3>地域の場へ届く</h3>
+            <p>応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。</p>
           </article>
         </div>
       </div>
@@ -1480,8 +1491,8 @@
             <h2>あなたの牛乳にまつわる<span class="accent">1枚</span>を募集します。</h2>
           </div>
           <p class="lead">
-            テーマは自由です。迷ったときは、以下の切り口から考えてみてください。
-            日常の一場面でも、未来のアイデアでも応募できます。
+            5つのテーマから、好きな切り口で参加できます。
+            日常の一場面でも、未来のアイデアでも、牛さんへのメッセージでも応募できます。
           </p>
         </div>
 
@@ -1513,6 +1524,13 @@
               <h3>牛さんに伝えたいこと</h3>
             </div>
             <p>応援、ありがとう、素朴な疑問。言葉と絵で届ける。</p>
+          </article>
+          <article class="theme-card t5">
+            <div>
+              <div class="theme-card__num">05</div>
+              <h3>こんな牛乳があったらいいな</h3>
+            </div>
+            <p>味、飲み方、パッケージ、未来のアイデアを自由に表現する。</p>
           </article>
         </div>
       </div>
@@ -1618,25 +1636,45 @@
       </div>
     </section>
 
-    <section class="section band-soft">
-      <div class="container media-split">
-        <div>
-          <p class="section-kicker">Limited Benefit</p>
-          <h2>牛乳月間2026<br><span class="accent">参加証NFT</span></h2>
+    <section id="benefits" class="section band-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Benefits</p>
+            <h2>参加すると、<span class="accent">島根の牛乳・酪農</span>ともつながります。</h2>
+          </div>
           <p class="lead">
-            希望者には、牛乳月間2026への参加の証として「牛乳月間2026 参加証NFT」を無料で配布します。
-            応募して終わりではなく、あなたの1枚が未来の牛乳づくりに参加した記録として残ります。
+            作品を投稿するだけで終わらず、地域の乳製品や酪農イベント、参加の記録につながる特典を用意しています。
           </p>
-          <ul class="value-list">
-            <li>参加者限定の無料特典</li>
-            <li>希望者のみ受け取り</li>
-            <li>受け取りサイトをメールで案内</li>
-            <li>Gmailログインなどの受け取り方法を案内予定</li>
-          </ul>
         </div>
-        <figure class="photo-frame">
-          <img src="image/LP掲載/川上牧場の牛舎.jpg" alt="川上牧場の牛舎で乳牛の世話をしている様子">
-        </figure>
+
+        <div class="grid-4">
+          <article class="card">
+            <span class="icon">01</span>
+            <h3>島根県の牛乳・乳製品詰め合わせをプレゼント</h3>
+            <p>島根県牛乳普及協会の副賞として、島根県の牛乳・乳製品詰め合わせを用意しています。</p>
+          </article>
+          <article class="card">
+            <span class="icon">02</span>
+            <h3>川上牧場のカヌレ</h3>
+            <p>島根県出雲市の川上牧場の牛乳を使ったカヌレも副賞として用意しています。</p>
+          </article>
+          <article class="card">
+            <span class="icon">03</span>
+            <h3>しまね酪農フェアで作品展示</h3>
+            <p>応募条件を満たした作品は、2026年10月予定の会場ブースで展示予定です。</p>
+          </article>
+          <article class="card">
+            <span class="icon">04</span>
+            <h3>参加証NFTを無料配布</h3>
+            <p>希望者には「牛乳月間2026 参加証NFT」の受け取り方法を、応募後にメールでご案内します。</p>
+          </article>
+        </div>
+
+        <p class="small" style="margin-top: 18px;">
+          副賞の対象者・点数・発送方法などの詳細は、結果発表時または応募フォーム内の案内をご確認ください。
+          NFTの受け取りは任意で、受け取らなくても応募できます。
+        </p>
       </div>
     </section>
 
@@ -1676,8 +1714,8 @@
         </div>
 
         <p class="small" style="margin-top: 18px;">
-          副賞は乳製品セット、川上牧場の牛乳を使ったカヌレ、協力酪農家の乳製品、牧場体験、特設ページ掲載などを想定しています。正式内容は確定後に更新します。
-          参加者限定特典として、希望者には「牛乳月間2026 参加証NFT」を無料で配布予定です。
+          副賞として、島根県の牛乳・乳製品詰め合わせや川上牧場の牛乳を使ったカヌレを用意しています。
+          応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。
         </p>
       </div>
     </section>
@@ -1707,7 +1745,7 @@
             <p class="section-kicker">Schedule</p>
             <h2>スケジュール</h2>
           </div>
-          <p class="lead">募集開始から結果発表、AI分析結果の公開までの流れです。</p>
+          <p class="lead">募集開始から結果発表、作品展示に向けた流れです。</p>
         </div>
         <div class="timeline">
           <div class="timeline-item">
@@ -1728,7 +1766,11 @@
           </div>
           <div class="timeline-item">
             <div class="timeline-date">2026年7月</div>
-            <div class="timeline-body"><strong>結果発表・AI分析結果公開</strong><br>受賞作品と、自由記述の傾向分析を公開します。</div>
+            <div class="timeline-body"><strong>結果発表</strong><br>受賞作品や副賞対象者を発表し、応募作品の紹介を進めます。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2026年10月予定</div>
+            <div class="timeline-body"><strong>しまね酪農フェアで展示</strong><br>応募条件を満たした作品を会場ブースで展示予定です。</div>
           </div>
         </div>
       </div>
@@ -1742,7 +1784,7 @@
             <h2>応募要項</h2>
           </div>
           <p class="lead">
-            応募点数、ファイルサイズ、正式な副賞などは確定後に更新します。
+            応募前に、作品形式や展示・特典の扱いをご確認ください。
           </p>
         </div>
         <div class="requirements">
@@ -1750,13 +1792,13 @@
             <li><b>募集作品</b><span>牛乳にまつわる画像</span></li>
             <li><b>対象形式</b><span>写真・イラスト・手描き作品・AI生成画像</span></li>
             <li><b>ファイル形式</b><span>JPG / PNG など</span></li>
-            <li><b>応募点数</b><span>確定後に記載</span></li>
+            <li><b>展示予定</b><span>応募条件を満たした作品をしまね酪農フェアで展示予定</span></li>
           </ul>
           <ul class="req-list">
             <li><b>自由記述</b><span>作品説明、牛乳への意見や疑問</span></li>
             <li><b>AI画像</b><span>商用利用可能なツールで作成。使用ツール名を記載</span></li>
             <li><b>人物写真</b><span>本人同意が必要。未成年は保護者同意</span></li>
-            <li><b>応募条件</b><span>LINE登録やDiscord参加は不要</span></li>
+            <li><b>特典・副賞</b><span>NFT参加証、島根県の牛乳・乳製品詰め合わせ、川上牧場のカヌレ</span></li>
           </ul>
         </div>
       </div>
@@ -1806,7 +1848,7 @@
           </details>
           <details>
             <summary>子どもが描いた絵でも応募できますか？</summary>
-            <p>応募できます。18歳未満の場合は、保護者の同意をお願いします。</p>
+            <p>応募できます。親子で描いた作品や、家庭での牛乳時間を表現した作品も歓迎しています。18歳未満の場合は、保護者の同意をお願いします。</p>
           </details>
           <details>
             <summary>AIで作った画像でも応募できますか？</summary>
@@ -1822,11 +1864,15 @@
           </details>
           <details>
             <summary>投稿した自由記述はどのように使われますか？</summary>
-            <p>個人が特定されない形で、牛乳への意見・疑問・期待として整理し、AI分析や発信に活用する場合があります。</p>
+            <p>個人が特定されない形で、牛乳への意見・疑問・期待として整理し、関連発信やレポート等で活用する場合があります。</p>
           </details>
           <details>
             <summary>牛乳月間2026 参加証NFTとは何ですか？</summary>
-            <p>牛乳月間2026への参加の証として、希望者に無料で配布する参加者限定NFTです。受け取りサイトや受け取り方法は、応募後にメールでご案内します。</p>
+            <p>牛乳月間2026への参加の証として、希望者に無料で配布する参加者限定NFTです。受け取りは任意で、受け取らなくても応募できます。受け取りサイトや受け取り方法は、応募後にメールでご案内します。</p>
+          </details>
+          <details>
+            <summary>応募作品はどこに展示されますか？</summary>
+            <p>応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。展示方法や会場での掲出内容は、運営側で調整します。</p>
           </details>
           <details>
             <summary>応募作品は必ず掲載されますか？</summary>
