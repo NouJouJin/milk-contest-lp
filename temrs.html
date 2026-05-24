@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>参加規約 | 未来のミルク画像投稿キャンペーン2026</title>
+  <meta name="description" content="未来のミルク画像投稿キャンペーン2026の参加規約です。応募資格、作品条件、著作権、AI生成画像、個人情報、展示・特典の扱いについて定めています。">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicon-512.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <style>
+    :root {
+      --milk: #fffdf7;
+      --cream: #f8f2df;
+      --blue: #2f78b7;
+      --blue-soft: #eaf5ff;
+      --blue-deep: #1f6ec4;
+      --green: #2f6f55;
+      --green-soft: #e8f5ee;
+      --green-deep: #245f48;
+      --yellow: #f4c95d;
+      --yellow-soft: #fff6d9;
+      --berry: #b64b6b;
+      --coral: #db6f57;
+      --ink: #1e2a32;
+      --muted: #60717d;
+      --line: #dce8e2;
+      --shadow: 0 18px 48px rgba(30, 42, 50, 0.12);
+      --shadow-soft: 0 10px 26px rgba(30, 42, 50, 0.08);
+      --radius: 8px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.85;
+      background:
+        linear-gradient(180deg, rgba(255, 253, 247, 0.94), rgba(255, 253, 247, 1)),
+        linear-gradient(90deg, rgba(47, 111, 85, 0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(47, 120, 183, 0.04) 1px, transparent 1px);
+      background-size: auto, 48px 48px, 48px 48px;
+    }
+
+    body::selection {
+      color: #fff;
+      background: var(--green);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(244, 201, 93, 0.85);
+      outline-offset: 4px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(220, 232, 226, 0.9);
+      background: rgba(255, 253, 247, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 210px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      border-radius: 50%;
+      background: #fff url("image/favicon-512.png") center/cover no-repeat;
+      box-shadow: 0 4px 12px rgba(47, 111, 85, 0.16);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+
+    .nav a:hover,
+    .nav a.is-active {
+      color: var(--green);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      box-shadow: 0 12px 28px rgba(47, 111, 85, 0.24);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(47, 111, 85, 0.3);
+    }
+
+    .button.secondary {
+      color: var(--green);
+      border: 1px solid rgba(47, 111, 85, 0.22);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: none;
+    }
+
+    .terms-hero {
+      padding: 76px 0 54px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(47, 111, 85, 0.96), rgba(47, 120, 183, 0.9)),
+        url("image/LP掲載/川上牧場の牛舎.jpg") center/cover no-repeat;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--yellow-soft);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 17px;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .summary-band {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary-grid li {
+      padding: 16px 18px;
+      border: 1px solid rgba(47, 111, 85, 0.16);
+      border-radius: var(--radius);
+      background: var(--green-soft);
+      color: #21483a;
+      font-weight: 800;
+    }
+
+    .terms-section {
+      padding: 58px 0 78px;
+    }
+
+    .terms-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 88px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--green);
+      font-size: 14px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      color: var(--green);
+    }
+
+    .terms-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .intro {
+      padding: 28px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, var(--blue-soft));
+    }
+
+    .intro p + p {
+      margin-top: 12px;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      color: #12342a;
+      font-size: 13px;
+      font-weight: 900;
+      border-radius: 999px;
+      background: var(--yellow-soft);
+    }
+
+    .article {
+      padding: 30px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .article:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--green);
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.32;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+
+    ul,
+    ol {
+      margin: 12px 0 0;
+      padding-left: 1.45em;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      color: #21483a;
+      border: 1px solid rgba(47, 111, 85, 0.16);
+      border-radius: var(--radius);
+      background: var(--green-soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .info-table {
+      overflow: hidden;
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-row b,
+    .info-row span {
+      padding: 13px 16px;
+    }
+
+    .info-row b {
+      color: #12342a;
+      background: var(--green-soft);
+    }
+
+    .footer {
+      padding: 40px 0;
+      color: #d4e8dc;
+      background: #132923;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    .small {
+      color: #b7cdc4;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
+
+      .summary-grid,
+      .terms-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner,
+      .container,
+      .footer-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .brand {
+        min-width: 0;
+        font-size: 14px;
+      }
+
+      .terms-hero {
+        padding: 54px 0 38px;
+      }
+
+      .article,
+      .intro {
+        padding: 22px 18px;
+      }
+
+      .info-row {
+        grid-template-columns: 1fr;
+      }
+
+      .info-row span {
+        padding-top: 10px;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html#top" aria-label="LPトップへ">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>牛乳月間2026</span>
+      </a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="index.html#about">企画について</a>
+        <a href="index.html#themes">募集テーマ</a>
+        <a href="index.html#howto">応募方法</a>
+        <a href="gallery.html">参考ギャラリー</a>
+        <a class="is-active" href="temrs.html">参加規約</a>
+        <a class="button" href="index.html#entry">応募する</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="terms-hero">
+      <div class="container">
+        <p class="kicker">Terms</p>
+        <h1>未来のミルク画像投稿キャンペーン2026 参加規約</h1>
+        <p class="lead">
+          本キャンペーンに応募する前に、応募条件、作品の権利、AI生成画像、人物写真、展示・広報利用、個人情報の扱いをご確認ください。
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="index.html#entry">応募フォームへ</a>
+          <a class="button secondary" href="index.html">LPへ戻る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary-band" aria-label="規約の概要">
+      <div class="container">
+        <ul class="summary-grid">
+          <li>応募期間: 2026年6月1日から6月30日</li>
+          <li>写真・イラスト・手描き作品・AI生成画像で応募可能</li>
+          <li>希望者に参加証NFTを無料配布</li>
+          <li>応募条件を満たした作品はしまね酪農フェアで展示予定</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section">
+      <div class="container terms-layout">
+        <aside class="toc" aria-label="目次">
+          <strong>Contents</strong>
+          <a href="#article-1">第1条 応募資格</a>
+          <a href="#article-2">第2条 応募期間</a>
+          <a href="#article-3">第3条 応募作品の条件</a>
+          <a href="#article-4">第4条 応募方法</a>
+          <a href="#article-5">第5条 禁止事項</a>
+          <a href="#article-6">第6条 審査・結果発表</a>
+          <a href="#article-7">第7条 特典・副賞</a>
+          <a href="#article-8">第8条 著作権および使用許諾</a>
+          <a href="#article-9">第9条 AI生成画像</a>
+          <a href="#article-10">第10条 人物写真・未成年</a>
+          <a href="#article-11">第11条 個人情報</a>
+          <a href="#article-12">第12条 免責事項</a>
+          <a href="#article-13">第13条 中止・変更</a>
+          <a href="#article-14">第14条 お問い合わせ</a>
+        </aside>
+
+        <div class="terms-card">
+          <div class="intro">
+            <span class="updated">最終更新日: 2026年5月24日</span>
+            <p>
+              本規約は、Metagri研究所（運営: 株式会社農情人、以下「主催者」といいます）が主催する「未来のミルク画像投稿キャンペーン2026」（以下「本キャンペーン」といいます）への応募にあたり、応募者が遵守すべき事項を定めるものです。
+            </p>
+            <p>
+              本キャンペーンに応募された方は、本規約に同意したものとみなします。応募フォーム内で別途確認事項が表示される場合は、本規約とあわせてご確認ください。
+            </p>
+          </div>
+
+          <article id="article-1" class="article">
+            <h2>第1条 応募資格</h2>
+            <ol>
+              <li>本キャンペーンは、年齢、国籍、プロ・アマチュアを問わず、牛乳や酪農、未来の食や暮らしに関心のある方が応募できます。</li>
+              <li>18歳未満の方は、保護者の同意を得たうえで応募してください。</li>
+              <li>個人、親子、家族、チームでの応募が可能です。チームで応募する場合は、代表者1名を定め、代表者が応募手続きを行ってください。</li>
+              <li>主催者が本キャンペーンの運営に支障があると判断した場合、応募を無効とすることがあります。</li>
+            </ol>
+          </article>
+
+          <article id="article-2" class="article">
+            <h2>第2条 応募期間</h2>
+            <p>
+              本キャンペーンの応募期間は、2026年6月1日（月）0:00から2026年6月30日（火）23:59（日本標準時）までとします。期間外の応募は無効となる場合があります。
+            </p>
+          </article>
+
+          <article id="article-3" class="article">
+            <h2>第3条 応募作品の条件</h2>
+            <h3>1. 募集内容</h3>
+            <p>
+              牛乳にまつわる画像作品を募集します。手描き作品、イラスト、写真、AI生成画像など、表現形式は問いません。
+            </p>
+            <h3>2. 応募テーマ</h3>
+            <ul>
+              <li>わたしの牛乳時間</li>
+              <li>牛乳のある食卓</li>
+              <li>未来の牛乳</li>
+              <li>牛さんに伝えたいこと</li>
+              <li>こんな牛乳があったらいいな</li>
+            </ul>
+            <h3>3. 作品形式</h3>
+            <ul>
+              <li>写真、イラスト、手描き作品、AI生成画像、その他主催者が認める画像作品</li>
+              <li>ファイル形式は、JPG、PNG等の一般的な画像形式を推奨します。</li>
+              <li>応募作品は、応募者自身が撮影・制作したオリジナル作品、または応募者が必要な権利処理を行った作品に限ります。</li>
+            </ul>
+            <h3>4. 自由記述</h3>
+            <p>
+              応募時に、作品に込めた思い、牛乳への意見・疑問・期待などを記入できます。自由記述は、個人が特定されない形でAI分析やレポート、関連発信に活用する場合があります。
+            </p>
+          </article>
+
+          <article id="article-4" class="article">
+            <h2>第4条 応募方法</h2>
+            <ol>
+              <li>主催者が指定する本キャンペーン特設LP内の応募フォームから応募してください。</li>
+              <li>応募フォームには、応募者名、メールアドレス、作品タイトル、作品画像、作品説明、作品形式、掲載可否、権利確認、参加規約への同意等、主催者が指定する情報を入力してください。</li>
+              <li>AI生成画像で応募する場合は、使用したAIツール名を入力してください。</li>
+              <li>応募内容に不備がある場合、主催者から確認の連絡を行うことがあります。</li>
+            </ol>
+          </article>
+
+          <article id="article-5" class="article">
+            <h2>第5条 禁止事項</h2>
+            <p>
+              応募作品には、以下の内容を含めることはできません。違反が判明した場合、応募を無効とし、掲載後または受賞後であっても掲載停止、受賞取消、特典・副賞対象外とする場合があります。
+            </p>
+            <ol>
+              <li>公序良俗に反する内容、または法令に違反する内容</li>
+              <li>第三者の著作権、商標権、肖像権、プライバシー権、その他の権利を侵害する内容</li>
+              <li>既存のキャラクター、ブランドロゴ、企業ロゴ、商標、著名人の肖像等を無断で使用した内容</li>
+              <li>特定の個人、団体、企業、国、地域等を誹謗中傷する内容</li>
+              <li>政治的または宗教的な主張を主目的とする内容</li>
+              <li>暴力的、差別的、性的、過度に不快な表現を含む内容</li>
+              <li>虚偽の情報や誤解を招く内容</li>
+              <li>商業目的の宣伝・広告を主目的とする内容</li>
+              <li>牛乳、酪農、協力先、関係者のイメージを著しく損なう内容</li>
+              <li>その他、主催者が不適切と判断する内容</li>
+            </ol>
+          </article>
+
+          <article id="article-6" class="article">
+            <h2>第6条 審査・結果発表</h2>
+            <h3>1. 審査方法</h3>
+            <p>
+              主催者および関係者による選考を行います。応募作品の上手さだけでなく、牛乳月間らしさ、作品に込めた思い、親しみやすさ、未来への広がりなどを総合的に評価します。
+            </p>
+            <h3>2. 審査基準</h3>
+            <ul>
+              <li>牛乳や乳製品、酪農とのつながりが伝わるか</li>
+              <li>作品説明やコメントに思いが込められているか</li>
+              <li>見た人が参加したくなる親しみやすさがあるか</li>
+              <li>未来の牛乳や酪農につながる視点があるか</li>
+            </ul>
+            <h3>3. 結果発表</h3>
+            <p>
+              結果発表は2026年7月を予定しています。発表方法は、本キャンペーン特設LP、主催者公式サイト、公式SNS等を予定しています。対象者には別途メールで連絡する場合があります。
+            </p>
+            <h3>4. 注意事項</h3>
+            <ul>
+              <li>審査の過程および結果に関する個別のお問い合わせには応じられません。</li>
+              <li>審査結果に対する異議申し立ては受け付けません。</li>
+              <li>応募条件を満たした作品であっても、すべての媒体掲載を保証するものではありません。</li>
+            </ul>
+          </article>
+
+          <article id="article-7" class="article">
+            <h2>第7条 特典・副賞</h2>
+            <h3>1. 参加証NFT</h3>
+            <p>
+              本キャンペーン参加者のうち希望者には、NFT「未来のミルク参加証 2026」を無料で配布します。NFTの受け取りは任意であり、受け取らなくても応募できます。
+            </p>
+            <ul>
+              <li>NFTは金銭的価値や投資性を保証するものではありません。</li>
+              <li>受け取りサイト、受け取り方法、受け取り期限等は、応募後にメール等で案内します。</li>
+              <li>ウォレット、通信環境、外部サービスの仕様変更等により受け取りができない場合があります。</li>
+            </ul>
+            <h3>2. 副賞</h3>
+            <p>
+              副賞として、島根県の牛乳・乳製品詰め合わせ、川上牧場の牛乳を使ったカヌレ等を用意します。対象者数、内容、発送時期、発送方法は、結果発表時または個別連絡時に案内します。
+            </p>
+            <ul>
+              <li>副賞の発送は日本国内に限ります。</li>
+              <li>副賞の換金、変更、譲渡はできません。</li>
+              <li>対象者が連絡不能の場合、または受け取りを辞退した場合、対象を取り消す場合があります。</li>
+            </ul>
+            <h3>3. 展示</h3>
+            <p>
+              応募条件を満たした作品は、2026年10月開催予定の「しまね酪農フェア」会場ブースで展示予定です。展示方法、掲出サイズ、掲出順、クレジット表記の有無は主催者または関係者が決定します。
+            </p>
+          </article>
+
+          <article id="article-8" class="article">
+            <h2>第8条 著作権および使用許諾</h2>
+            <h3>1. 著作権の帰属</h3>
+            <ul>
+              <li>応募作品について著作権法上の著作権が発生する場合、当該著作権は応募者に帰属します。</li>
+              <li>AI生成部分については、使用したAIツールの利用規約に従います。</li>
+              <li>応募者は、応募作品について必要な権利処理を行い、第三者の権利を侵害しないことを保証するものとします。</li>
+            </ul>
+            <h3>2. 主催者の使用権</h3>
+            <p>
+              応募者は、主催者および主催者が許諾した第三者に対し、応募作品、作品タイトル、作品説明、自由記述、応募時に指定した公開可能な名前等について、以下の目的で、期間の定めなく、無償・非独占的に利用することを許諾するものとします。
+            </p>
+            <ul>
+              <li>本キャンペーンの運営、審査、結果発表</li>
+              <li>本キャンペーン特設LP、主催者公式サイト、SNS、メール、プレスリリース、関連資料への掲載</li>
+              <li>「しまね酪農フェア」等のイベント、展示会、発表資料での展示・紹介</li>
+              <li>協力酪農家、牧場、関係団体の発信における紹介</li>
+              <li>AI分析レポート、広報、メディア対応、事例紹介、今後の関連企画の参考資料としての利用</li>
+              <li>掲載媒体に合わせたトリミング、サイズ変更、色味調整、レイアウト調整、抜粋、要約等の編集</li>
+            </ul>
+            <h3>3. クレジット表記</h3>
+            <p>
+              主催者が応募作品を使用する際、クレジット表記の有無、表記名、表記位置、表記方法は、応募フォームでの指定内容と媒体特性を踏まえ、主催者が判断します。
+            </p>
+            <h3>4. 著作者人格権</h3>
+            <p>
+              応募者は、主催者および主催者が許諾した第三者による本規約に基づく応募作品の利用に関し、著作者人格権を行使しないものとします。
+            </p>
+          </article>
+
+          <article id="article-9" class="article">
+            <h2>第9条 AI生成画像の扱い</h2>
+            <ol>
+              <li>AI生成画像で応募する場合は、商用利用または本キャンペーンでの公開・展示・広報利用が可能なツールを使用してください。</li>
+              <li>応募者は、使用したAIツールの利用規約、生成物の利用条件、権利関係を自身の責任で確認してください。</li>
+              <li>AI生成画像で応募する場合は、応募フォームで使用したAIツール名を入力してください。</li>
+              <li>既存のキャラクター、ブランドロゴ、著名人、第三者の作品に酷似した画像、または第三者の権利を侵害するおそれのある画像は応募できません。</li>
+              <li>AI生成画像であることを理由に不利に扱うものではありませんが、権利確認が困難な場合や不適切と判断した場合、掲載・展示・受賞対象外とする場合があります。</li>
+            </ol>
+          </article>
+
+          <article id="article-10" class="article">
+            <h2>第10条 人物写真・未成年</h2>
+            <ol>
+              <li>実在人物が写っている写真・画像を応募する場合は、写っている本人から本キャンペーンへの応募、公開、展示、広報利用について同意を得てください。</li>
+              <li>18歳未満の方が写っている場合、または18歳未満の方が応募する場合は、保護者の同意を得てください。</li>
+              <li>学校、園、施設、イベント会場等で撮影した写真を応募する場合は、必要に応じて施設管理者や関係者の許諾を得てください。</li>
+              <li>主催者が人物写真の同意確認が不十分と判断した場合、応募作品の掲載・展示を控える場合があります。</li>
+            </ol>
+          </article>
+
+          <article id="article-11" class="article">
+            <h2>第11条 個人情報</h2>
+            <h3>1. 取得する情報</h3>
+            <p>
+              主催者は、本キャンペーンの運営に必要な範囲で、応募者名、メールアドレス、年齢区分、作品情報、発送先情報、掲載可否、同意確認事項等を取得する場合があります。
+            </p>
+            <h3>2. 利用目的</h3>
+            <ul>
+              <li>本キャンペーンの応募受付、運営、審査、結果発表</li>
+              <li>応募内容の確認、連絡、問い合わせ対応</li>
+              <li>特典・副賞・NFT受け取り方法等の案内</li>
+              <li>副賞の発送</li>
+              <li>応募作品の掲載、展示、広報利用、AI分析レポート作成</li>
+              <li>主催者が提供する関連情報の案内（希望者のみ）</li>
+            </ul>
+            <h3>3. 第三者提供</h3>
+            <p>
+              主催者は、応募者の同意がある場合、法令に基づく場合、特典・副賞発送や展示・運営に必要な範囲で委託先・協力先に提供する場合を除き、応募者の個人情報を第三者に提供しません。
+            </p>
+            <h3>4. 公開対象外の情報</h3>
+            <p>
+              メールアドレス、住所、電話番号、発送先情報、審査メモ等は、応募作品ギャラリーや公開レポートには掲載しません。
+            </p>
+          </article>
+
+          <article id="article-12" class="article">
+            <h2>第12条 免責事項</h2>
+            <ol>
+              <li>通信障害、システム障害、応募者の利用環境、外部サービスの仕様変更等により応募、掲載、NFT受け取り、特典・副賞の受け取りができなかった場合、主催者は責任を負いません。</li>
+              <li>応募作品に関して第三者との間で紛争が生じた場合、応募者の責任と費用において解決するものとし、主催者に迷惑または損害を与えないものとします。</li>
+              <li>主催者が応募作品に第三者の権利侵害またはそのおそれがあると判断した場合、当該作品の公開停止、展示停止、受賞取消、特典・副賞対象外等の対応を行うことができます。</li>
+              <li>本キャンペーンの内容、特典、副賞、展示、発表時期、AI分析レポートの内容は、運営上の都合により変更となる場合があります。</li>
+            </ol>
+          </article>
+
+          <article id="article-13" class="article">
+            <h2>第13条 キャンペーンの中止・変更</h2>
+            <p>
+              主催者は、天災地変、戦争、暴動、疫病、法令の制定・改廃、システム障害、協力先・会場都合、その他主催者がやむを得ないと判断した場合、本キャンペーンの全部または一部を中止、延期、変更することがあります。この場合、主催者は応募者に対して一切の責任を負いません。
+            </p>
+          </article>
+
+          <article id="article-14" class="article">
+            <h2>第14条 お問い合わせ</h2>
+            <p>
+              本キャンペーンに関するお問い合わせは、Metagri研究所（株式会社農情人）までお願いいたします。
+            </p>
+            <div class="info-table" role="table" aria-label="お問い合わせ先">
+              <div class="info-row" role="row">
+                <b role="cell">公式サイト</b>
+                <span role="cell"><a href="https://metagri-labo.com/" target="_blank" rel="noopener">https://metagri-labo.com/</a></span>
+              </div>
+              <div class="info-row" role="row">
+                <b role="cell">お問い合わせフォーム</b>
+                <span role="cell"><a href="https://metagri-labo.com/contact/" target="_blank" rel="noopener">https://metagri-labo.com/contact/</a></span>
+              </div>
+            </div>
+            <p class="note">
+              お問い合わせへの回答には数日を要する場合があります。あらかじめご了承ください。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>未来のミルク画像投稿キャンペーン2026</strong>
+        <p class="small">
+          主催: Metagri研究所（株式会社農情人）<br>
+          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック<br>
+          協力: 川上牧場、協力酪農家の皆様
+          <br><a href="index.html">LPへ戻る</a>
+          <br><a href="gallery.html">参考ギャラリーを見る</a>
+          <br><a href="https://www.dairy-farm.jp/" target="_blank" rel="noopener">地域交流牧場全国連絡会 公式HP</a>
+        </p>
+      </div>
+      <p class="small">
+        <a href="index.html#entry">応募フォームへ</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
