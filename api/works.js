@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   }
 
   const formula = encodeURIComponent(
-    "AND({LP・SNS等での掲載可否}='はい',{作品画像},{作品タイトル},NOT(OR({掲載ステータス}='非公開',{掲載ステータス}='保留')))"
+    "AND({参加規約への同意},{作品画像},{作品タイトル})"
   );
   const fields = airtableFieldParams(PUBLIC_FIELDS);
   const url =
