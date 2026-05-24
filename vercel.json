@@ -1,0 +1,17 @@
+{
+  "headers": [
+    {
+      "source": "/api/works",
+      "headers": [
+        {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "public, s-maxage=300, stale-while-revalidate=600"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60"
+        }
+      ]
+    }
+  ]
+}
