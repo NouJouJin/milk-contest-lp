@@ -3,17 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGHQ2LWHG4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GGHQ2LWHG4');
+    window.mlTrack = function(name, params){
+      try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
+    };
+  </script>
   <title>応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026</title>
   <meta name="description" content="未来のミルク画像投稿キャンペーン2026に寄せられた応募作品を紹介するギャラリーページです。">
   <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="image/favicon-512.png" type="image/png">
   <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
   <meta property="og:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
   <meta property="og:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。">
-  <meta property="og:type" content="website">
   <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
   <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="432">
+  <meta property="og:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
+  <meta property="og:locale" content="ja_JP">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
+  <meta name="twitter:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。">
+  <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
   <style>
     :root {
       --milk: #fffdf7;
@@ -479,12 +504,12 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="index.html#about">企画について</a>
-        <a href="index.html#themes">募集テーマ</a>
-        <a href="gallery.html">参考ギャラリー</a>
-        <a class="is-active" href="submitted-works.html">応募作品</a>
-        <a href="terms.html">参加規約</a>
-        <a class="button" href="index.html#entry">応募する</a>
+        <a href="index.html#about" data-nav="about">企画について</a>
+        <a href="index.html#themes" data-nav="themes">募集テーマ</a>
+        <a href="gallery.html" data-nav="gallery">参考ギャラリー</a>
+        <a class="is-active" href="submitted-works.html" data-nav="works">応募作品</a>
+        <a href="terms.html" data-nav="terms">参加規約</a>
+        <a class="button" href="index.html#entry" data-cta="apply" data-cta-location="nav">応募する</a>
       </nav>
     </div>
   </header>
@@ -542,7 +567,7 @@
         </p>
       </div>
       <p class="small">
-        <a href="index.html#entry">応募フォームへ</a>
+        <a href="index.html#entry" data-cta="apply" data-cta-location="footer">応募フォームへ</a>
       </p>
     </div>
   </footer>
@@ -673,7 +698,15 @@
               <div class="work-date">${formatDate(work.createdAt)}</div>
             </div>
           `;
-          card.querySelector("button").addEventListener("click", () => openModal(work));
+          card.querySelector("button").addEventListener("click", () => {
+            window.mlTrack && window.mlTrack("works_card_open", {
+              work_id: work.id,
+              work_title: work.title,
+              work_theme: asText(work.theme),
+              work_format: asText(work.format),
+            });
+            openModal(work);
+          });
           grid.appendChild(card);
         });
       };
@@ -688,21 +721,78 @@
           fillSelect(themeFilter, works.map((work) => asText(work.theme)));
           fillSelect(formatFilter, works.map((work) => asText(work.format)));
           render();
+          window.mlTrack && window.mlTrack("works_loaded", {
+            count: works.length,
+            status: "success",
+          });
         } catch (error) {
           count.textContent = "掲載中の作品: --件";
           updated.textContent = "最終更新: 取得できませんでした";
           setStatus("作品一覧を読み込めませんでした。", "時間をおいて再読み込みしてください。");
+          window.mlTrack && window.mlTrack("works_loaded", {
+            count: 0,
+            status: "error",
+            error_message: (error && error.message) || "unknown",
+          });
         }
       };
 
-      themeFilter.addEventListener("change", render);
-      formatFilter.addEventListener("change", render);
+      themeFilter.addEventListener("change", () => {
+        window.mlTrack && window.mlTrack("works_filter_change", {
+          filter_type: "theme",
+          filter_value: themeFilter.value || "all",
+        });
+        render();
+      });
+      formatFilter.addEventListener("change", () => {
+        window.mlTrack && window.mlTrack("works_filter_change", {
+          filter_type: "format",
+          filter_value: formatFilter.value || "all",
+        });
+        render();
+      });
       modalClose.addEventListener("click", closeModal);
       modal.addEventListener("click", (event) => {
         if (event.target === modal) closeModal();
       });
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+      });
+
+      // 共通のクリックトラッキング（nav / cta / outbound）
+      const SITE_HOST = "world-milk-contest-2026.metagri-labo.com";
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a");
+        if (!link || !window.mlTrack) return;
+        const cta = link.getAttribute("data-cta");
+        if (cta) {
+          window.mlTrack("cta_click", {
+            cta_label: cta,
+            cta_location: link.getAttribute("data-cta-location") || "unknown",
+            cta_target: link.getAttribute("href") || "",
+          });
+        }
+        const nav = link.getAttribute("data-nav");
+        if (nav) {
+          window.mlTrack("nav_click", {
+            nav_target: nav,
+            nav_href: link.getAttribute("href") || "",
+            page: "submitted-works",
+          });
+        }
+        try {
+          const href = link.getAttribute("href") || "";
+          if (/^https?:\/\//i.test(href)) {
+            const url = new URL(href);
+            if (url.host && url.host !== SITE_HOST) {
+              window.mlTrack("outbound_click", {
+                link_url: href,
+                link_domain: url.host,
+                page: "submitted-works",
+              });
+            }
+          }
+        } catch(e) {}
       });
 
       loadWorks();

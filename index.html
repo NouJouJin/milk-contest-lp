@@ -10,6 +10,9 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GGHQ2LWHG4');
+    window.mlTrack = function(name, params){
+      try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
+    };
   </script>
   <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
   <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
@@ -1389,15 +1392,15 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="#about">企画について</a>
-        <a href="#themes">募集テーマ</a>
-        <a href="#howto">応募方法</a>
-        <a href="#benefits">特典</a>
-        <a href="gallery.html">参考ギャラリー</a>
-        <a href="submitted-works.html">応募作品</a>
-        <a href="terms.html">参加規約</a>
-        <a href="#faq">FAQ</a>
-        <a class="button" href="#entry">応募する</a>
+        <a href="#about" data-nav="about">企画について</a>
+        <a href="#themes" data-nav="themes">募集テーマ</a>
+        <a href="#howto" data-nav="howto">応募方法</a>
+        <a href="#benefits" data-nav="benefits">特典</a>
+        <a href="gallery.html" data-nav="gallery">参考ギャラリー</a>
+        <a href="submitted-works.html" data-nav="works">応募作品</a>
+        <a href="terms.html" data-nav="terms">参加規約</a>
+        <a href="#faq" data-nav="faq">FAQ</a>
+        <a class="button" href="#entry" data-cta="apply" data-cta-location="nav">応募する</a>
       </nav>
     </div>
   </header>
@@ -1415,10 +1418,10 @@
       <div class="hero-panel">
         <div>
           <div class="hero-actions">
-            <a class="button" href="#entry">応募する<span class="arrow">→</span></a>
-            <a class="button secondary" href="#themes">募集テーマを見る</a>
-            <a class="button secondary" href="gallery.html">参考ギャラリーを見る</a>
-            <a class="button secondary" href="submitted-works.html">応募作品を見る</a>
+            <a class="button" href="#entry" data-cta="apply" data-cta-location="hero">応募する<span class="arrow">→</span></a>
+            <a class="button secondary" href="#themes" data-cta="themes" data-cta-location="hero">募集テーマを見る</a>
+            <a class="button secondary" href="gallery.html" data-cta="gallery" data-cta-location="hero">参考ギャラリーを見る</a>
+            <a class="button secondary" href="submitted-works.html" data-cta="works" data-cta-location="hero">応募作品を見る</a>
           </div>
           <div class="hero-meta" aria-label="キャンペーン概要">
             <span class="pill">応募期間: 2026年6月1日から6月30日</span>
@@ -1947,7 +1950,7 @@
       </div>
     </div>
   </footer>
-  <a class="floating-entry" href="#entry" aria-label="応募フォームへ移動">応募フォームへ</a>
+  <a class="floating-entry" href="#entry" aria-label="応募フォームへ移動" data-cta="apply" data-cta-location="floating">応募フォームへ</a>
   <script>
     (() => {
       const header = document.querySelector(".site-header");
@@ -2046,6 +2049,68 @@
       updateCountdown();
       updatePageState();
       updateActiveNav();
+
+      // ===== GA カスタム計測（mlTrack） =====
+      const SITE_HOST = "world-milk-contest-2026.metagri-labo.com";
+
+      // 全リンクの delegate トラッキング（cta / nav / outbound）
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a");
+        if (!link || !window.mlTrack) return;
+
+        const cta = link.getAttribute("data-cta");
+        if (cta) {
+          const isSecondary = (link.getAttribute("data-cta-location") || "") !== "nav"
+            && cta !== "apply";
+          window.mlTrack(isSecondary ? "secondary_cta_click" : "cta_click", {
+            cta_label: cta,
+            cta_location: link.getAttribute("data-cta-location") || "unknown",
+            cta_target: link.getAttribute("href") || "",
+          });
+        }
+
+        const nav = link.getAttribute("data-nav");
+        if (nav) {
+          window.mlTrack("nav_click", {
+            nav_target: nav,
+            nav_href: link.getAttribute("href") || "",
+            page: "index",
+          });
+        }
+
+        try {
+          const href = link.getAttribute("href") || "";
+          if (/^https?:\/\//i.test(href)) {
+            const url = new URL(href);
+            if (url.host && url.host !== SITE_HOST) {
+              window.mlTrack("outbound_click", {
+                link_url: href,
+                link_domain: url.host,
+                page: "index",
+              });
+            }
+          }
+        } catch (e) {}
+      });
+
+      // #entry が 50% 以上画面表示されたら entry_form_view を1回だけ発火
+      const entrySection = document.getElementById("entry");
+      if (entrySection && "IntersectionObserver" in window) {
+        let entryViewSent = false;
+        const entryObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !entryViewSent) {
+              entryViewSent = true;
+              window.mlTrack && window.mlTrack("entry_form_view", {
+                ratio: Math.round((entry.intersectionRatio || 0) * 100),
+                page: "index",
+              });
+              entryObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.5 });
+        entryObserver.observe(entrySection);
+      }
     })();
   </script>
 </body>

@@ -10,6 +10,9 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GGHQ2LWHG4');
+    window.mlTrack = function(name, params){
+      try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
+    };
   </script>
   <title>参考ギャラリー | 未来のミルク画像投稿キャンペーン2026</title>
   <meta name="description" content="未来のミルク画像投稿キャンペーン2026に参加する方向けの、牛の写真参考ギャラリーです。">
@@ -469,13 +472,13 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="index.html#about">企画について</a>
-        <a href="index.html#themes">募集テーマ</a>
-        <a href="index.html#howto">応募方法</a>
-        <a href="gallery.html">参考ギャラリー</a>
-        <a href="submitted-works.html">応募作品</a>
-        <a href="terms.html">参加規約</a>
-        <a class="button" href="index.html#entry">応募する</a>
+        <a href="index.html#about" data-nav="about">企画について</a>
+        <a href="index.html#themes" data-nav="themes">募集テーマ</a>
+        <a href="index.html#howto" data-nav="howto">応募方法</a>
+        <a class="is-active" href="gallery.html" data-nav="gallery">参考ギャラリー</a>
+        <a href="submitted-works.html" data-nav="works">応募作品</a>
+        <a href="terms.html" data-nav="terms">参加規約</a>
+        <a class="button" href="index.html#entry" data-cta="apply" data-cta-location="nav">応募する</a>
       </nav>
     </div>
   </header>
@@ -669,6 +672,44 @@
         if (event.key === "Escape" && modal.classList.contains("is-open")) {
           closeModal();
         }
+      });
+    })();
+  </script>
+  <script>
+    (() => {
+      const SITE_HOST = "world-milk-contest-2026.metagri-labo.com";
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest("a");
+        if (!link || !window.mlTrack) return;
+        const cta = link.getAttribute("data-cta");
+        if (cta) {
+          window.mlTrack("cta_click", {
+            cta_label: cta,
+            cta_location: link.getAttribute("data-cta-location") || "unknown",
+            cta_target: link.getAttribute("href") || "",
+          });
+        }
+        const nav = link.getAttribute("data-nav");
+        if (nav) {
+          window.mlTrack("nav_click", {
+            nav_target: nav,
+            nav_href: link.getAttribute("href") || "",
+            page: "gallery",
+          });
+        }
+        try {
+          const href = link.getAttribute("href") || "";
+          if (/^https?:\/\//i.test(href)) {
+            const url = new URL(href);
+            if (url.host && url.host !== SITE_HOST) {
+              window.mlTrack("outbound_click", {
+                link_url: href,
+                link_domain: url.host,
+                page: "gallery",
+              });
+            }
+          }
+        } catch(e) {}
       });
     })();
   </script>
