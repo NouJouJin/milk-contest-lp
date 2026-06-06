@@ -612,6 +612,115 @@
       color: var(--green);
     }
 
+    /* === 開催中レポート（進捗）セクション === */
+    .progress-head-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #fff;
+      background: var(--berry);
+      border-radius: 999px;
+    }
+    .live-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      animation: livePulse 1.8s infinite;
+    }
+    @keyframes livePulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+      70% { box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+    .update-stamp {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .progress-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 26px 0 30px;
+    }
+    .stat-card {
+      padding: 18px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+    }
+    .stat-card .num {
+      display: block;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--green);
+    }
+    .stat-card .num .unit {
+      font-size: 15px;
+      margin-left: 2px;
+    }
+    .stat-card .label {
+      display: block;
+      margin-top: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .stat-card.accent-blue .num { color: var(--blue-deep); }
+    .stat-card.accent-berry .num { color: var(--berry); }
+    .stat-card.accent-yellow .num { color: var(--coral); }
+    .insight-lead {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 18px;
+    }
+    .insight-quote {
+      margin: 24px 0 0;
+      padding: 20px 22px;
+      border-left: 4px solid var(--berry);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: rgba(255, 255, 255, 0.86);
+    }
+    .insight-quote p {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .insight-quote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-style: normal;
+      color: var(--muted);
+    }
+    .progress-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+    @media (max-width: 720px) {
+      .progress-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     .icon {
       display: inline-grid;
       place-items: center;
@@ -1392,6 +1501,7 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="#progress" data-nav="progress">開催中レポート</a>
         <a href="#about" data-nav="about">企画について</a>
         <a href="#themes" data-nav="themes">募集テーマ</a>
         <a href="#howto" data-nav="howto">応募方法</a>
@@ -1444,6 +1554,66 @@
   </section>
 
   <main>
+    <section id="progress" class="section band-soft">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="progress-head-row">
+              <span class="live-badge">開催中</span>
+              <span class="section-kicker" style="margin:0;">Now / 1週目レポート</span>
+            </div>
+            <h2>集まっている作品は<br><span class="accent">「背景が見える牛乳」</span>への期待です。</h2>
+          </div>
+          <p class="lead">
+            受付開始から1週間。写真・イラスト・手描き・AI画像と、多種多様な1枚が届きはじめています。
+            作品に添えられた声から見えてきたのは、「この牛乳は、どの牛さんから来たんだろう」という問いでした。
+          </p>
+        </div>
+
+        <div class="progress-stats" aria-label="1週目の集計サマリー（2026年6月6日時点）">
+          <div class="stat-card">
+            <span class="num">16<span class="unit">件</span></span>
+            <span class="label">応募作品（6/6時点）</span>
+          </div>
+                    <div class="stat-card accent-berry">
+            <span class="num">9<span class="unit">件</span></span>
+            <span class="label">牛乳への声・疑問つき</span>
+          
+          </div>
+        </div>
+
+        <p class="insight-lead">1週目に見えてきた、3つの声。</p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="icon">01</span>
+            <h3>「どこから来た牛乳か」を知りたい</h3>
+            <p>牛さんの名前や牧場の風景、酪農家の想いを親子で知りたい——。一杯の向こう側を見たいという声が、もっとも多く集まっています。</p>
+          </article>
+          <article class="card">
+            <span class="icon">02</span>
+            <h3>牛乳は「家族・団らん」の飲み物</h3>
+            <p>深夜に寄り添う一杯、お酒ではなく牛乳で乾杯する金曜日、100年後も変わらない朝食。栄養だけでない牛乳の姿が描かれています。</p>
+          </article>
+          <article class="card">
+            <span class="icon">03</span>
+            <h3>子ども・手描き・実体験も</h3>
+            <p>チョコミルクの公園を描いた手描き作品、1か月の酪農体験を綴った写真。AI画像だけでなく、参加のかたちが広がりはじめました。</p>
+          </article>
+        </div>
+
+        <blockquote class="insight-quote">
+          <p>「この牛乳は、どの牛さんから来たんだろう。牧場や牛さんの様子を、親子で知れたらうれしい。」</p>
+          <cite>応募作品に寄せられた声より（一部要約）</cite>
+        </blockquote>
+
+        <div class="progress-cta">
+          <a class="button" href="#entry">あなたの1枚を応募する<span class="arrow">→</span></a>
+          <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
+        </div>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月6日 ／ 会期中は毎週更新予定です。</p>
+      </div>
+    </section>
+
     <section id="about" class="section">
       <div class="container">
         <div class="section-head">
