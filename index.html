@@ -1245,6 +1245,81 @@
       color: rgba(255, 255, 255, 0.9);
     }
 
+    .entry-reassurance {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(260px, 0.52fr);
+      gap: 22px;
+      align-items: start;
+      margin-top: 26px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+    }
+
+    .entry-reassurance h3 {
+      margin: 0 0 8px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .entry-reassurance p {
+      font-size: 14px;
+    }
+
+    .entry-checks {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .entry-checks li {
+      position: relative;
+      min-height: 42px;
+      padding: 9px 10px 9px 30px;
+      color: #12342a;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.45;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .entry-checks li::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      width: 9px;
+      height: 5px;
+      border-bottom: 2px solid var(--green);
+      border-left: 2px solid var(--green);
+      transform: rotate(-45deg);
+    }
+
+    .entry-benefit {
+      margin-top: 14px;
+      padding: 13px 14px;
+      border-radius: var(--radius);
+      background: rgba(255, 246, 217, 0.16);
+    }
+
+    .entry-benefit strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff6d9;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .entry-benefit p {
+      font-size: 13px;
+    }
+
     .form-frame {
       overflow: hidden;
       margin-top: 28px;
@@ -1471,6 +1546,11 @@
         border-radius: 22px;
       }
 
+      .entry-reassurance,
+      .entry-checks {
+        grid-template-columns: 1fr;
+      }
+
       .floating-entry {
         right: 12px;
         bottom: 12px;
@@ -1560,57 +1640,64 @@
           <div>
             <div class="progress-head-row">
               <span class="live-badge">開催中</span>
-              <span class="section-kicker" style="margin:0;">Now / 1週目レポート</span>
+              <span class="section-kicker" style="margin:0;">Now / 6月8日レポート</span>
             </div>
-            <h2>集まっている作品は<br><span class="accent">「背景が見える牛乳」</span>への期待です。</h2>
+            <h2>集まっている声は<br><span class="accent">「個性が見える牛乳」</span>への期待です。</h2>
           </div>
           <p class="lead">
-            受付開始から1週間。写真・イラスト・手描き・AI画像と、多種多様な1枚が届きはじめています。
-            作品に添えられた声から見えてきたのは、「この牛乳は、どの牛さんから来たんだろう」という問いでした。
+            受付開始から8日。写真・イラスト・手描き・AI画像と、多種多様な1枚が届いています。
+            作品に添えられた声からは、牛乳の背景だけでなく、地域・季節・牧場ごとの違いを知りたいという期待が見えはじめました。
           </p>
         </div>
 
-        <div class="progress-stats" aria-label="1週目の集計サマリー（2026年6月6日時点）">
+        <div class="progress-stats" aria-label="集計サマリー（2026年6月8日時点）">
           <div class="stat-card">
-            <span class="num">16<span class="unit">件</span></span>
-            <span class="label">応募作品（6/6時点）</span>
+            <span class="num">22<span class="unit">件</span></span>
+            <span class="label">応募作品（6/8時点）</span>
           </div>
-                    <div class="stat-card accent-berry">
-            <span class="num">9<span class="unit">件</span></span>
+          <div class="stat-card accent-berry">
+            <span class="num">14<span class="unit">件</span></span>
             <span class="label">牛乳への声・疑問つき</span>
-          
+          </div>
+          <div class="stat-card accent-blue">
+            <span class="num">8<span class="unit">件</span></span>
+            <span class="label">写真・手描き・イラスト</span>
+          </div>
+          <div class="stat-card accent-yellow">
+            <span class="num">12<span class="unit">件</span></span>
+            <span class="label">「未来の牛乳」テーマ</span>
           </div>
         </div>
 
-        <p class="insight-lead">1週目に見えてきた、3つの声。</p>
+        <p class="insight-lead">6月8日時点で見えてきた、3つの声。</p>
         <div class="grid-3">
           <article class="card">
             <span class="icon">01</span>
-            <h3>「どこから来た牛乳か」を知りたい</h3>
-            <p>牛さんの名前や牧場の風景、酪農家の想いを親子で知りたい——。一杯の向こう側を見たいという声が、もっとも多く集まっています。</p>
+            <h3>地域・季節・牧場ごとの違いを知りたい</h3>
+            <p>牛乳の味や香りは、季節、地域、牧場、餌や環境でどう変わるのか。飲み比べや牧場ごとの個性への関心が具体化しています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
-            <h3>牛乳は「家族・団らん」の飲み物</h3>
-            <p>深夜に寄り添う一杯、お酒ではなく牛乳で乾杯する金曜日、100年後も変わらない朝食。栄養だけでない牛乳の姿が描かれています。</p>
+            <h3>牛乳は「成長と家族の記憶」になる</h3>
+            <p>毎朝の一杯、家族での乾杯、子どもの成長を見守る食卓。牛乳は栄養だけでなく、暮らしの記憶として語られています。</p>
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>子ども・手描き・実体験も</h3>
-            <p>チョコミルクの公園を描いた手描き作品、1か月の酪農体験を綴った写真。AI画像だけでなく、参加のかたちが広がりはじめました。</p>
+            <h3>料理・カフェでも個性が見える</h3>
+            <p>ピザ、グラタン、カフェラテ、牛乳瓶の再活用。飲むだけでなく、料理や仕事場の温かさを支える存在として牛乳が描かれています。</p>
           </article>
         </div>
 
         <blockquote class="insight-quote">
-          <p>「この牛乳は、どの牛さんから来たんだろう。牧場や牛さんの様子を、親子で知れたらうれしい。」</p>
+          <p>「この牛乳は、どこで、どんな季節に、どんな牛さんから届いたんだろう。」</p>
           <cite>応募作品に寄せられた声より（一部要約）</cite>
         </blockquote>
 
         <div class="progress-cta">
-          <a class="button" href="#entry">あなたの1枚を応募する<span class="arrow">→</span></a>
+          <a class="button" href="#entry">あなたの牛乳時間を応募する<span class="arrow">→</span></a>
           <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
         </div>
-        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月6日 ／ 会期中は毎週更新予定です。</p>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月8日 ／ 会期中は毎週更新予定です。</p>
       </div>
     </section>
 
@@ -2092,7 +2179,29 @@
             写真でも、イラストでも、親子で描いた作品でも。<br>
             牛乳にまつわるあなたの1枚をお待ちしています。
           </p>
-          <div class="form-frame">
+          <div class="entry-reassurance" data-reassurance>
+            <div>
+              <h3>応募前に、これだけ確認できればOK</h3>
+              <p>
+                上手さよりも、牛乳への思いや日常のひとコマを大切にしています。<br>
+                迷っている方も、まずは気軽に1枚から参加できます。
+              </p>
+              <div class="entry-benefit">
+                <strong>特典について</strong>
+                <p>
+                  希望者には、参加証NFTを無料でご案内します。
+                  表彰作品には、島根県の牛乳・乳製品詰め合わせや川上牧場のカヌレなどの副賞を予定しています。
+                </p>
+              </div>
+            </div>
+            <ul class="entry-checks" aria-label="応募前チェックリスト">
+              <li>スマホ写真1枚でOK</li>
+              <li>ニックネームで参加可</li>
+              <li>入力は約5分</li>
+              <li>未成年は保護者同意必要</li>
+            </ul>
+          </div>
+          <div id="entry-form" class="form-frame">
             <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/paghtnLiOMP0bccRE/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
           </div>
         </div>
@@ -2276,6 +2385,24 @@
           });
         }, { threshold: 0.5 });
         entryObserver.observe(entrySection);
+      }
+
+      const reassurance = document.querySelector("[data-reassurance]");
+      if (reassurance && "IntersectionObserver" in window) {
+        let reassuranceViewSent = false;
+        const reassuranceObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !reassuranceViewSent) {
+              reassuranceViewSent = true;
+              window.mlTrack && window.mlTrack("entry_reassurance_view", {
+                ratio: Math.round((entry.intersectionRatio || 0) * 100),
+                page: "index",
+              });
+              reassuranceObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.5 });
+        reassuranceObserver.observe(reassurance);
       }
     })();
   </script>
