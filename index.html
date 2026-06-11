@@ -828,6 +828,102 @@
       opacity: 0.94;
     }
 
+    .featured-works {
+      margin-top: 34px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .featured-works[hidden] {
+      display: none;
+    }
+
+    .featured-works-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .featured-works-head h3 {
+      margin: 0;
+      color: var(--green);
+      font-size: 22px;
+    }
+
+    .featured-works-head p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .featured-works-link {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .featured-works-link:hover {
+      text-decoration: underline;
+    }
+
+    .featured-works-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .featured-work-card {
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid rgba(220, 232, 226, 0.95);
+      border-radius: var(--radius);
+      background: var(--milk);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .featured-work-card:hover {
+      border-color: rgba(47, 111, 85, 0.32);
+      box-shadow: 0 14px 32px rgba(30, 42, 50, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .featured-work-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--cream);
+    }
+
+    .featured-work-body {
+      padding: 12px 12px 14px;
+    }
+
+    .featured-work-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    .featured-work-meta {
+      display: block;
+      margin-top: 6px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
     .gallery-preview {
       display: grid;
       grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.72fr);
@@ -1448,6 +1544,7 @@
 
       .grid-3,
       .grid-4,
+      .featured-works-grid,
       .theme-grid,
       .steps,
       .award-grid,
@@ -1514,6 +1611,7 @@
 
       .grid-3,
       .grid-4,
+      .featured-works-grid,
       .theme-grid,
       .steps,
       .award-grid,
@@ -1727,6 +1825,17 @@
             <h3>地域の場へ届く</h3>
             <p>応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。</p>
           </article>
+        </div>
+
+        <div class="featured-works" data-featured-works hidden>
+          <div class="featured-works-head">
+            <div>
+              <h3>届いている作品の一部</h3>
+              <p>写真、手描き、イラスト、AI画像など、さまざまな牛乳時間が集まっています。</p>
+            </div>
+            <a class="featured-works-link" href="submitted-works.html" data-cta="works" data-cta-location="about_featured">応募作品ギャラリーを見る</a>
+          </div>
+          <div class="featured-works-grid" data-featured-works-grid aria-label="応募作品の抜粋"></div>
         </div>
       </div>
     </section>
@@ -2321,6 +2430,110 @@
       updateCountdown();
       updatePageState();
       updateActiveNav();
+
+      // About内の応募作品抜粋（公開作品APIから厳選IDを表示）
+      const featuredWorksRoot = document.querySelector("[data-featured-works]");
+      const featuredWorksGrid = document.querySelector("[data-featured-works-grid]");
+      const featuredWorkIds = [
+        "rec247kaO4RxU59l9",
+        "rec6O9zmFmGUvlsbG",
+        "rec14hKnkc2Iq24RO",
+        "recyrqR5YuK7L9qjO",
+      ];
+      const featuredFallbackWorks = [
+        {
+          id: "rec247kaO4RxU59l9",
+          title: "大きくなる途中",
+          theme: "牛乳のある食卓",
+          format: "写真",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/d8VKOo4SnybzDnQuCAcG7A/dgeNfThH6kb6aEG2LihYd5klTHbFyziwOwPkuaD6-Acbf6-Qi18dopjJaxyavSEfxXwxMQ7xf3JWJGQoeHfpCvK4owwPjajyBpbJ20pe0crUsuZfT3Tv6ZLT33tC3-7fWtCknG0Hay75sin05NyE-A/7GKgGwI4HKA3ZdO3yAjVjerdWW-vGUIAYemBUKH9AaQ",
+        },
+        {
+          id: "rec6O9zmFmGUvlsbG",
+          title: "ミルクのおかげ！ごちそうイタリアン",
+          theme: "牛乳のある食卓",
+          format: "手描き作品",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/I8dYRk9OxJpuJwdfUol_-w/eO0veZMFKVvCJZ4V6iOJrKKJ-u1551b6n66hwmcs3XM-muzMXownDQu3YCBUFfkeYTkQGwvn9jgjdesejBsXPU3M9sM1-jt58LzuTORmOJCQ-deVB8mkbOnvtKBSC3kSzPZMuzehtCq7lZwVvPx0XA/q16PC1ih3d83kPCOo5GMYfh75To8G9kIHxkEhLcGhMo",
+        },
+        {
+          id: "rec14hKnkc2Iq24RO",
+          title: "おいしいミルクをありがとう",
+          theme: "牛さんに伝えたいこと",
+          format: "イラスト",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/82BRnK8O8Inic1yRojs1kg/W5MrfiG2V78zfUHtc8AKxpg1kltnDWxmH9NGN1UfjW5N1rUsh7V7bk-xKo1jSacf6UKhjg5R0Blh3dyfwVaaqyXohb-Jk51XH6KmfiKZi-hhYfFhOCG2OzBh5phV16ZcqWInRgqxOdHF5Fus1yuIvg/t7bs7cpxM1w69Ny8Y5I3Lpub_3DA25TZ4_7L8yhXCGI",
+        },
+        {
+          id: "recyrqR5YuK7L9qjO",
+          title: "お風呂上り",
+          theme: "わたしの牛乳時間",
+          format: "AI生成画像",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/pA0-7RZlhAsVVyf5fj3z_A/nFR6aejChiSGtWlDkQj8GNCJsBId9zqKJwDujvydtsnCYOjtFAV-K93TpS_lkHULXxvsPPwC93x5aetPMFIiSYY42IgZvtvnzTBomhFuKIFQpg0Mdc58T5aGceBIsuk6qEa3vbTgf-1QRaHGk09h7Q/CwhSxsS_NimtZqon88LsNZ5GFTbMsFeBoPL48z8qWJg",
+        },
+      ];
+
+      const escapeHtml = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      }[char]));
+
+      const asText = (value) => Array.isArray(value) ? value.join(" / ") : (value || "");
+
+      const worksApiUrl = () => {
+        const host = window.location.hostname;
+        if (host === "world-milk-contest-2026.metagri-labo.com" || host.endsWith(".vercel.app")) {
+          return "/api/works";
+        }
+        return "https://world-milk-contest-2026.metagri-labo.com/api/works";
+      };
+
+      const renderFeaturedWorks = (works) => {
+        if (!featuredWorksRoot || !featuredWorksGrid || !works.length) return;
+
+        const selected = featuredWorkIds
+          .map((id) => works.find((work) => work.id === id))
+          .filter(Boolean);
+        const fallback = works.filter((work) => !selected.some((selectedWork) => selectedWork.id === work.id));
+        const displayWorks = [...selected, ...fallback].slice(0, 4);
+
+        if (!displayWorks.length) return;
+
+        featuredWorksGrid.innerHTML = displayWorks.map((work) => {
+          const theme = asText(work.theme);
+          const format = asText(work.format);
+          const meta = [format, theme].filter(Boolean).join(" / ");
+          return `
+            <a class="featured-work-card" href="submitted-works.html" data-cta="featured_work" data-cta-location="about" data-work-id="${escapeHtml(work.id)}">
+              <img src="${escapeHtml(work.thumb)}" alt="${escapeHtml(work.title)}" loading="lazy">
+              <div class="featured-work-body">
+                <p class="featured-work-title">${escapeHtml(work.title)}</p>
+                ${meta ? `<span class="featured-work-meta">${escapeHtml(meta)}</span>` : ""}
+              </div>
+            </a>
+          `;
+        }).join("");
+        featuredWorksRoot.hidden = false;
+
+        window.mlTrack && window.mlTrack("featured_works_loaded", {
+          count: displayWorks.length,
+          page: "index",
+        });
+      };
+
+      if (featuredWorksRoot && featuredWorksGrid) {
+        renderFeaturedWorks(featuredFallbackWorks);
+        fetch(worksApiUrl(), { headers: { Accept: "application/json" } })
+          .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
+          .then((data) => {
+            const works = Array.isArray(data.works) ? data.works.filter((work) => work.title && work.thumb) : [];
+            renderFeaturedWorks(works.length ? works : featuredFallbackWorks);
+          })
+          .catch(() => {
+            renderFeaturedWorks(featuredFallbackWorks);
+          });
+      }
 
       // ===== GA カスタム計測（mlTrack） =====
       const SITE_HOST = "world-milk-contest-2026.metagri-labo.com";
