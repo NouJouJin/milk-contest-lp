@@ -656,6 +656,10 @@
       gap: 14px;
       margin: 26px 0 30px;
     }
+    .progress-stats.focused {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 560px;
+    }
     .stat-card {
       padding: 18px 16px;
       border: 1px solid var(--line);
@@ -718,7 +722,8 @@
       margin-top: 26px;
     }
     @media (max-width: 720px) {
-      .progress-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .progress-stats,
+      .progress-stats.focused { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     .icon {
@@ -1640,56 +1645,48 @@
           <div>
             <div class="progress-head-row">
               <span class="live-badge">開催中</span>
-              <span class="section-kicker" style="margin:0;">Now / 6月8日レポート</span>
+              <span class="section-kicker" style="margin:0;">Now / 6月11日レポート</span>
             </div>
-            <h2>集まっている声は<br><span class="accent">「個性が見える牛乳」</span>への期待です。</h2>
+            <h2>未来の牛乳は、<br><span class="accent">気持ちにも寄り添う一杯へ。</span></h2>
           </div>
           <p class="lead">
-            受付開始から8日。写真・イラスト・手描き・AI画像と、多種多様な1枚が届いています。
-            作品に添えられた声からは、牛乳の背景だけでなく、地域・季節・牧場ごとの違いを知りたいという期待が見えはじめました。
+            受付開始から11日で、応募作品は28件に。
+            牛乳の背景や味の違いだけでなく、心を整える一杯、発酵や料理、湯上がりの体験まで、未来の牛乳像が広がっています。
           </p>
         </div>
 
-        <div class="progress-stats" aria-label="集計サマリー（2026年6月8日時点）">
+        <div class="progress-stats focused" aria-label="集計サマリー（2026年6月11日時点）">
           <div class="stat-card">
-            <span class="num">22<span class="unit">件</span></span>
-            <span class="label">応募作品（6/8時点）</span>
+            <span class="num">28<span class="unit">件</span></span>
+            <span class="label">応募作品（6/11時点）</span>
           </div>
           <div class="stat-card accent-berry">
-            <span class="num">14<span class="unit">件</span></span>
+            <span class="num">17<span class="unit">件</span></span>
             <span class="label">牛乳への声・疑問つき</span>
-          </div>
-          <div class="stat-card accent-blue">
-            <span class="num">8<span class="unit">件</span></span>
-            <span class="label">写真・手描き・イラスト</span>
-          </div>
-          <div class="stat-card accent-yellow">
-            <span class="num">12<span class="unit">件</span></span>
-            <span class="label">「未来の牛乳」テーマ</span>
           </div>
         </div>
 
-        <p class="insight-lead">6月8日時点で見えてきた、3つの声。</p>
+        <p class="insight-lead">6月11日時点で見えてきた、3つの声。</p>
         <div class="grid-3">
           <article class="card">
             <span class="icon">01</span>
-            <h3>地域・季節・牧場ごとの違いを知りたい</h3>
-            <p>牛乳の味や香りは、季節、地域、牧場、餌や環境でどう変わるのか。飲み比べや牧場ごとの個性への関心が具体化しています。</p>
+            <h3>体だけでなく、気持ちにも寄り添う</h3>
+            <p>深夜のホットミルク、湯上がりの一杯、心に効くホエイ。牛乳は栄養だけでなく、気分を整えたり前向きさを支えたりする存在として語られています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
-            <h3>牛乳は「成長と家族の記憶」になる</h3>
-            <p>毎朝の一杯、家族での乾杯、子どもの成長を見守る食卓。牛乳は栄養だけでなく、暮らしの記憶として語られています。</p>
+            <h3>搾りたて・季節・地域の違いを知りたい</h3>
+            <p>牛乳の味や香りは、鮮度、季節、地域、牧場、餌や環境でどう変わるのか。生活者の関心は、背景から商品体験へと深まりはじめています。</p>
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>料理・カフェでも個性が見える</h3>
-            <p>ピザ、グラタン、カフェラテ、牛乳瓶の再活用。飲むだけでなく、料理や仕事場の温かさを支える存在として牛乳が描かれています。</p>
+            <h3>飲むだけでなく、発酵や体験へ広がる</h3>
+            <p>ヨーグルト、バター、プリン、カフェラテ、銭湯の湯上がり牛乳。未来の牛乳は、料理や発酵乳製品、日常の小さな幸せも支えています。</p>
           </article>
         </div>
 
         <blockquote class="insight-quote">
-          <p>「この牛乳は、どこで、どんな季節に、どんな牛さんから届いたんだろう。」</p>
+          <p>「牛乳は、体だけでなく気持ちにも寄り添う一杯かもしれません。」</p>
           <cite>応募作品に寄せられた声より（一部要約）</cite>
         </blockquote>
 
@@ -1697,7 +1694,7 @@
           <a class="button" href="#entry">あなたの牛乳時間を応募する<span class="arrow">→</span></a>
           <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
         </div>
-        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月8日 ／ 会期中は毎週更新予定です。</p>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月11日 ／ 会期中は毎週更新予定です。</p>
       </div>
     </section>
 
