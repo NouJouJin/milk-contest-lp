@@ -56,7 +56,7 @@ export default async function handler(req, res) {
   }
 
   const formula = encodeURIComponent(
-    "AND({参加規約への同意},{作品画像},{作品タイトル})"
+    "AND({参加規約への同意},{作品画像},{作品タイトル},NOT({掲載対象外}))"
   );
   const fields = airtableFieldParams(PUBLIC_FIELDS);
   const url =
