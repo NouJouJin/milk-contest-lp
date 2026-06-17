@@ -15,13 +15,13 @@
     };
   </script>
   <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
-  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
+  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。応募48件、協賛の輪も広がっています。">
   <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
   <meta property="og:title" content="未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026">
-  <meta property="og:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
+  <meta property="og:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。応募48件、協賛の輪も広がっています。">
   <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/">
   <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
@@ -33,7 +33,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026">
-  <meta name="twitter:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。">
+  <meta name="twitter:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。応募48件、協賛の輪も広がっています。">
   <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -610,6 +610,51 @@
 
     .card strong {
       color: var(--green);
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .sponsor-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sponsor-card .area {
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .sponsor-card h3 {
+      font-size: 18px;
+    }
+
+    .sponsor-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sponsor-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(47, 111, 85, 0.18);
+      border-radius: var(--radius);
+      background: rgba(232, 245, 238, 0.74);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
     }
 
     /* === 開催中レポート（進捗）セクション === */
@@ -1544,6 +1589,7 @@
 
       .grid-3,
       .grid-4,
+      .sponsor-grid,
       .featured-works-grid,
       .theme-grid,
       .steps,
@@ -1611,6 +1657,7 @@
 
       .grid-3,
       .grid-4,
+      .sponsor-grid,
       .featured-works-grid,
       .theme-grid,
       .steps,
@@ -1718,10 +1765,11 @@
           </div>
           <div class="hero-meta" aria-label="キャンペーン概要">
             <span class="pill">応募期間: 2026年6月1日から6月30日</span>
+            <span class="pill yellow">応募48件・6/17時点</span>
             <span class="pill blue">写真・イラスト・手描き・AI画像 OK</span>
             <span class="pill yellow">親子参加歓迎</span>
-            <span class="pill berry">地域交流牧場全国連絡会・近畿中国四国ブロック 協賛</span>
-            <span class="pill">島根県の牛乳・乳製品詰め合わせをプレゼント</span>
+            <span class="pill berry">協賛の輪が中四国へ拡大</span>
+            <span class="pill">地域の牛乳・乳製品とつながる特典</span>
             <span class="pill">参加証NFTは希望者に無料配布</span>
           </div>
         </div>
@@ -1743,48 +1791,56 @@
           <div>
             <div class="progress-head-row">
               <span class="live-badge">開催中</span>
-              <span class="section-kicker" style="margin:0;">Now / 6月14日レポート</span>
+              <span class="section-kicker" style="margin:0;">Now / 6月17日レポート</span>
             </div>
-            <h2>未来の牛乳は、<br><span class="accent">気持ちにも寄り添う一杯へ。</span></h2>
+            <h2>未来の牛乳は、<br><span class="accent">牧場と食卓をつなぐ一杯へ。</span></h2>
           </div>
           <p class="lead">
-            受付開始から14日で、重複を除いた応募作品は33件に。
-            牛乳の背景や味の違いだけでなく、心を整える一杯、発酵や料理、湯上がりの体験まで、未来の牛乳像が広がっています。
+            受付開始から17日で、応募作品は48件に。
+            牛乳の生産背景を知りたいという声に加え、保存・携帯・体質対応、AIやセンサーを活用した未来牧場など、生活者の想像が具体的に広がっています。
           </p>
         </div>
 
-        <div class="progress-stats focused" aria-label="集計サマリー（2026年6月14日時点）">
+        <div class="progress-stats" aria-label="集計サマリー（2026年6月17日時点）">
           <div class="stat-card">
-            <span class="num">33<span class="unit">件</span></span>
-            <span class="label">応募作品（重複除外・6/14時点）</span>
+            <span class="num">48<span class="unit">件</span></span>
+            <span class="label">応募作品（6/17時点）</span>
           </div>
           <div class="stat-card accent-berry">
-            <span class="num">17<span class="unit">件</span></span>
+            <span class="num">29<span class="unit">件</span></span>
             <span class="label">牛乳への声・疑問つき</span>
+          </div>
+          <div class="stat-card accent-blue">
+            <span class="num">24<span class="unit">件</span></span>
+            <span class="label">未来の牛乳テーマ</span>
+          </div>
+          <div class="stat-card accent-yellow">
+            <span class="num">5<span class="unit">形式</span></span>
+            <span class="label">AI・手描き・写真・イラスト・その他</span>
           </div>
         </div>
 
-        <p class="insight-lead">6月14日時点で見えてきた、3つの声。</p>
+        <p class="insight-lead">6月17日時点で見えてきた、3つの声。</p>
         <div class="grid-3">
           <article class="card">
             <span class="icon">01</span>
-            <h3>体だけでなく、気持ちにも寄り添う</h3>
-            <p>深夜のホットミルク、湯上がりの一杯、心に効くホエイ。牛乳は栄養だけでなく、気分を整えたり前向きさを支えたりする存在として語られています。</p>
+            <h3>生産背景や牧場のことを知りたい</h3>
+            <p>どこの牧場から届くのか、牛はどんな環境で暮らしているのか。毎日の一杯の向こう側にある物語や酪農家の想いへの関心が集まっています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
-            <h3>搾りたて・季節・地域の違いを知りたい</h3>
-            <p>牛乳の味や香りは、鮮度、季節、地域、牧場、餌や環境でどう変わるのか。生活者の関心は、背景から商品体験へと深まりはじめています。</p>
+            <h3>もっと日常に合わせたい</h3>
+            <p>粉末、常温保存、ペットボトル型、体質を気にせず飲める牛乳など、生活の中で続けやすい牛乳への具体的な期待が増えています。</p>
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>飲むだけでなく、発酵や体験へ広がる</h3>
-            <p>ヨーグルト、バター、プリン、カフェラテ、銭湯の湯上がり牛乳。未来の牛乳は、料理や発酵乳製品、日常の小さな幸せも支えています。</p>
+            <h3>表現の幅が広がっています</h3>
+            <p>AI生成画像だけでなく、手描き、写真、イラスト、自由な表現も増加中。親子の体験や牧場への感謝など、生活者の手触りがある作品が届いています。</p>
           </article>
         </div>
 
         <blockquote class="insight-quote">
-          <p>「牛乳は、体だけでなく気持ちにも寄り添う一杯かもしれません。」</p>
+          <p>「毎日の一杯の向こうにある牧場や牛たち、そして酪農家の想いをもっと知りたい。」</p>
           <cite>応募作品に寄せられた声より（一部要約）</cite>
         </blockquote>
 
@@ -1792,7 +1848,7 @@
           <a class="button" href="#entry">あなたの牛乳時間を応募する<span class="arrow">→</span></a>
           <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
         </div>
-        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月14日 ／ 会期中は毎週更新予定です。</p>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月17日 ／ 会期中は毎週更新予定です。</p>
       </div>
     </section>
 
@@ -1846,13 +1902,13 @@
           <div>
             <p class="section-kicker">Cooperation</p>
             <h2 class="cooperation-title">
-              <span>交牧連</span>
-              <span class="region-line">（近畿・中国・四国ブロック）</span>
-              <span>の協賛企画です。</span>
+              <span>協賛・応援の輪が、</span>
+              <span class="region-line">中四国へ広がっています。</span>
             </h2>
           </div>
           <p class="lead">
-            本企画は、酪農家による全国的なネットワーク組織である地域交流牧場全国連絡会の近畿・中国・四国ブロックの協賛のもと、牛乳や酪農への理解を広げる取り組みとして実施します。
+            本企画は、地域交流牧場全国連絡会・近畿中国四国ブロックの協賛のもとスタートしました。
+            会期中には島根県牛乳消費拡大運動実行委員会、ジェラテリア クラキチ、森のジェラテリアMUCCAも加わり、生活者の声と地域の作り手をつなぐ取り組みとして広がっています。
           </p>
         </div>
 
@@ -1877,6 +1933,32 @@
             </div>
           </div>
         </div>
+
+        <div class="sponsor-grid" aria-label="協賛・応援団体">
+          <article class="sponsor-card">
+            <span class="area">広域ネットワーク</span>
+            <h3>地域交流牧場全国連絡会・近畿中国四国ブロック</h3>
+            <p>酪農家同士の交流や、都市生活者・地域住民との交流活動を通じて、日本酪農への理解を広げる全国ネットワークです。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">島根県</span>
+            <h3>島根県牛乳消費拡大運動実行委員会</h3>
+            <p>島根県内の酪農・乳業を横断し、県産牛乳や乳製品の魅力を届ける普及活動に取り組んでいます。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">山口県</span>
+            <h3>ジェラテリア クラキチ</h3>
+            <p>藤井牧場の朝搾りミルクを使った手作りジェラートを通じて、牧場の恵みと地域の食文化を伝えています。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">香川県</span>
+            <h3>森のジェラテリアMUCCA</h3>
+            <p>広野牧場直営のジェラート店として、酪農・食・地域づくりを一体で伝える活動に取り組んでいます。</p>
+          </article>
+        </div>
+        <p class="sponsor-note">
+          応募作品やコメントから見えてきた「牛乳の背景をもっと知りたい」という声を、地域の酪農・乳製品の魅力発信へつなげていきます。
+        </p>
       </div>
     </section>
 
@@ -2039,10 +2121,10 @@
         <div class="section-head">
           <div>
             <p class="section-kicker">Benefits</p>
-            <h2>参加すると、<span class="accent">島根の牛乳・酪農</span>ともつながります。</h2>
+            <h2>参加すると、<span class="accent">地域の牛乳・乳製品</span>ともつながります。</h2>
           </div>
           <p class="lead">
-            作品を投稿するだけで終わらず、地域の乳製品や酪農イベント、参加の記録につながる特典を用意しています。
+            作品を投稿するだけで終わらず、地域の乳製品や酪農イベント、参加の記録につながる特典を用意しています。協賛の広がりに合わせて、地域の作り手との接点も増えています。
           </p>
         </div>
 
@@ -2050,7 +2132,7 @@
           <article class="card">
             <span class="icon">01</span>
             <h3>島根県の牛乳・乳製品詰め合わせをプレゼント</h3>
-            <p>島根県牛乳普及協会の副賞として、島根県の牛乳・乳製品詰め合わせを用意しています。</p>
+            <p>島根県牛乳消費拡大運動実行委員会の副賞として、島根県の牛乳・乳製品詰め合わせを用意しています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
@@ -2059,13 +2141,13 @@
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>しまね酪農フェアで作品展示</h3>
-            <p>応募条件を満たした作品は、2026年10月予定の会場ブースで展示予定です。</p>
+            <h3>地域の作り手とつながる企画へ</h3>
+            <p>島根・山口・香川の協賛先とともに、牛乳や乳製品の背景にある地域の魅力も発信していきます。</p>
           </article>
           <article class="card">
             <span class="icon">04</span>
-            <h3>参加証NFTを無料配布</h3>
-            <p>希望者には「牛乳月間2026 参加証NFT」の受け取り方法を、応募後にメールでご案内します。</p>
+            <h3>しまね酪農フェアで作品展示</h3>
+            <p>応募条件を満たした作品は、2026年10月予定の会場ブースで展示予定です。希望者には参加証NFTも無料でご案内します。</p>
           </article>
         </div>
 
@@ -2113,6 +2195,7 @@
 
         <p class="small" style="margin-top: 18px;">
           副賞として、島根県の牛乳・乳製品詰め合わせや川上牧場の牛乳を使ったカヌレを用意しています。
+          協賛の広がりに合わせて、地域の牛乳・乳製品を知るきっかけも増えています。
           応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。
         </p>
       </div>
@@ -2192,7 +2275,7 @@
             <li><b>自由記述</b><span>作品説明、牛乳への意見や疑問</span></li>
             <li><b>AI画像</b><span>商用利用可能なツールで作成。使用ツール名を記載</span></li>
             <li><b>人物写真</b><span>本人同意が必要。未成年は保護者同意</span></li>
-            <li><b>特典・副賞</b><span>NFT参加証、島根県の牛乳・乳製品詰め合わせ、川上牧場のカヌレ</span></li>
+            <li><b>特典・副賞</b><span>NFT参加証、島根県の牛乳・乳製品詰め合わせ、川上牧場のカヌレ、地域協賛先の紹介</span></li>
           </ul>
         </div>
       </div>
@@ -2308,7 +2391,7 @@
             </ul>
           </div>
           <div id="entry-form" class="form-frame">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/paghtnLiOMP0bccRE/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <iframe class="airtable-embed" data-airtable-frame src="https://airtable.com/embed/apprCtybztnPDNCXI/paghtnLiOMP0bccRE/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
           </div>
         </div>
       </div>
@@ -2321,7 +2404,7 @@
         <strong>未来のミルク画像投稿キャンペーン2026</strong>
         <p class="small">
           主催: Metagri研究所（株式会社農情人）<br>
-          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック<br>
+          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック、島根県牛乳消費拡大運動実行委員会、ジェラテリア クラキチ、森のジェラテリアMUCCA<br>
           協力: 川上牧場、協力酪農家の皆様
           <br><a href="gallery.html">参考ギャラリーを見る</a>
           <br><a href="submitted-works.html">応募作品ギャラリーを見る</a>
@@ -2613,6 +2696,40 @@
           });
         }, { threshold: 0.5 });
         reassuranceObserver.observe(reassurance);
+      }
+
+      const airtableFrame = document.querySelector("[data-airtable-frame]");
+      if (airtableFrame) {
+        let frameLoadCount = 1;
+        let formTouched = false;
+        let formStartSent = false;
+        let submitSent = false;
+
+        const markFormTouched = () => {
+          formTouched = true;
+          if (!formStartSent) {
+            formStartSent = true;
+            window.mlTrack && window.mlTrack("entry_form_start", {
+              page: "index",
+              method: "airtable_iframe_interaction",
+            });
+          }
+        };
+
+        ["pointerenter", "touchstart", "focus"].forEach((eventName) => {
+          airtableFrame.addEventListener(eventName, markFormTouched, { passive: true });
+        });
+
+        airtableFrame.addEventListener("load", () => {
+          frameLoadCount += 1;
+          if (submitSent || !formTouched || frameLoadCount <= 1) return;
+
+          submitSent = true;
+          window.mlTrack && window.mlTrack("entry_submit", {
+            page: "index",
+            method: "airtable_iframe_reload",
+          });
+        });
       }
     })();
   </script>

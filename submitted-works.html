@@ -15,7 +15,7 @@
     };
   </script>
   <title>応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026</title>
-  <meta name="description" content="未来のミルク画像投稿キャンペーン2026に寄せられた応募作品を紹介するギャラリーページです。">
+  <meta name="description" content="未来のミルク画像投稿キャンペーン2026に寄せられた応募作品を紹介するギャラリーページです。作品を見て浮かんだあなたの1枚も募集中です。">
   <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="image/favicon-512.png" type="image/png">
@@ -24,7 +24,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
   <meta property="og:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
-  <meta property="og:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。">
+  <meta property="og:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。作品を見て浮かんだあなたの1枚も募集中です。">
   <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
   <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
@@ -36,7 +36,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
-  <meta name="twitter:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。">
+  <meta name="twitter:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。作品を見て浮かんだあなたの1枚も募集中です。">
   <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
   <style>
@@ -228,6 +228,41 @@
 
     .works-section {
       padding: 44px 0 76px;
+    }
+
+    .works-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin: 0 0 24px;
+      padding: 20px;
+      border: 1px solid rgba(47, 111, 85, 0.2);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(232, 245, 238, 0.92), rgba(234, 245, 255, 0.82)),
+        #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .works-cta h2,
+    .works-cta p {
+      margin: 0;
+    }
+
+    .works-cta h2 {
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .works-cta p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .works-cta.bottom {
+      margin: 28px 0 0;
     }
 
     .works-toolbar {
@@ -469,6 +504,10 @@
       .works-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .works-cta {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
@@ -521,10 +560,10 @@
         <h1>応募作品ギャラリー</h1>
         <p class="lead">
           牛乳月間2026に寄せられた作品を紹介します。写真、イラスト、手描き作品、AI画像など、
-          それぞれの視点から生まれた「未来のミルク」の表現をご覧ください。
+          それぞれの視点から生まれた「未来のミルク」の表現をご覧ください。あなたの作品も、ここに並べられます。
         </p>
         <div class="hero-actions">
-          <a class="button" href="index.html#entry">応募フォームへ</a>
+          <a class="button" href="index.html#entry" data-cta="apply" data-cta-location="works_hero">あなたの作品も応募する</a>
           <a class="button secondary" href="gallery.html">参考ギャラリーを見る</a>
         </div>
       </div>
@@ -532,6 +571,14 @@
 
     <section class="works-section">
       <div class="container">
+        <div class="works-cta">
+          <div>
+            <h2>見ているうちに浮かんだ牛乳時間も、応募できます。</h2>
+            <p>スマホ写真、手描き、イラスト、AI画像、どれでもOK。ニックネームで気軽に参加できます。</p>
+          </div>
+          <a class="button" href="index.html#entry" data-cta="apply" data-cta-location="works_before_grid">応募フォームへ</a>
+        </div>
+
         <div class="works-toolbar">
           <div class="works-meta" aria-live="polite">
             <span class="count" data-count>掲載中の作品: --件</span>
@@ -552,6 +599,13 @@
           Airtableから公開対象の作品を取得しています。
         </div>
         <div class="works-grid" data-grid hidden></div>
+        <div class="works-cta bottom">
+          <div>
+            <h2>あなたなら、どんな未来のミルクを描きますか。</h2>
+            <p>締切は2026年6月30日。作品を見て浮かんだ一枚を、そのまま応募できます。</p>
+          </div>
+          <a class="button" href="index.html#entry" data-cta="apply" data-cta-location="works_after_grid">今すぐ応募する</a>
+        </div>
       </div>
     </section>
   </main>
