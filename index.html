@@ -1791,27 +1791,27 @@
           <div>
             <div class="progress-head-row">
               <span class="live-badge">開催中</span>
-              <span class="section-kicker" style="margin:0;">Now / 6月17日レポート</span>
+              <span class="section-kicker" style="margin:0;">Now / 6月20日レポート</span>
             </div>
             <h2>未来の牛乳は、<br><span class="accent">牧場と食卓をつなぐ一杯へ。</span></h2>
           </div>
           <p class="lead">
-            受付開始から17日で、応募作品は48件に。
+            受付開始から20日で、公開中の応募作品は<span data-public-work-count>63</span>件に。
             牛乳の生産背景を知りたいという声に加え、保存・携帯・体質対応、AIやセンサーを活用した未来牧場など、生活者の想像が具体的に広がっています。
           </p>
         </div>
 
-        <div class="progress-stats" aria-label="集計サマリー（2026年6月17日時点）">
+        <div class="progress-stats" aria-label="集計サマリー（2026年6月20日時点）">
           <div class="stat-card">
-            <span class="num">48<span class="unit">件</span></span>
-            <span class="label">応募作品（6/17時点）</span>
+            <span class="num"><span data-public-work-count>63</span><span class="unit">件</span></span>
+            <span class="label">公開中の応募作品（現在）</span>
           </div>
           <div class="stat-card accent-berry">
             <span class="num">29<span class="unit">件</span></span>
             <span class="label">牛乳への声・疑問つき</span>
           </div>
           <div class="stat-card accent-blue">
-            <span class="num">24<span class="unit">件</span></span>
+            <span class="num">29<span class="unit">件</span></span>
             <span class="label">未来の牛乳テーマ</span>
           </div>
           <div class="stat-card accent-yellow">
@@ -1820,7 +1820,7 @@
           </div>
         </div>
 
-        <p class="insight-lead">6月17日時点で見えてきた、3つの声。</p>
+        <p class="insight-lead">6月20日時点で見えてきた、3つの声。</p>
         <div class="grid-3">
           <article class="card">
             <span class="icon">01</span>
@@ -1848,7 +1848,7 @@
           <a class="button" href="#entry">あなたの牛乳時間を応募する<span class="arrow">→</span></a>
           <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
         </div>
-        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月17日 ／ 会期中は毎週更新予定です。</p>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月20日 ／ 会期中は毎週更新予定です。</p>
       </div>
     </section>
 
@@ -2514,43 +2514,37 @@
       updatePageState();
       updateActiveNav();
 
-      // About内の応募作品抜粋（公開作品APIから厳選IDを表示）
+      // About内の応募作品抜粋（公開作品APIから最新4件を表示）
       const featuredWorksRoot = document.querySelector("[data-featured-works]");
       const featuredWorksGrid = document.querySelector("[data-featured-works-grid]");
-      const featuredWorkIds = [
-        "rec247kaO4RxU59l9",
-        "rec6O9zmFmGUvlsbG",
-        "rec14hKnkc2Iq24RO",
-        "recyrqR5YuK7L9qjO",
-      ];
       const featuredFallbackWorks = [
         {
-          id: "rec247kaO4RxU59l9",
-          title: "大きくなる途中",
-          theme: "牛乳のある食卓",
-          format: "写真",
-          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/d8VKOo4SnybzDnQuCAcG7A/dgeNfThH6kb6aEG2LihYd5klTHbFyziwOwPkuaD6-Acbf6-Qi18dopjJaxyavSEfxXwxMQ7xf3JWJGQoeHfpCvK4owwPjajyBpbJ20pe0crUsuZfT3Tv6ZLT33tC3-7fWtCknG0Hay75sin05NyE-A/7GKgGwI4HKA3ZdO3yAjVjerdWW-vGUIAYemBUKH9AaQ",
+          id: "recIeRjrHwiVSdMyV",
+          title: "モー！とまねっこ",
+          theme: "牛さんに伝えたいこと",
+          format: "AI生成画像",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/_7rICRLI1Qwrhyffuj3rAQ/T9yOFpz29ZH2hDYZtAY4IgvgUhD-l6vLovnHqf1IitpUq9TEyfYCCLc5AhkVQWOx7ADPFJ6r2BBl3T_z3F6NlVRC5lSFF-c7vXx564axbdrD3gvQFxdzqXXol6rCEoV5ykP3GpRv9ZMMdrVzS0os8g/qo82z2W1sbC6OSbPRB9ym8WtuAzJ4pqOKwwR1CvKHeQ",
         },
         {
-          id: "rec6O9zmFmGUvlsbG",
-          title: "ミルクのおかげ！ごちそうイタリアン",
+          id: "recQXXFqYguR6iYOr",
+          title: "ミルクの向こう側",
           theme: "牛乳のある食卓",
           format: "手描き作品",
-          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/I8dYRk9OxJpuJwdfUol_-w/eO0veZMFKVvCJZ4V6iOJrKKJ-u1551b6n66hwmcs3XM-muzMXownDQu3YCBUFfkeYTkQGwvn9jgjdesejBsXPU3M9sM1-jt58LzuTORmOJCQ-deVB8mkbOnvtKBSC3kSzPZMuzehtCq7lZwVvPx0XA/q16PC1ih3d83kPCOo5GMYfh75To8G9kIHxkEhLcGhMo",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/-1BVvYK6FDRgqnW2xj-ibg/UjyQSTiLp6HfVRJObRZ3Six7RbdiyaKlZO0BY-OjF3lapPgrmoh16DPquyEg4FnSky_qqKzac-ZLW_E7bNCldVSo25UhvcBvHaVjHPmIxKlfbuyOturpQh1oNUO6uDrIKN5V97fvCZQlcFdc7471eQ/cPO8DwwQjVvtbijFSp6RoFmjlE-erjwPyGLUMijYcJQ",
         },
         {
-          id: "rec14hKnkc2Iq24RO",
-          title: "おいしいミルクをありがとう",
-          theme: "牛さんに伝えたいこと",
-          format: "イラスト",
-          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/82BRnK8O8Inic1yRojs1kg/W5MrfiG2V78zfUHtc8AKxpg1kltnDWxmH9NGN1UfjW5N1rUsh7V7bk-xKo1jSacf6UKhjg5R0Blh3dyfwVaaqyXohb-Jk51XH6KmfiKZi-hhYfFhOCG2OzBh5phV16ZcqWInRgqxOdHF5Fus1yuIvg/t7bs7cpxM1w69Ny8Y5I3Lpub_3DA25TZ4_7L8yhXCGI",
-        },
-        {
-          id: "recyrqR5YuK7L9qjO",
-          title: "お風呂上り",
+          id: "recEO4cfCkZ1RkPcD",
+          title: "Every Day  Milk Life",
           theme: "わたしの牛乳時間",
-          format: "AI生成画像",
-          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781150400000/pA0-7RZlhAsVVyf5fj3z_A/nFR6aejChiSGtWlDkQj8GNCJsBId9zqKJwDujvydtsnCYOjtFAV-K93TpS_lkHULXxvsPPwC93x5aetPMFIiSYY42IgZvtvnzTBomhFuKIFQpg0Mdc58T5aGceBIsuk6qEa3vbTgf-1QRaHGk09h7Q/CwhSxsS_NimtZqon88LsNZ5GFTbMsFeBoPL48z8qWJg",
+          format: "イラスト",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/qcRlUgDGvWCx_66NVc2vgg/K_ZgMzy-l5FBCMEkgoOYlqi1cvlqbk1M46Lo4PEpWC2VphON67IEuFvtLvhdXbUfllqp3vR1_ZH1tAVW1PRBxDaa2BM_4yznU7P0fdhKz1l5zUyJ35epGogLQXp9ApkbMjaLMgKJqC8eHQd2Me2b2g/DECDbm9bMunLfTP8Stpjhe0ZMRZGiAjN2e1qkAnc9eY",
+        },
+        {
+          id: "recKedamg7MyoPizR",
+          title: "飲み方いろいろ",
+          theme: "わたしの牛乳時間",
+          format: "手描き作品",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/HUppdVkdhcPCc9qUNlFh9A/lZItj11-6j4xBD-sXus-23v3TbMSgj5mCNhv0FZVdJxXyJAZV0k2UFTNM8zMz2EZS3VlW0QtMwBB-GTMAT8-hACut9kyLJpMR2a_tRhCv5ForqqLZJ8fmcFt368A9mHAgm6g5Ch5ANCq_1Rsnrv-3g/uZy-iIKmP0tPKKD8ZwrTc4DecVf3JI0x7MVX4RdBQ3o",
         },
       ];
 
@@ -2575,11 +2569,7 @@
       const renderFeaturedWorks = (works) => {
         if (!featuredWorksRoot || !featuredWorksGrid || !works.length) return;
 
-        const selected = featuredWorkIds
-          .map((id) => works.find((work) => work.id === id))
-          .filter(Boolean);
-        const fallback = works.filter((work) => !selected.some((selectedWork) => selectedWork.id === work.id));
-        const displayWorks = [...selected, ...fallback].slice(0, 4);
+        const displayWorks = works.slice(0, 4);
 
         if (!displayWorks.length) return;
 
@@ -2611,6 +2601,10 @@
           .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
           .then((data) => {
             const works = Array.isArray(data.works) ? data.works.filter((work) => work.title && work.thumb) : [];
+            const publicWorkCount = Number.isFinite(data.count) ? data.count : works.length;
+            document.querySelectorAll("[data-public-work-count]").forEach((element) => {
+              element.textContent = String(publicWorkCount);
+            });
             renderFeaturedWorks(works.length ? works : featuredFallbackWorks);
           })
           .catch(() => {
