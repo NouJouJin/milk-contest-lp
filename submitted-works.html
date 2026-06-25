@@ -649,6 +649,7 @@
       const modalTitle = document.querySelector("[data-modal-title]");
       const modalClose = document.querySelector("[data-modal-close]");
       let works = [];
+      let totalWorksCount = 0;
 
       const formatDate = (value, withTime = false) => {
         if (!value) return "";
@@ -713,7 +714,10 @@
           return (!selectedTheme || theme === selectedTheme) && (!selectedFormat || format === selectedFormat);
         });
 
-        count.textContent = `掲載中の作品: ${filtered.length}件`;
+        const hasFilter = Boolean(selectedTheme || selectedFormat);
+        count.textContent = hasFilter
+          ? `絞り込み結果: ${filtered.length}件 / 掲載中の作品: ${totalWorksCount}件`
+          : `掲載中の作品: ${totalWorksCount}件`;
 
         if (!filtered.length) {
           setStatus("現在準備中です。", "投稿作品は順次掲載されます。");
@@ -767,19 +771,24 @@
 
       const loadWorks = async () => {
         try {
-          const response = await fetch("/api/works", { headers: { Accept: "application/json" } });
+          const response = await fetch("/api/works", {
+            cache: "no-cache",
+            headers: { Accept: "application/json" },
+          });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const data = await response.json();
           works = Array.isArray(data.works) ? data.works : [];
+          totalWorksCount = Number.isFinite(data.count) ? data.count : works.length;
           updated.textContent = `最終更新: ${formatDate(data.updatedAt, true) || "--"}`;
           fillSelect(themeFilter, works.map((work) => asText(work.theme)));
           fillSelect(formatFilter, works.map((work) => asText(work.format)));
           render();
           window.mlTrack && window.mlTrack("works_loaded", {
-            count: works.length,
+            count: totalWorksCount,
             status: "success",
           });
         } catch (error) {
+          totalWorksCount = 0;
           count.textContent = "掲載中の作品: --件";
           updated.textContent = "最終更新: 取得できませんでした";
           setStatus("作品一覧を読み込めませんでした。", "時間をおいて再読み込みしてください。");
