@@ -65,24 +65,33 @@ export default async function handler(req, res) {
     "&sort[0][field]=投稿日付&sort[0][direction]=desc&pageSize=100";
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const records = [];
+    let offset = "";
 
-    if (!response.ok) {
-      const detail = await response.text();
-      return res.status(502).json({
-        works: [],
-        count: 0,
-        error: "airtable_upstream",
-        detail: detail.slice(0, 500),
+    do {
+      const pageUrl = offset ? `${url}&offset=${encodeURIComponent(offset)}` : url;
+      const response = await fetch(pageUrl, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
-    }
 
-    const data = await response.json();
-    const works = (data.records || [])
+      if (!response.ok) {
+        const detail = await response.text();
+        return res.status(502).json({
+          works: [],
+          count: 0,
+          error: "airtable_upstream",
+          detail: detail.slice(0, 500),
+        });
+      }
+
+      const data = await response.json();
+      records.push(...(data.records || []));
+      offset = data.offset || "";
+    } while (offset);
+
+    const works = records
       .map(normalizeWork)
       .filter((work) => work.title && work.thumb);
 
