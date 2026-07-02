@@ -14,18 +14,18 @@
       try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
     };
   </script>
-  <title>応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026</title>
-  <meta name="description" content="未来のミルク画像投稿キャンペーン2026に寄せられた応募作品を紹介するギャラリーページです。応募受付は終了し、作品を順次公開しています。">
-  <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
+  <title>特別賞発表 | 未来のミルク画像投稿キャンペーン2026</title>
+  <meta name="description" content="未来のミルク画像投稿キャンペーン2026の特別賞を発表します。島根県牛乳消費拡大運動実行委員会（島根県）特別賞10作品、川上牧場特別賞2作品をご紹介します。">
+  <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/awards.html">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="image/favicon-512.png" type="image/png">
   <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
-  <meta property="og:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
-  <meta property="og:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。応募受付は終了し、作品を順次公開しています。">
-  <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">
+  <meta property="og:title" content="特別賞発表 | 未来のミルク画像投稿キャンペーン2026">
+  <meta property="og:description" content="島根県牛乳消費拡大運動実行委員会（島根県）特別賞10作品、川上牧場特別賞2作品を発表しました。受賞作品をご紹介します。">
+  <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/awards.html">
   <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta property="og:image:type" content="image/png">
@@ -35,8 +35,8 @@
   <meta property="og:locale" content="ja_JP">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="応募作品ギャラリー | 未来のミルク画像投稿キャンペーン2026">
-  <meta name="twitter:description" content="牛乳月間2026に寄せられた写真・イラスト・手描き作品・AI画像を紹介します。応募受付は終了し、作品を順次公開しています。">
+  <meta name="twitter:title" content="特別賞発表 | 未来のミルク画像投稿キャンペーン2026">
+  <meta name="twitter:description" content="島根県牛乳消費拡大運動実行委員会（島根県）特別賞10作品、川上牧場特別賞2作品を発表しました。受賞作品をご紹介します。">
   <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
   <style>
@@ -48,6 +48,8 @@
       --green: #2f6f55;
       --green-soft: #e8f5ee;
       --yellow: #f4c95d;
+      --gold: #b8860b;
+      --gold-soft: #fdf3d7;
       --ink: #1e2a32;
       --muted: #60717d;
       --line: #dce8e2;
@@ -173,7 +175,7 @@
     .works-hero {
       padding: 76px 0 48px;
       background:
-        linear-gradient(135deg, rgba(47, 120, 183, 0.14), rgba(47, 111, 85, 0.1)),
+        linear-gradient(135deg, rgba(244, 201, 93, 0.22), rgba(47, 111, 85, 0.1)),
         var(--milk);
       border-bottom: 1px solid var(--line);
     }
@@ -213,16 +215,11 @@
       font-size: 17px;
     }
 
-    .hero-actions,
-    .works-toolbar,
-    .works-meta {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 12px;
-    }
-
-    .hero-actions {
       margin-top: 24px;
     }
 
@@ -230,74 +227,71 @@
       padding: 44px 0 76px;
     }
 
-    .works-cta {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 18px;
-      align-items: center;
+    .award-block {
+      margin-bottom: 52px;
+    }
+
+    .award-block:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .award-head {
       margin: 0 0 24px;
-      padding: 20px;
-      border: 1px solid rgba(47, 111, 85, 0.2);
+      padding: 24px;
+      border: 1px solid rgba(184, 134, 11, 0.28);
       border-radius: var(--radius);
       background:
-        linear-gradient(135deg, rgba(232, 245, 238, 0.92), rgba(234, 245, 255, 0.82)),
+        linear-gradient(135deg, rgba(253, 243, 215, 0.9), rgba(232, 245, 238, 0.75)),
         #fff;
       box-shadow: var(--shadow-soft);
     }
 
-    .works-cta h2,
-    .works-cta p {
-      margin: 0;
-    }
-
-    .works-cta h2 {
-      margin-bottom: 6px;
-      font-size: 24px;
-      line-height: 1.35;
-    }
-
-    .works-cta p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .works-cta.bottom {
-      margin: 28px 0 0;
-    }
-
-    .works-toolbar {
-      justify-content: space-between;
-      padding: 16px;
-      margin-bottom: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.78);
-    }
-
-    .works-meta {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .count {
-      color: var(--ink);
+    .award-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 12px;
       font-weight: 900;
+      letter-spacing: 0.04em;
     }
 
-    .filters {
-      display: flex;
+    .award-head h2 {
+      margin-bottom: 8px;
+      font-size: clamp(22px, 3.4vw, 30px);
+      line-height: 1.4;
+    }
+
+    .award-head p {
+      max-width: 820px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .award-prize {
+      display: inline-flex;
       flex-wrap: wrap;
-      gap: 10px;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 8px 14px;
+      border: 1px solid rgba(184, 134, 11, 0.3);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
     }
 
-    select {
-      min-height: 40px;
-      padding: 8px 34px 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      color: var(--ink);
-      background: #fff;
-      font: inherit;
+    .award-prize span.small-label {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .status {
@@ -346,6 +340,17 @@
       background: var(--cream);
     }
 
+    .work-image-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--cream);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .work-body {
       padding: 16px;
     }
@@ -366,7 +371,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
     }
 
     .tag {
@@ -386,20 +391,40 @@
       color: var(--blue);
     }
 
-    .work-description {
-      display: -webkit-box;
-      min-height: 0;
-      margin-bottom: 12px;
-      overflow: hidden;
-      color: var(--muted);
-      font-size: 14px;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+    .tag.gold {
+      background: var(--gold-soft);
+      color: var(--gold);
     }
 
-    .work-date {
+    .works-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin: 52px 0 0;
+      padding: 20px;
+      border: 1px solid rgba(47, 111, 85, 0.2);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(232, 245, 238, 0.92), rgba(234, 245, 255, 0.82)),
+        #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .works-cta h2,
+    .works-cta p {
+      margin: 0;
+    }
+
+    .works-cta h2 {
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .works-cta p {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 14px;
     }
 
     .modal {
@@ -519,16 +544,6 @@
         font-size: 34px;
       }
 
-      .works-toolbar {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .filters,
-      select {
-        width: 100%;
-      }
-
       .works-grid {
         grid-template-columns: 1fr;
       }
@@ -543,11 +558,11 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="awards.html" data-nav="awards">特別賞発表</a>
+        <a class="is-active" href="awards.html" data-nav="awards">特別賞発表</a>
         <a href="index.html#about" data-nav="about">企画について</a>
         <a href="index.html#themes" data-nav="themes">募集テーマ</a>
         <a href="gallery.html" data-nav="gallery">参考ギャラリー</a>
-        <a class="is-active" href="submitted-works.html" data-nav="works">応募作品</a>
+        <a href="submitted-works.html" data-nav="works">応募作品</a>
         <a href="terms.html" data-nav="terms">参加規約</a>
         <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="nav">応募作品を見る</a>
       </nav>
@@ -557,55 +572,65 @@
   <main>
     <section class="works-hero">
       <div class="container">
-        <p class="kicker">Submitted Works</p>
-        <h1>応募作品ギャラリー</h1>
+        <p class="kicker">Special Awards</p>
+        <h1>特別賞発表</h1>
         <p class="lead">
-          牛乳月間2026に寄せられた作品を紹介します。写真、イラスト、手描き作品、AI画像など、
-          それぞれの視点から生まれた「未来のミルク」の表現をご覧ください。応募受付は終了し、作品は順次整理・紹介しています。
+          牛乳月間2026「未来のミルク画像投稿キャンペーン」に寄せられた全応募作品の中から、
+          協賛・協力いただいた地域の作り手が選んだ特別賞を発表します。
+          島根県牛乳消費拡大運動実行委員会（島根県）特別賞10作品、川上牧場特別賞2作品です。
+          受賞者の皆さま、おめでとうございます。
         </p>
         <div class="hero-actions">
-          <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="works_hero">応募作品を見る</a>
-          <a class="button secondary" href="gallery.html">参考ギャラリーを見る</a>
+          <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="awards_hero">応募作品をすべて見る</a>
+          <a class="button secondary" href="index.html#progress">締切後レポートを見る</a>
         </div>
       </div>
     </section>
 
     <section class="works-section">
       <div class="container">
+
+        <div class="award-block">
+          <div class="award-head">
+            <span class="award-label">特別賞 ｜ 10作品</span>
+            <h2>島根県牛乳消費拡大運動実行委員会（島根県）特別賞</h2>
+            <p>
+              島根県内の酪農・乳業を横断し、県産牛乳や乳製品の魅力を届ける普及活動に取り組む
+              島根県牛乳消費拡大運動実行委員会が選んだ10作品です。
+              親子の牛乳時間や、未来の牛乳への自由な発想が光る作品が選ばれました。
+            </p>
+            <span class="award-prize"><span class="small-label">副賞</span>島根県の牛乳・乳製品詰め合わせ</span>
+          </div>
+          <div class="status" data-status="shimane">
+            <strong>受賞作品を読み込んでいます。</strong>
+            応募作品ギャラリーのデータから受賞作品を表示します。
+          </div>
+          <div class="works-grid" data-grid="shimane" hidden></div>
+        </div>
+
+        <div class="award-block">
+          <div class="award-head">
+            <span class="award-label">特別賞 ｜ 2作品</span>
+            <h2>川上牧場特別賞</h2>
+            <p>
+              本キャンペーンに協力いただいた島根県出雲市の酪農家・川上牧場が選んだ2作品です。
+              牛乳を作る現場の目線から、思わず笑顔になる牛乳時間が選ばれました。
+            </p>
+            <span class="award-prize"><span class="small-label">副賞</span>川上牧場の牛乳を使ったカヌレ</span>
+          </div>
+          <div class="status" data-status="kawakami">
+            <strong>受賞作品を読み込んでいます。</strong>
+            応募作品ギャラリーのデータから受賞作品を表示します。
+          </div>
+          <div class="works-grid" data-grid="kawakami" hidden></div>
+        </div>
+
         <div class="works-cta">
           <div>
-            <h2>183作品の牛乳時間が集まりました。</h2>
-            <p>写真、手描き、イラスト、AI画像など、多様な作品を順次掲載しています。</p>
+            <h2>受賞者の皆さまへ</h2>
+            <p>受賞者の方には、ご応募時のメールアドレス宛に賞品発送のご案内をお送りしています。メールをご確認のうえ、フォームより発送先情報のご入力をお願いします。</p>
           </div>
-          <a class="button" href="index.html#entry" data-cta="closed" data-cta-location="works_before_grid">受付終了のお知らせ</a>
-        </div>
-
-        <div class="works-toolbar">
-          <div class="works-meta" aria-live="polite">
-            <span class="count" data-count>掲載中の作品: --件</span>
-            <span data-updated>最終更新: 読み込み中</span>
-          </div>
-          <div class="filters" aria-label="作品の絞り込み">
-            <select data-theme-filter aria-label="応募テーマで絞り込み">
-              <option value="">すべてのテーマ</option>
-            </select>
-            <select data-format-filter aria-label="作品形式で絞り込み">
-              <option value="">すべての形式</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="status" data-status>
-          <strong>作品一覧を読み込んでいます。</strong>
-          Airtableから公開対象の作品を取得しています。
-        </div>
-        <div class="works-grid" data-grid hidden></div>
-        <div class="works-cta bottom">
-          <div>
-            <h2>ご応募ありがとうございました。</h2>
-            <p>応募受付は終了しました。届いた作品は、確認後に順次公開していきます。</p>
-          </div>
-          <a class="button" href="index.html#entry" data-cta="closed" data-cta-location="works_after_grid">受付終了のお知らせ</a>
+          <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="awards_bottom">応募作品をすべて見る</a>
         </div>
       </div>
     </section>
@@ -622,7 +647,7 @@
         </p>
       </div>
       <p class="small">
-        <a href="index.html#entry" data-cta="closed" data-cta-location="footer">受付終了のお知らせ</a>
+        <a href="submitted-works.html" data-cta="works" data-cta-location="footer">応募作品ギャラリー</a>
       </p>
     </div>
   </footer>
@@ -639,31 +664,36 @@
 
   <script>
     (() => {
-      const grid = document.querySelector("[data-grid]");
-      const status = document.querySelector("[data-status]");
-      const count = document.querySelector("[data-count]");
-      const updated = document.querySelector("[data-updated]");
-      const themeFilter = document.querySelector("[data-theme-filter]");
-      const formatFilter = document.querySelector("[data-format-filter]");
+      // 受賞作品リスト（作品タイトル・掲載時の表示名で /api/works と照合）
+      const AWARDS = {
+        shimane: {
+          name: "島根県牛乳消費拡大運動実行委員会（島根県）特別賞",
+          winners: [
+            { title: "冷たくて美味しい！", author: "シン" },
+            { title: "チョコミルクパークへようこそ", author: "緑ちゃん" },
+            { title: "大きくなる途中", author: "さぼまる" },
+            { title: "牛乳、おいしい！", author: "りょう" },
+            { title: "未来の牛乳プール", author: "KOKOA" },
+            { title: "親子で嬉しい牛乳タイム", author: "あやみ" },
+            { title: "おっきい牛乳ないの？", author: "ユエ" },
+            { title: "こうしさん　ぎゅうにゅうわけてくれてありがとう", author: "みなと" },
+            { title: "その牛乳私たちが作りました", author: "ヒロシマ　ツモト" },
+            { title: "味が変わる牛乳の水筒", author: "りな" },
+          ],
+        },
+        kawakami: {
+          name: "川上牧場特別賞",
+          winners: [
+            { title: "まだ帰りませんよ", author: "ikuo" },
+            { title: "牛乳を飲むときは腰に手を", author: "Tomo" },
+          ],
+        },
+      };
+
       const modal = document.querySelector("[data-modal]");
       const modalImage = document.querySelector("[data-modal-image]");
       const modalTitle = document.querySelector("[data-modal-title]");
       const modalClose = document.querySelector("[data-modal-close]");
-      let works = [];
-      let totalWorksCount = 0;
-
-      const formatDate = (value, withTime = false) => {
-        if (!value) return "";
-        const date = new Date(value);
-        if (Number.isNaN(date.getTime())) return "";
-        return new Intl.DateTimeFormat("ja-JP", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-          hour: withTime ? "2-digit" : undefined,
-          minute: withTime ? "2-digit" : undefined,
-        }).format(date);
-      };
 
       const asText = (value) => Array.isArray(value) ? value.join(" / ") : (value || "");
       const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
@@ -674,23 +704,22 @@
         "'": "&#039;",
       }[char]));
 
-      const setStatus = (title, body) => {
-        status.hidden = false;
-        grid.hidden = true;
-        status.innerHTML = `<strong>${title}</strong>${body}`;
-      };
+      // 全角/半角スペース・記号ゆれを吸収して照合キーを作る
+      const normalize = (value) => String(value || "")
+        .normalize("NFKC")
+        .replace(/\s+/g, "")
+        .toLowerCase();
+      const workKey = (title, author) => `${normalize(title)}__${normalize(author)}`;
 
-      const fillSelect = (select, values) => {
-        values
-          .filter(Boolean)
-          .filter((value, index, array) => array.indexOf(value) === index)
-          .sort((a, b) => a.localeCompare(b, "ja"))
-          .forEach((value) => {
-            const option = document.createElement("option");
-            option.value = value;
-            option.textContent = value;
-            select.appendChild(option);
-          });
+      const formatDate = (value) => {
+        if (!value) return "";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return "";
+        return new Intl.DateTimeFormat("ja-JP", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(date);
       };
 
       const openModal = (work) => {
@@ -706,68 +735,69 @@
         modalImage.src = "";
       };
 
-      const render = () => {
-        const selectedTheme = themeFilter.value;
-        const selectedFormat = formatFilter.value;
-        const filtered = works.filter((work) => {
-          const theme = asText(work.theme);
-          const format = asText(work.format);
-          return (!selectedTheme || theme === selectedTheme) && (!selectedFormat || format === selectedFormat);
-        });
-
-        const hasFilter = Boolean(selectedTheme || selectedFormat);
-        count.textContent = hasFilter
-          ? `絞り込み結果: ${filtered.length}件 / 掲載中の作品: ${totalWorksCount}件`
-          : `掲載中の作品: ${totalWorksCount}件`;
-
-        if (!filtered.length) {
-          setStatus("現在準備中です。", "投稿作品は順次掲載されます。");
-          return;
-        }
-
-        status.hidden = true;
-        grid.hidden = false;
-        grid.innerHTML = "";
-
-        filtered.forEach((work) => {
-          const card = document.createElement("article");
-          card.className = "work-card";
-          const theme = asText(work.theme);
-          const format = asText(work.format);
-          const author = work.author || "匿名希望";
-          const description = work.description || "";
-          const safeTitle = escapeHtml(work.title);
-          const safeTheme = escapeHtml(theme);
-          const safeFormat = escapeHtml(format);
-          const safeAuthor = escapeHtml(author);
-          const safeDescription = escapeHtml(description);
-          const safeThumb = escapeHtml(work.thumb);
-          card.innerHTML = `
-            <button type="button" aria-label="${safeTitle}を拡大表示">
-              <img src="${safeThumb}" alt="${safeTitle}" loading="lazy">
-            </button>
-            <div class="work-body">
-              <h2 class="work-title">${safeTitle}</h2>
-              <div class="work-author">${safeAuthor}</div>
-              <div class="tags">
-                ${theme ? `<span class="tag">${safeTheme}</span>` : ""}
-                ${format ? `<span class="tag blue">${safeFormat}</span>` : ""}
-              </div>
-              ${description ? `<p class="work-description">${safeDescription}</p>` : ""}
-              <div class="work-date">${formatDate(work.createdAt)}</div>
+      const buildCard = (winner, work, awardName) => {
+        const card = document.createElement("article");
+        card.className = "work-card";
+        const title = work ? work.title : winner.title;
+        const author = (work && work.author) || winner.author || "匿名希望";
+        const safeTitle = escapeHtml(title);
+        const safeAuthor = escapeHtml(author);
+        const theme = work ? asText(work.theme) : "";
+        const format = work ? asText(work.format) : "";
+        const imageHtml = work && work.thumb
+          ? `<button type="button" aria-label="${safeTitle}を拡大表示">
+              <img src="${escapeHtml(work.thumb)}" alt="${safeTitle}" loading="lazy">
+            </button>`
+          : `<div class="work-image-fallback">画像は準備中です</div>`;
+        card.innerHTML = `
+          ${imageHtml}
+          <div class="work-body">
+            <div class="tags">
+              <span class="tag gold">特別賞</span>
+              ${theme ? `<span class="tag">${escapeHtml(theme)}</span>` : ""}
+              ${format ? `<span class="tag blue">${escapeHtml(format)}</span>` : ""}
             </div>
-          `;
-          card.querySelector("button").addEventListener("click", () => {
-            window.mlTrack && window.mlTrack("works_card_open", {
+            <h3 class="work-title">${safeTitle}</h3>
+            <div class="work-author">${safeAuthor} さん${work && work.createdAt ? `｜${formatDate(work.createdAt)}投稿` : ""}</div>
+          </div>
+        `;
+        const button = card.querySelector("button");
+        if (button && work) {
+          button.addEventListener("click", () => {
+            window.mlTrack && window.mlTrack("awards_card_open", {
               work_id: work.id,
               work_title: work.title,
-              work_theme: asText(work.theme),
-              work_format: asText(work.format),
+              award_name: awardName,
             });
             openModal(work);
           });
-          grid.appendChild(card);
+        }
+        return card;
+      };
+
+      const renderAward = (key, worksByKey) => {
+        const award = AWARDS[key];
+        const grid = document.querySelector(`[data-grid="${key}"]`);
+        const status = document.querySelector(`[data-status="${key}"]`);
+        grid.innerHTML = "";
+        award.winners.forEach((winner) => {
+          const work = worksByKey.get(workKey(winner.title, winner.author)) || null;
+          grid.appendChild(buildCard(winner, work, award.name));
         });
+        status.hidden = true;
+        grid.hidden = false;
+      };
+
+      const renderFallback = (key) => {
+        const award = AWARDS[key];
+        const grid = document.querySelector(`[data-grid="${key}"]`);
+        const status = document.querySelector(`[data-status="${key}"]`);
+        grid.innerHTML = "";
+        award.winners.forEach((winner) => {
+          grid.appendChild(buildCard(winner, null, award.name));
+        });
+        status.hidden = true;
+        grid.hidden = false;
       };
 
       const loadWorks = async () => {
@@ -778,22 +808,22 @@
           });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const data = await response.json();
-          works = Array.isArray(data.works) ? data.works : [];
-          totalWorksCount = Number.isFinite(data.count) ? data.count : works.length;
-          updated.textContent = `最終更新: ${formatDate(data.updatedAt, true) || "--"}`;
-          fillSelect(themeFilter, works.map((work) => asText(work.theme)));
-          fillSelect(formatFilter, works.map((work) => asText(work.format)));
-          render();
-          window.mlTrack && window.mlTrack("works_loaded", {
-            count: totalWorksCount,
+          const works = Array.isArray(data.works) ? data.works : [];
+          const worksByKey = new Map();
+          works.forEach((work) => {
+            worksByKey.set(workKey(work.title, work.author), work);
+          });
+          renderAward("shimane", worksByKey);
+          renderAward("kawakami", worksByKey);
+          window.mlTrack && window.mlTrack("awards_loaded", {
+            count: works.length,
             status: "success",
           });
         } catch (error) {
-          totalWorksCount = 0;
-          count.textContent = "掲載中の作品: --件";
-          updated.textContent = "最終更新: 取得できませんでした";
-          setStatus("作品一覧を読み込めませんでした。", "時間をおいて再読み込みしてください。");
-          window.mlTrack && window.mlTrack("works_loaded", {
+          // API取得に失敗しても受賞リスト（タイトル・表示名）は表示する
+          renderFallback("shimane");
+          renderFallback("kawakami");
+          window.mlTrack && window.mlTrack("awards_loaded", {
             count: 0,
             status: "error",
             error_message: (error && error.message) || "unknown",
@@ -801,20 +831,6 @@
         }
       };
 
-      themeFilter.addEventListener("change", () => {
-        window.mlTrack && window.mlTrack("works_filter_change", {
-          filter_type: "theme",
-          filter_value: themeFilter.value || "all",
-        });
-        render();
-      });
-      formatFilter.addEventListener("change", () => {
-        window.mlTrack && window.mlTrack("works_filter_change", {
-          filter_type: "format",
-          filter_value: formatFilter.value || "all",
-        });
-        render();
-      });
       modalClose.addEventListener("click", closeModal);
       modal.addEventListener("click", (event) => {
         if (event.target === modal) closeModal();
@@ -841,7 +857,7 @@
           window.mlTrack("nav_click", {
             nav_target: nav,
             nav_href: link.getAttribute("href") || "",
-            page: "submitted-works",
+            page: "awards",
           });
         }
         try {
@@ -852,7 +868,7 @@
               window.mlTrack("outbound_click", {
                 link_url: href,
                 link_domain: url.host,
-                page: "submitted-works",
+                page: "awards",
               });
             }
           }
