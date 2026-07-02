@@ -15,13 +15,13 @@
     };
   </script>
   <title>未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026</title>
-  <meta name="description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
+  <meta name="description" content="牛乳月間2026に合わせて実施した、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像の投稿キャンペーンです。応募総数183作品が集まりました。">
   <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
   <meta property="og:title" content="未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026">
-  <meta property="og:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。島根県の牛乳・乳製品詰め合わせなどの特典も用意しています。">
+  <meta property="og:description" content="牛乳月間2026に合わせて実施した、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像の投稿キャンペーンです。応募総数183作品が集まりました。">
   <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/">
   <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
@@ -33,7 +33,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="未来のミルク画像投稿キャンペーン2026 | 牛乳月間2026">
-  <meta name="twitter:description" content="牛乳月間2026に合わせて、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像を募集する参加型キャンペーンです。">
+  <meta name="twitter:description" content="牛乳月間2026に合わせて実施した、牛乳にまつわる写真・イラスト・手描き作品・AI生成画像の投稿キャンペーンです。応募総数183作品が集まりました。">
   <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
   <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -612,6 +612,51 @@
       color: var(--green);
     }
 
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .sponsor-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .sponsor-card .area {
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .sponsor-card h3 {
+      font-size: 18px;
+    }
+
+    .sponsor-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sponsor-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(47, 111, 85, 0.18);
+      border-radius: var(--radius);
+      background: rgba(232, 245, 238, 0.74);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
     /* === 開催中レポート（進捗）セクション === */
     .progress-head-row {
       display: flex;
@@ -826,6 +871,102 @@
     .theme-card p {
       color: inherit;
       opacity: 0.94;
+    }
+
+    .featured-works {
+      margin-top: 34px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .featured-works[hidden] {
+      display: none;
+    }
+
+    .featured-works-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .featured-works-head h3 {
+      margin: 0;
+      color: var(--green);
+      font-size: 22px;
+    }
+
+    .featured-works-head p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .featured-works-link {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .featured-works-link:hover {
+      text-decoration: underline;
+    }
+
+    .featured-works-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .featured-work-card {
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid rgba(220, 232, 226, 0.95);
+      border-radius: var(--radius);
+      background: var(--milk);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .featured-work-card:hover {
+      border-color: rgba(47, 111, 85, 0.32);
+      box-shadow: 0 14px 32px rgba(30, 42, 50, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .featured-work-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--cream);
+    }
+
+    .featured-work-body {
+      padding: 12px 12px 14px;
+    }
+
+    .featured-work-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    .featured-work-meta {
+      display: block;
+      margin-top: 6px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.45;
     }
 
     .gallery-preview {
@@ -1333,15 +1474,26 @@
       box-shadow: 0 14px 34px rgba(19, 41, 35, 0.22);
     }
 
-    .airtable-embed {
-      display: block;
-      width: 100%;
-      min-height: 533px;
-      border: 1px solid rgba(220, 232, 226, 0.9) !important;
-      background: transparent;
+    .entry-closed {
+      padding: 28px;
+      color: var(--ink);
     }
 
-    .floating-entry {
+    .entry-closed h3 {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: clamp(22px, 3vw, 32px);
+    }
+
+    .entry-closed p {
+      color: var(--muted);
+    }
+
+    .entry-closed .button {
+      margin-top: 18px;
+    }
+
+.floating-entry {
       position: fixed;
       right: 18px;
       bottom: 18px;
@@ -1448,6 +1600,8 @@
 
       .grid-3,
       .grid-4,
+      .sponsor-grid,
+      .featured-works-grid,
       .theme-grid,
       .steps,
       .award-grid,
@@ -1514,6 +1668,8 @@
 
       .grid-3,
       .grid-4,
+      .sponsor-grid,
+      .featured-works-grid,
       .theme-grid,
       .steps,
       .award-grid,
@@ -1586,7 +1742,8 @@
         <span>牛乳月間2026</span>
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
-        <a href="#progress" data-nav="progress">開催中レポート</a>
+        <a href="awards.html" data-nav="awards">特別賞発表</a>
+        <a href="#progress" data-nav="progress">締切後レポート</a>
         <a href="#about" data-nav="about">企画について</a>
         <a href="#themes" data-nav="themes">募集テーマ</a>
         <a href="#howto" data-nav="howto">応募方法</a>
@@ -1595,7 +1752,7 @@
         <a href="submitted-works.html" data-nav="works">応募作品</a>
         <a href="terms.html" data-nav="terms">参加規約</a>
         <a href="#faq" data-nav="faq">FAQ</a>
-        <a class="button" href="#entry" data-cta="apply" data-cta-location="nav">応募する</a>
+        <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="nav">応募作品を見る</a>
       </nav>
     </div>
   </header>
@@ -1603,33 +1760,33 @@
   <section id="top" class="hero">
     <div class="hero-visual" role="img" aria-label="未来のミルク画像投稿キャンペーン2026のキービジュアル"></div>
     <div class="hero-inner">
-      <p class="eyebrow">2026年6月1日から受付開始</p>
+      <p class="eyebrow">応募受付は終了しました</p>
       <h1>未来のミルク画像投稿キャンペーン2026</h1>
       <p class="hero-copy">
         牛乳のある暮らし、未来の牛乳、牛さんへの想い。
         写真でも、イラストでも、親子で描いた作品でも。
-        あなたの1枚を、未来の牛乳へ届けませんか。
+        183作品のご応募、ありがとうございました。
       </p>
       <div class="hero-panel">
         <div>
           <div class="hero-actions">
-            <a class="button" href="#entry" data-cta="apply" data-cta-location="hero">応募する<span class="arrow">→</span></a>
+            <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="hero">応募作品を見る<span class="arrow">→</span></a>
             <a class="button secondary" href="#themes" data-cta="themes" data-cta-location="hero">募集テーマを見る</a>
             <a class="button secondary" href="gallery.html" data-cta="gallery" data-cta-location="hero">参考ギャラリーを見る</a>
-            <a class="button secondary" href="submitted-works.html" data-cta="works" data-cta-location="hero">応募作品を見る</a>
           </div>
           <div class="hero-meta" aria-label="キャンペーン概要">
             <span class="pill">応募期間: 2026年6月1日から6月30日</span>
+            <span class="pill yellow">応募総数183作品</span>
             <span class="pill blue">写真・イラスト・手描き・AI画像 OK</span>
             <span class="pill yellow">親子参加歓迎</span>
-            <span class="pill berry">地域交流牧場全国連絡会・近畿中国四国ブロック 協賛</span>
-            <span class="pill">島根県の牛乳・乳製品詰め合わせをプレゼント</span>
+            <span class="pill berry">協賛の輪が中四国へ拡大</span>
+            <span class="pill">地域の牛乳・乳製品とつながる特典</span>
             <span class="pill">参加証NFTは希望者に無料配布</span>
           </div>
         </div>
         <div class="hero-footer">
           <div class="countdown-card" aria-live="polite">
-            <span>応募受付まで</span>
+            <span>応募受付</span>
             <strong data-countdown>日程を確認中</strong>
           </div>
           <a class="scroll-cue" href="#about">企画を見る</a>
@@ -1644,57 +1801,64 @@
         <div class="section-head">
           <div>
             <div class="progress-head-row">
-              <span class="live-badge">開催中</span>
-              <span class="section-kicker" style="margin:0;">Now / 6月11日レポート</span>
+              <span class="live-badge">受付終了</span>
+              <span class="section-kicker" style="margin:0;">Thanks / 締切後レポート</span>
             </div>
-            <h2>未来の牛乳は、<br><span class="accent">気持ちにも寄り添う一杯へ。</span></h2>
+            <h2>183作品のご応募、<br><span class="accent">ありがとうございました。</span></h2>
           </div>
           <p class="lead">
-            受付開始から11日で、応募作品は28件に。
-            牛乳の背景や味の違いだけでなく、心を整える一杯、発酵や料理、湯上がりの体験まで、未来の牛乳像が広がっています。
+            2026年6月30日をもって応募受付を終了しました。
+            写真、手描き、イラスト、AI画像など、牛乳のある暮らしや未来への想像が183作品集まりました。
           </p>
         </div>
 
-        <div class="progress-stats focused" aria-label="集計サマリー（2026年6月11日時点）">
+        <div class="progress-stats" aria-label="集計サマリー（2026年7月1日時点）">
           <div class="stat-card">
-            <span class="num">28<span class="unit">件</span></span>
-            <span class="label">応募作品（6/11時点）</span>
+            <span class="num">183<span class="unit">作品</span></span>
+            <span class="label">応募総数</span>
           </div>
           <div class="stat-card accent-berry">
-            <span class="num">17<span class="unit">件</span></span>
-            <span class="label">牛乳への声・疑問つき</span>
+            <span class="num">64<span class="unit">件</span></span>
+            <span class="label">自由記述コメント</span>
+          </div>
+          <div class="stat-card accent-blue">
+            <span class="num">40<span class="unit">件</span></span>
+            <span class="label">未来の牛乳テーマ</span>
+          </div>
+          <div class="stat-card accent-yellow">
+            <span class="num">5<span class="unit">形式</span></span>
+            <span class="label">AI・手描き・写真・イラスト・その他</span>
           </div>
         </div>
 
-        <p class="insight-lead">6月11日時点で見えてきた、3つの声。</p>
+        <p class="insight-lead">締切後に、あらためて見えてきた3つの広がり。</p>
         <div class="grid-3">
           <article class="card">
             <span class="icon">01</span>
-            <h3>体だけでなく、気持ちにも寄り添う</h3>
-            <p>深夜のホットミルク、湯上がりの一杯、心に効くホエイ。牛乳は栄養だけでなく、気分を整えたり前向きさを支えたりする存在として語られています。</p>
+            <h3>写真でも参加できることが伝わっています</h3>
+            <p>朝食、休憩、牧場での出会い、ご当地牛乳など、身近な場面をそのまま作品にする投稿が増えています。制作のハードルが下がり、参加の入口が広がっています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
-            <h3>搾りたて・季節・地域の違いを知りたい</h3>
-            <p>牛乳の味や香りは、鮮度、季節、地域、牧場、餌や環境でどう変わるのか。生活者の関心は、背景から商品体験へと深まりはじめています。</p>
+            <h3>牛乳時間が生活者の本音を集めています</h3>
+            <p>カフェラテ、ミルクティー、おやつ作り、親子の会話。牛乳は栄養だけでなく、気分を整えたり、記憶や会話をつくったりする存在として語られています。</p>
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>飲むだけでなく、発酵や体験へ広がる</h3>
-            <p>ヨーグルト、バター、プリン、カフェラテ、銭湯の湯上がり牛乳。未来の牛乳は、料理や発酵乳製品、日常の小さな幸せも支えています。</p>
+            <h3>背景を知り、納得して選びたい</h3>
+            <p>牛の育ち、牧場の健康管理、季節による栄養差、地域ごとの味などへの疑問も具体化しています。未来の牛乳は、技術だけでなく、背景が見える安心へ広がっています。</p>
           </article>
         </div>
 
         <blockquote class="insight-quote">
-          <p>「牛乳は、体だけでなく気持ちにも寄り添う一杯かもしれません。」</p>
-          <cite>応募作品に寄せられた声より（一部要約）</cite>
+          <p>「休憩、親子のおやつ、ご当地牛乳。牛乳は、暮らしの気分や記憶、会話のきっかけとしても語られています。」</p>
+          <cite>6月25日レポートより要約</cite>
         </blockquote>
 
         <div class="progress-cta">
-          <a class="button" href="#entry">あなたの牛乳時間を応募する<span class="arrow">→</span></a>
-          <a class="button secondary" href="submitted-works.html">届いた作品を見る</a>
+          <a class="button" href="submitted-works.html">届いた作品を見る<span class="arrow">→</span></a>
         </div>
-        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年6月11日 ／ 会期中は毎週更新予定です。</p>
+        <p class="update-stamp" style="margin-top:18px;">最終更新: 2026年7月1日 ／ 応募受付は終了しました。</p>
       </div>
     </section>
 
@@ -1728,6 +1892,17 @@
             <p>応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。</p>
           </article>
         </div>
+
+        <div class="featured-works" data-featured-works hidden>
+          <div class="featured-works-head">
+            <div>
+              <h3>届いている作品の一部</h3>
+              <p>写真、手描き、イラスト、AI画像など、さまざまな牛乳時間が集まっています。</p>
+            </div>
+            <a class="featured-works-link" href="submitted-works.html" data-cta="works" data-cta-location="about_featured">応募作品ギャラリーを見る</a>
+          </div>
+          <div class="featured-works-grid" data-featured-works-grid aria-label="応募作品の抜粋"></div>
+        </div>
       </div>
     </section>
 
@@ -1737,13 +1912,13 @@
           <div>
             <p class="section-kicker">Cooperation</p>
             <h2 class="cooperation-title">
-              <span>交牧連</span>
-              <span class="region-line">（近畿・中国・四国ブロック）</span>
-              <span>の協賛企画です。</span>
+              <span>協賛・応援の輪が、</span>
+              <span class="region-line">中四国へ広がっています。</span>
             </h2>
           </div>
           <p class="lead">
-            本企画は、酪農家による全国的なネットワーク組織である地域交流牧場全国連絡会の近畿・中国・四国ブロックの協賛のもと、牛乳や酪農への理解を広げる取り組みとして実施します。
+            本企画は、地域交流牧場全国連絡会・近畿中国四国ブロックの協賛のもとスタートしました。
+            会期中には島根県牛乳消費拡大運動実行委員会、ジェラテリア クラキチ、森のジェラテリアMUCCAも加わり、生活者の声と地域の作り手をつなぐ取り組みとして広がっています。
           </p>
         </div>
 
@@ -1768,6 +1943,32 @@
             </div>
           </div>
         </div>
+
+        <div class="sponsor-grid" aria-label="協賛・応援団体">
+          <article class="sponsor-card">
+            <span class="area">広域ネットワーク</span>
+            <h3>地域交流牧場全国連絡会・近畿中国四国ブロック</h3>
+            <p>酪農家同士の交流や、都市生活者・地域住民との交流活動を通じて、日本酪農への理解を広げる全国ネットワークです。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">島根県</span>
+            <h3>島根県牛乳消費拡大運動実行委員会</h3>
+            <p>島根県内の酪農・乳業を横断し、県産牛乳や乳製品の魅力を届ける普及活動に取り組んでいます。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">山口県</span>
+            <h3>ジェラテリア クラキチ</h3>
+            <p>藤井牧場の朝搾りミルクを使った手作りジェラートを通じて、牧場の恵みと地域の食文化を伝えています。</p>
+          </article>
+          <article class="sponsor-card">
+            <span class="area">香川県</span>
+            <h3>森のジェラテリアMUCCA</h3>
+            <p>広野牧場直営のジェラート店として、酪農・食・地域づくりを一体で伝える活動に取り組んでいます。</p>
+          </article>
+        </div>
+        <p class="sponsor-note">
+          応募作品やコメントから見えてきた「牛乳の背景をもっと知りたい」という声を、地域の酪農・乳製品の魅力発信へつなげていきます。
+        </p>
       </div>
     </section>
 
@@ -1874,12 +2075,12 @@
           <h2>作品づくりに迷ったら、<span class="accent">牛の写真</span>を眺めてみる。</h2>
           <p class="lead">
             牛の表情、距離感、リラックスした姿は、写真・イラスト・手描き・AI画像のヒントになります。
-            参考ギャラリーでは、参加前に見ておきたい牛の写真をまとめています。
+            参考ギャラリーでは、企画の背景として見ておきたい牛の写真をまとめています。
           </p>
           <div class="gallery-preview-actions">
             <a class="button" href="gallery.html">参考ギャラリーを見る<span class="arrow">→</span></a>
             <a class="button secondary" href="submitted-works.html">応募作品ギャラリーへ</a>
-            <a class="button secondary" href="#howto">応募方法へ進む</a>
+            <a class="button secondary" href="submitted-works.html">応募作品を見る</a>
           </div>
         </div>
 
@@ -1900,11 +2101,11 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="section-kicker">How to Apply</p>
-            <h2>応募は<span class="accent">3ステップ</span>。</h2>
+            <p class="section-kicker">Application Closed</p>
+            <h2>応募受付は<span class="accent">終了しました</span>。</h2>
           </div>
           <p class="lead">
-            LINE登録やDiscord参加は不要です。LPから応募フォームに進み、そのまま応募できます。
+            2026年6月30日をもって応募受付を終了しました。たくさんのご応募をありがとうございました。
           </p>
         </div>
 
@@ -1914,12 +2115,12 @@
             <p>牛乳にまつわる写真、イラスト、手描き作品、AI生成画像のいずれかを用意します。</p>
           </article>
           <article class="step">
-            <h3>フォームに入力する</h3>
+            <h3>作品情報を登録</h3>
             <p>ニックネーム、年代、作品タイトル、作品説明、画像を登録します。</p>
           </article>
           <article class="step">
             <h3>送信して応募完了</h3>
-            <p>応募後、希望者には「牛乳月間2026 参加証NFT」の受け取り方法をメールでご案内します。</p>
+            <p>応募受付は終了しました。今後は作品確認、審査、結果発表に向けた準備を進めます。</p>
           </article>
         </div>
       </div>
@@ -1930,10 +2131,10 @@
         <div class="section-head">
           <div>
             <p class="section-kicker">Benefits</p>
-            <h2>参加すると、<span class="accent">島根の牛乳・酪農</span>ともつながります。</h2>
+            <h2>参加すると、<span class="accent">地域の牛乳・乳製品</span>ともつながります。</h2>
           </div>
           <p class="lead">
-            作品を投稿するだけで終わらず、地域の乳製品や酪農イベント、参加の記録につながる特典を用意しています。
+            作品を投稿するだけで終わらず、地域の乳製品や酪農イベント、参加の記録につながる特典を用意しています。協賛の広がりに合わせて、地域の作り手との接点も増えています。
           </p>
         </div>
 
@@ -1941,7 +2142,7 @@
           <article class="card">
             <span class="icon">01</span>
             <h3>島根県の牛乳・乳製品詰め合わせをプレゼント</h3>
-            <p>島根県牛乳普及協会の副賞として、島根県の牛乳・乳製品詰め合わせを用意しています。</p>
+            <p>島根県牛乳消費拡大運動実行委員会の副賞として、島根県の牛乳・乳製品詰め合わせを用意しています。</p>
           </article>
           <article class="card">
             <span class="icon">02</span>
@@ -1950,19 +2151,19 @@
           </article>
           <article class="card">
             <span class="icon">03</span>
-            <h3>しまね酪農フェアで作品展示</h3>
-            <p>応募条件を満たした作品は、2026年10月予定の会場ブースで展示予定です。</p>
+            <h3>地域の作り手とつながる企画へ</h3>
+            <p>島根・山口・香川の協賛先とともに、牛乳や乳製品の背景にある地域の魅力も発信していきます。</p>
           </article>
           <article class="card">
             <span class="icon">04</span>
-            <h3>参加証NFTを無料配布</h3>
-            <p>希望者には「牛乳月間2026 参加証NFT」の受け取り方法を、応募後にメールでご案内します。</p>
+            <h3>しまね酪農フェアで作品展示</h3>
+            <p>応募条件を満たした作品は、2026年10月予定の会場ブースで展示予定です。希望者には参加証NFTも無料でご案内します。</p>
           </article>
         </div>
 
         <p class="small" style="margin-top: 18px;">
-          副賞の対象者・点数・発送方法などの詳細は、結果発表時または応募フォーム内の案内をご確認ください。
-          NFTの受け取りは任意で、受け取らなくても応募できます。
+          副賞の対象者・点数・発送方法などの詳細は、結果発表時の案内をご確認ください。
+          NFTの受け取りは任意です。
         </p>
       </div>
     </section>
@@ -2004,6 +2205,7 @@
 
         <p class="small" style="margin-top: 18px;">
           副賞として、島根県の牛乳・乳製品詰め合わせや川上牧場の牛乳を使ったカヌレを用意しています。
+          協賛の広がりに合わせて、地域の牛乳・乳製品を知るきっかけも増えています。
           応募条件を満たした作品は、2026年10月予定の「しまね酪農フェア」会場ブースで展示予定です。
         </p>
       </div>
@@ -2083,7 +2285,7 @@
             <li><b>自由記述</b><span>作品説明、牛乳への意見や疑問</span></li>
             <li><b>AI画像</b><span>商用利用可能なツールで作成。使用ツール名を記載</span></li>
             <li><b>人物写真</b><span>本人同意が必要。未成年は保護者同意</span></li>
-            <li><b>特典・副賞</b><span>NFT参加証、島根県の牛乳・乳製品詰め合わせ、川上牧場のカヌレ</span></li>
+            <li><b>特典・副賞</b><span>NFT参加証、島根県の牛乳・乳製品詰め合わせ、川上牧場のカヌレ、地域協賛先の紹介</span></li>
           </ul>
         </div>
       </div>
@@ -2153,7 +2355,7 @@
           </details>
           <details>
             <summary>牛乳月間2026 参加証NFTとは何ですか？</summary>
-            <p>牛乳月間2026への参加の証として、希望者に無料で配布する参加者限定NFTです。受け取りは任意で、受け取らなくても応募できます。受け取りサイトや受け取り方法は、応募後にメールでご案内します。</p>
+            <p>牛乳月間2026への参加の証として、希望者に無料で配布する参加者限定NFTです。受け取りは任意です。受け取りサイトや受け取り方法は、対象者へメールでご案内します。</p>
           </details>
           <details>
             <summary>応募作品はどこに展示されますか？</summary>
@@ -2171,35 +2373,41 @@
       <div class="container">
         <div class="entry">
           <p class="section-kicker" style="color: #fff6d9;">Entry</p>
-          <h2>あなたの1枚を、<br>未来の牛乳へ。</h2>
+          <h2>たくさんのご応募、<br>ありがとうございました。</h2>
           <p>
-            写真でも、イラストでも、親子で描いた作品でも。<br>
-            牛乳にまつわるあなたの1枚をお待ちしています。
+            2026年6月30日をもって、応募受付を終了しました。<br>
+            集まった183作品は、順次整理・紹介していきます。
           </p>
           <div class="entry-reassurance" data-reassurance>
             <div>
-              <h3>応募前に、これだけ確認できればOK</h3>
+              <h3>ご参加いただいた皆さまへ</h3>
               <p>
-                上手さよりも、牛乳への思いや日常のひとコマを大切にしています。<br>
-                迷っている方も、まずは気軽に1枚から参加できます。
+                牛乳のある暮らし、未来の牛乳、牛さんへの想いなど、多様な視点の作品が届きました。<br>
+                ご応募いただいた作品は、公開対象の確認後、応募作品ギャラリー等で紹介します。
               </p>
               <div class="entry-benefit">
-                <strong>特典について</strong>
+                <strong>今後の予定</strong>
                 <p>
-                  希望者には、参加証NFTを無料でご案内します。
+                  審査・集計を進め、結果発表や展示に向けた準備を行います。
                   表彰作品には、島根県の牛乳・乳製品詰め合わせや川上牧場のカヌレなどの副賞を予定しています。
                 </p>
               </div>
             </div>
-            <ul class="entry-checks" aria-label="応募前チェックリスト">
-              <li>スマホ写真1枚でOK</li>
-              <li>ニックネームで参加可</li>
-              <li>入力は約5分</li>
-              <li>未成年は保護者同意必要</li>
+            <ul class="entry-checks" aria-label="締切後の進行">
+              <li>応募総数183作品</li>
+              <li>応募受付は終了</li>
+              <li>公開対象を順次確認</li>
+              <li>結果発表に向けて審査</li>
             </ul>
           </div>
           <div id="entry-form" class="form-frame">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/paghtnLiOMP0bccRE/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <div class="entry-closed">
+              <h3>応募フォームは閉じました</h3>
+              <p>
+                多くのご応募をありがとうございました。現在は受付を終了し、作品の確認と審査準備を進めています。
+              </p>
+              <a class="button" href="submitted-works.html" data-cta="works" data-cta-location="entry_closed">応募作品を見る</a>
+            </div>
           </div>
         </div>
       </div>
@@ -2212,7 +2420,7 @@
         <strong>未来のミルク画像投稿キャンペーン2026</strong>
         <p class="small">
           主催: Metagri研究所（株式会社農情人）<br>
-          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック<br>
+          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック、島根県牛乳消費拡大運動実行委員会、ジェラテリア クラキチ、森のジェラテリアMUCCA<br>
           協力: 川上牧場、協力酪農家の皆様
           <br><a href="gallery.html">参考ギャラリーを見る</a>
           <br><a href="submitted-works.html">応募作品ギャラリーを見る</a>
@@ -2222,7 +2430,7 @@
       </div>
     </div>
   </footer>
-  <a class="floating-entry" href="#entry" aria-label="応募フォームへ移動" data-cta="apply" data-cta-location="floating">応募フォームへ</a>
+  <a class="floating-entry" href="submitted-works.html" aria-label="応募作品ギャラリーへ移動" data-cta="works" data-cta-location="floating">応募作品を見る</a>
   <script>
     (() => {
       const header = document.querySelector(".site-header");
@@ -2322,6 +2530,104 @@
       updatePageState();
       updateActiveNav();
 
+      // About内の応募作品抜粋（公開作品APIから最新4件を表示）
+      const featuredWorksRoot = document.querySelector("[data-featured-works]");
+      const featuredWorksGrid = document.querySelector("[data-featured-works-grid]");
+      const featuredFallbackWorks = [
+        {
+          id: "recIeRjrHwiVSdMyV",
+          title: "モー！とまねっこ",
+          theme: "牛さんに伝えたいこと",
+          format: "AI生成画像",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/_7rICRLI1Qwrhyffuj3rAQ/T9yOFpz29ZH2hDYZtAY4IgvgUhD-l6vLovnHqf1IitpUq9TEyfYCCLc5AhkVQWOx7ADPFJ6r2BBl3T_z3F6NlVRC5lSFF-c7vXx564axbdrD3gvQFxdzqXXol6rCEoV5ykP3GpRv9ZMMdrVzS0os8g/qo82z2W1sbC6OSbPRB9ym8WtuAzJ4pqOKwwR1CvKHeQ",
+        },
+        {
+          id: "recQXXFqYguR6iYOr",
+          title: "ミルクの向こう側",
+          theme: "牛乳のある食卓",
+          format: "手描き作品",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/-1BVvYK6FDRgqnW2xj-ibg/UjyQSTiLp6HfVRJObRZ3Six7RbdiyaKlZO0BY-OjF3lapPgrmoh16DPquyEg4FnSky_qqKzac-ZLW_E7bNCldVSo25UhvcBvHaVjHPmIxKlfbuyOturpQh1oNUO6uDrIKN5V97fvCZQlcFdc7471eQ/cPO8DwwQjVvtbijFSp6RoFmjlE-erjwPyGLUMijYcJQ",
+        },
+        {
+          id: "recEO4cfCkZ1RkPcD",
+          title: "Every Day  Milk Life",
+          theme: "わたしの牛乳時間",
+          format: "イラスト",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/qcRlUgDGvWCx_66NVc2vgg/K_ZgMzy-l5FBCMEkgoOYlqi1cvlqbk1M46Lo4PEpWC2VphON67IEuFvtLvhdXbUfllqp3vR1_ZH1tAVW1PRBxDaa2BM_4yznU7P0fdhKz1l5zUyJ35epGogLQXp9ApkbMjaLMgKJqC8eHQd2Me2b2g/DECDbm9bMunLfTP8Stpjhe0ZMRZGiAjN2e1qkAnc9eY",
+        },
+        {
+          id: "recKedamg7MyoPizR",
+          title: "飲み方いろいろ",
+          theme: "わたしの牛乳時間",
+          format: "手描き作品",
+          thumb: "https://v5.airtableusercontent.com/v3/u/54/54/1781920800000/HUppdVkdhcPCc9qUNlFh9A/lZItj11-6j4xBD-sXus-23v3TbMSgj5mCNhv0FZVdJxXyJAZV0k2UFTNM8zMz2EZS3VlW0QtMwBB-GTMAT8-hACut9kyLJpMR2a_tRhCv5ForqqLZJ8fmcFt368A9mHAgm6g5Ch5ANCq_1Rsnrv-3g/uZy-iIKmP0tPKKD8ZwrTc4DecVf3JI0x7MVX4RdBQ3o",
+        },
+      ];
+
+      const escapeHtml = (value) => String(value || "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      }[char]));
+
+      const asText = (value) => Array.isArray(value) ? value.join(" / ") : (value || "");
+
+      const worksApiUrl = () => {
+        const host = window.location.hostname;
+        if (host === "world-milk-contest-2026.metagri-labo.com" || host.endsWith(".vercel.app")) {
+          return "/api/works";
+        }
+        return "https://world-milk-contest-2026.metagri-labo.com/api/works";
+      };
+
+      const renderFeaturedWorks = (works) => {
+        if (!featuredWorksRoot || !featuredWorksGrid || !works.length) return;
+
+        const displayWorks = works.slice(0, 4);
+
+        if (!displayWorks.length) return;
+
+        featuredWorksGrid.innerHTML = displayWorks.map((work) => {
+          const theme = asText(work.theme);
+          const format = asText(work.format);
+          const meta = [format, theme].filter(Boolean).join(" / ");
+          return `
+            <a class="featured-work-card" href="submitted-works.html" data-cta="featured_work" data-cta-location="about" data-work-id="${escapeHtml(work.id)}">
+              <img src="${escapeHtml(work.thumb)}" alt="${escapeHtml(work.title)}" loading="lazy">
+              <div class="featured-work-body">
+                <p class="featured-work-title">${escapeHtml(work.title)}</p>
+                ${meta ? `<span class="featured-work-meta">${escapeHtml(meta)}</span>` : ""}
+              </div>
+            </a>
+          `;
+        }).join("");
+        featuredWorksRoot.hidden = false;
+
+        window.mlTrack && window.mlTrack("featured_works_loaded", {
+          count: displayWorks.length,
+          page: "index",
+        });
+      };
+
+      if (featuredWorksRoot && featuredWorksGrid) {
+        renderFeaturedWorks(featuredFallbackWorks);
+        fetch(worksApiUrl(), { headers: { Accept: "application/json" } })
+          .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
+          .then((data) => {
+            const works = Array.isArray(data.works) ? data.works.filter((work) => work.title && work.thumb) : [];
+            const publicWorkCount = Number.isFinite(data.count) ? data.count : works.length;
+            document.querySelectorAll("[data-public-work-count]").forEach((element) => {
+              element.textContent = String(publicWorkCount);
+            });
+            renderFeaturedWorks(works.length ? works : featuredFallbackWorks);
+          })
+          .catch(() => {
+            renderFeaturedWorks(featuredFallbackWorks);
+          });
+      }
+
       // ===== GA カスタム計測（mlTrack） =====
       const SITE_HOST = "world-milk-contest-2026.metagri-labo.com";
 
@@ -2365,7 +2671,7 @@
         } catch (e) {}
       });
 
-      // #entry が 50% 以上画面表示されたら entry_form_view を1回だけ発火
+      // #entry が 50% 以上画面表示されたら entry_closed_view を1回だけ発火
       const entrySection = document.getElementById("entry");
       if (entrySection && "IntersectionObserver" in window) {
         let entryViewSent = false;
@@ -2373,7 +2679,7 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting && !entryViewSent) {
               entryViewSent = true;
-              window.mlTrack && window.mlTrack("entry_form_view", {
+              window.mlTrack && window.mlTrack("entry_closed_view", {
                 ratio: Math.round((entry.intersectionRatio || 0) * 100),
                 page: "index",
               });
@@ -2401,6 +2707,7 @@
         }, { threshold: 0.5 });
         reassuranceObserver.observe(reassurance);
       }
+
     })();
   </script>
 </body>
