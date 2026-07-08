@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGHQ2LWHG4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GGHQ2LWHG4');
+    window.mlTrack = function(name, params){
+      try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
+    };
+  </script>
+  <title>業界関係者向けレポート申込 | 牛乳月間2026</title>
+  <meta name="description" content="牛乳月間2026に寄せられた生活者138名の声をまとめた、酪農・乳業・JA・自治体・業界メディア・研究機関向けレポートの無料申込ページです。">
+  <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/report.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicon-512.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="未来のミルク画像投稿キャンペーン2026">
+  <meta property="og:title" content="業界関係者向けレポート申込 | 牛乳月間2026">
+  <meta property="og:description" content="生活者138名の声を分類・整理した公開レポート『牛乳パックの向こう側を知りたい』を、酪農・乳業関係者向けに無料公開します。">
+  <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/report.html">
+  <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="432">
+  <meta property="og:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="業界関係者向けレポート申込 | 牛乳月間2026">
+  <meta name="twitter:description" content="生活者138名の声を分類・整理した公開レポート『牛乳パックの向こう側を知りたい』を無料公開します。">
+  <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
+  <style>
+    :root {
+      --milk: #fffdf7;
+      --cream: #f8f2df;
+      --blue: #2f78b7;
+      --blue-soft: #eaf5ff;
+      --green: #2f6f55;
+      --green-soft: #e8f5ee;
+      --yellow: #f4c95d;
+      --yellow-soft: #fff6d9;
+      --coral: #db6f57;
+      --ink: #1e2a32;
+      --muted: #60717d;
+      --line: #dce8e2;
+      --shadow: 0 18px 48px rgba(30, 42, 50, 0.12);
+      --shadow-soft: 0 10px 26px rgba(30, 42, 50, 0.08);
+      --radius: 8px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      background:
+        linear-gradient(180deg, rgba(255, 253, 247, 0.96), rgba(255, 253, 247, 1)),
+        linear-gradient(90deg, rgba(47, 111, 85, 0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(47, 120, 183, 0.04) 1px, transparent 1px);
+      background-size: auto, 48px 48px, 48px 48px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(244, 201, 93, 0.9);
+      outline-offset: 4px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(220, 232, 226, 0.9);
+      background: rgba(255, 253, 247, 0.94);
+      backdrop-filter: blur(14px);
+      transition: box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(255, 253, 247, 0.98);
+      box-shadow: 0 10px 28px rgba(30, 42, 50, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 210px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      border-radius: 50%;
+      background: #fff url("image/favicon-512.png") center/cover no-repeat;
+      box-shadow: 0 4px 12px rgba(47, 111, 85, 0.16);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+
+    .nav a:hover,
+    .nav a.is-active {
+      color: var(--green);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border: 0;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--green);
+      box-shadow: var(--shadow-soft);
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: #245f48;
+      box-shadow: var(--shadow);
+    }
+
+    .button.secondary {
+      color: var(--green);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .report-hero {
+      padding: 64px 0 56px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(244, 201, 93, 0.2), rgba(47, 111, 85, 0.1)),
+        var(--milk);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(34px, 5.2vw, 58px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.24;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .hero-meta,
+    .target-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgba(47, 111, 85, 0.2);
+      border-radius: 999px;
+      color: var(--green);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .pill.blue {
+      border-color: rgba(47, 120, 183, 0.22);
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+
+    .pill.yellow {
+      border-color: rgba(244, 201, 93, 0.42);
+      color: #785d18;
+      background: var(--yellow-soft);
+    }
+
+    .form-panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .form-panel-head {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, var(--milk));
+    }
+
+    .form-panel-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .airtable-wrap {
+      background: #fff;
+    }
+
+    .airtable-embed {
+      display: block;
+      width: 100%;
+      min-height: 533px;
+      border: 1px solid #ccc;
+      background: transparent;
+    }
+
+    .fallback {
+      margin: 0;
+      padding: 14px 20px 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .fallback a {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 68px 0;
+    }
+
+    .section.alt {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(234, 245, 255, 0.5);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .insight-card,
+    .summary-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .insight-card {
+      padding: 22px;
+    }
+
+    .insight-card span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--green);
+      font-weight: 900;
+    }
+
+    .insight-card:nth-child(2) span {
+      background: var(--blue);
+    }
+
+    .insight-card:nth-child(3) span {
+      background: var(--coral);
+    }
+
+    .insight-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .summary-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .summary-panel {
+      padding: 24px;
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .summary-list li {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .summary-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .summary-list b {
+      color: var(--green);
+    }
+
+    .quote-panel {
+      position: relative;
+      min-height: 100%;
+      padding: 28px;
+      border-radius: var(--radius);
+      color: #fff;
+      background:
+        linear-gradient(0deg, rgba(30, 42, 50, 0.68), rgba(30, 42, 50, 0.42)),
+        url("image/LP掲載/川上牧場の牛舎.jpg") center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-panel blockquote {
+      margin: 0 0 18px;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .quote-panel p {
+      max-width: 620px;
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .bottom-cta {
+      padding: 42px 0;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .bottom-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .bottom-cta p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .bottom-cta .button {
+      flex: 0 0 auto;
+      color: var(--green);
+      background: #fff;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: #1e2a32;
+      color: #fff;
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .footer .small,
+    .small {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    @media (max-width: 980px) {
+      .header-inner,
+      .footer-inner,
+      .bottom-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .hero-grid,
+      .summary-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .insight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container,
+      .header-inner,
+      .footer-inner {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .brand {
+        min-width: 0;
+        font-size: 14px;
+      }
+
+      .report-hero {
+        padding: 48px 0 42px;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .hero-actions .button,
+      .bottom-cta .button {
+        width: 100%;
+      }
+
+      .summary-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .form-panel-head,
+      .insight-card,
+      .summary-panel,
+      .quote-panel {
+        padding: 20px 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html#top" aria-label="LPトップへ">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>牛乳月間2026</span>
+      </a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="awards.html" data-nav="awards">特別賞発表</a>
+        <a href="index.html#about" data-nav="about">企画について</a>
+        <a href="gallery.html" data-nav="gallery">参考ギャラリー</a>
+        <a href="submitted-works.html" data-nav="works">応募作品</a>
+        <a class="is-active" href="report.html" data-nav="report">レポート申込</a>
+        <a href="terms.html" data-nav="terms">参加規約</a>
+        <a class="button" href="#form" data-cta="report" data-cta-location="nav">無料で申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="report-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="kicker">Industry Report</p>
+          <h1>牛乳パックの向こう側を知りたい</h1>
+          <p class="lead">
+            牛乳月間2026に寄せられた生活者138名の声を分類・整理した、酪農・乳業関係者向けの無料レポートです。
+            生産背景への関心、家族の食卓での牛乳体験、未来の牛乳への提案を、現場の発信や商品開発のヒントとしてまとめました。
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#form" data-cta="report" data-cta-location="hero">申し込みフォームへ</a>
+            <a class="button secondary" href="submitted-works.html" data-cta="works" data-cta-location="hero">応募作品を見る</a>
+          </div>
+          <ul class="hero-meta" aria-label="レポート概要">
+            <li class="pill yellow">費用: 無料</li>
+            <li class="pill">参加者138名の声を分析</li>
+            <li class="pill blue">183作品の応募データを整理</li>
+            <li class="pill">2026年7月公開</li>
+          </ul>
+        </div>
+
+        <div class="form-panel" id="form">
+          <div class="form-panel-head">
+            <h2>レポートを申し込む</h2>
+            <p>対象は、酪農生産者・乳業メーカー・JA・自治体・業界メディア・研究機関などの関係者です。</p>
+          </div>
+          <div class="airtable-wrap">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;" title="牛乳月間2026 業界関係者向けレポート申し込みフォーム"></iframe>
+          </div>
+          <p class="fallback">
+            フォームが表示されない場合は、
+            <a href="https://airtable.com/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" target="_blank" rel="noopener" data-cta="airtable_fallback" data-cta-location="form">こちらの申し込みフォーム</a>
+            を開いてください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">What You Get</p>
+          <h2>レポートでわかること</h2>
+          <p class="muted">
+            応募作品の表現だけでなく、参加者が作品に込めた言葉を分類し、牛乳・酪農に対する生活者の関心を整理しています。
+          </p>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <span>1</span>
+            <h3>生産背景への関心</h3>
+            <p>どの牧場で、どのような牛から、どんな思いで届けられているのか。生活者が知りたい背景を整理しています。</p>
+          </article>
+          <article class="insight-card">
+            <span>2</span>
+            <h3>家族・子どもとの食卓</h3>
+            <p>牛乳が子どもの成長、学校給食、牧場体験、家族の記憶とどう結びついているかを読み解きます。</p>
+          </article>
+          <article class="insight-card">
+            <span>3</span>
+            <h3>未来の牛乳への提案</h3>
+            <p>飲む時間、体調、地域性、容器、保存性など、商品・売り場・体験づくりのヒントになる声を収録しています。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container summary-layout">
+        <div class="summary-panel">
+          <p class="kicker">For Industry</p>
+          <h2>対象となる方</h2>
+          <ul class="target-list" aria-label="対象者">
+            <li class="pill">酪農生産者</li>
+            <li class="pill">乳業メーカー</li>
+            <li class="pill">JA</li>
+            <li class="pill">自治体</li>
+            <li class="pill">業界メディア</li>
+            <li class="pill">研究機関</li>
+            <li class="pill">食育・地域連携の関係者</li>
+          </ul>
+        </div>
+        <div class="summary-panel">
+          <p class="kicker">Campaign Summary</p>
+          <h2>キャンペーン概要</h2>
+          <ul class="summary-list">
+            <li><b>名称</b><span>未来のミルク画像投稿キャンペーン2026（牛乳月間2026）</span></li>
+            <li><b>応募期間</b><span>2026年6月1日から6月30日</span></li>
+            <li><b>応募総数</b><span>183作品・参加者138名</span></li>
+            <li><b>主催</b><span>Metagri研究所（株式会社農情人）</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container summary-layout">
+        <div class="quote-panel">
+          <blockquote>毎日飲んでいるのに、つくる人のことは意外と知らない。</blockquote>
+          <p>
+            食卓から届いた声には、牛乳の背景にいる牛・牧場・つくり手を知りたいという関心が表れていました。
+            レポートでは、こうした声を酪農・乳業分野の情報発信、商品開発、食育、牧場体験のヒントとしてまとめています。
+          </p>
+        </div>
+        <div class="summary-panel">
+          <p class="kicker">Included</p>
+          <h2>収録内容</h2>
+          <ul class="summary-list">
+            <li><b>分析</b><span>生産背景への関心、家族の食卓、未来の牛乳への提案</span></li>
+            <li><b>分類</b><span>参加者が作品を通じて語った言葉のテーマ別整理</span></li>
+            <li><b>引用</b><span>生活者の自由記述コメントの一部抜粋</span></li>
+            <li><b>活用</b><span>地域発信、売り場づくり、商品企画、食育企画への示唆</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div class="container bottom-cta-inner">
+        <div>
+          <h2>生活者の声を、次の牛乳月間へ。</h2>
+          <p>申し込み後、レポート閲覧に関するご案内をお送りします。</p>
+        </div>
+        <a class="button" href="#form" data-cta="report" data-cta-location="bottom">無料で申し込む</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>未来のミルク画像投稿キャンペーン2026</strong>
+        <p class="small">
+          主催: Metagri研究所（株式会社農情人）<br>
+          協賛: 地域交流牧場全国連絡会・近畿中国四国ブロック、島根県牛乳消費拡大運動実行委員会、ジェラテリア クラキチ、森のジェラテリアMUCCA<br>
+          協力: 川上牧場、協力酪農家の皆様
+          <br><a href="index.html">LPへ戻る</a>
+          <br><a href="submitted-works.html">応募作品ギャラリーを見る</a>
+          <br><a href="terms.html">参加規約を見る</a>
+        </p>
+      </div>
+      <p class="small">
+        <a href="#form" data-cta="report" data-cta-location="footer">レポートを申し込む</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const header = document.querySelector(".site-header");
+      const onScroll = () => {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      document.querySelectorAll("[data-cta]").forEach((element) => {
+        element.addEventListener("click", () => {
+          window.mlTrack && window.mlTrack("report_cta_click", {
+            cta: element.dataset.cta,
+            location: element.dataset.ctaLocation || "",
+            href: element.getAttribute("href") || "",
+            page: "report"
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
