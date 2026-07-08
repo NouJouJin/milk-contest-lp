@@ -25,18 +25,18 @@
   <meta property="og:title" content="業界関係者向けレポート申込 | 牛乳月間2026">
   <meta property="og:description" content="生活者138名の声を分類・整理した公開レポート『牛乳パックの向こう側を知りたい』を、酪農・乳業関係者向けに無料公開します。">
   <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/report.html">
-  <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
-  <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
+  <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/report-kv.png">
+  <meta property="og:image:secure_url" content="https://world-milk-contest-2026.metagri-labo.com/image/report-kv.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="768">
   <meta property="og:image:height" content="432">
-  <meta property="og:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
+  <meta property="og:image:alt" content="牛乳月間2026公開レポート 牛乳パックの向こう側を知りたい">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="業界関係者向けレポート申込 | 牛乳月間2026">
   <meta name="twitter:description" content="生活者138名の声を分類・整理した公開レポート『牛乳パックの向こう側を知りたい』を無料公開します。">
-  <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/og-image.png">
-  <meta name="twitter:image:alt" content="未来のミルク画像投稿キャンペーン2026 メインビジュアル">
+  <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/report-kv.png">
+  <meta name="twitter:image:alt" content="牛乳月間2026公開レポート 牛乳パックの向こう側を知りたい">
   <style>
     :root {
       --milk: #fffdf7;
@@ -192,7 +192,7 @@
     }
 
     .report-hero {
-      padding: 64px 0 56px;
+      padding: 42px 0 56px;
       border-bottom: 1px solid var(--line);
       background:
         linear-gradient(135deg, rgba(244, 201, 93, 0.2), rgba(47, 111, 85, 0.1)),
@@ -201,9 +201,8 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-      gap: 36px;
-      align-items: start;
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
 
     .kicker {
@@ -248,6 +247,10 @@
       font-size: 17px;
     }
 
+    .hero-copy {
+      max-width: 860px;
+    }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -289,6 +292,32 @@
       border-color: rgba(244, 201, 93, 0.42);
       color: #785d18;
       background: var(--yellow-soft);
+    }
+
+    .kv-panel {
+      overflow: hidden;
+      width: min(100%, 1152px);
+      margin: 0 auto;
+      border: 1px solid rgba(47, 111, 85, 0.18);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .kv-panel img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+    }
+
+    .kv-caption {
+      margin: 0;
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      background: #fff;
     }
 
     .form-panel {
@@ -344,6 +373,25 @@
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       background: rgba(234, 245, 255, 0.5);
+    }
+
+    .form-section {
+      padding: 68px 0;
+      border-top: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 217, 0.52), rgba(255, 253, 247, 1));
+    }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.22fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .form-copy {
+      position: sticky;
+      top: 96px;
     }
 
     .section-head {
@@ -525,9 +573,13 @@
         padding-bottom: 4px;
       }
 
-      .hero-grid,
+      .form-layout,
       .summary-layout {
         grid-template-columns: 1fr;
+      }
+
+      .form-copy {
+        position: static;
       }
 
       .insight-grid {
@@ -548,10 +600,14 @@
       }
 
       .report-hero {
-        padding: 48px 0 42px;
+        padding: 28px 0 42px;
       }
 
       .section {
+        padding: 48px 0;
+      }
+
+      .form-section {
         padding: 48px 0;
       }
 
@@ -570,6 +626,10 @@
       .summary-panel,
       .quote-panel {
         padding: 20px 18px;
+      }
+
+      .kv-caption {
+        padding: 12px 14px;
       }
     }
 
@@ -598,10 +658,8 @@
       </a>
       <nav class="nav" aria-label="主要ナビゲーション">
         <a href="awards.html" data-nav="awards">特別賞発表</a>
-        <a href="index.html#about" data-nav="about">企画について</a>
-        <a href="gallery.html" data-nav="gallery">参考ギャラリー</a>
         <a href="submitted-works.html" data-nav="works">応募作品</a>
-        <a class="is-active" href="report.html" data-nav="report">レポート申込</a>
+        <a class="is-active" href="#overview" data-nav="overview">レポート内容</a>
         <a href="terms.html" data-nav="terms">参加規約</a>
         <a class="button" href="#form" data-cta="report" data-cta-location="nav">無料で申し込む</a>
       </nav>
@@ -611,7 +669,14 @@
   <main>
     <section class="report-hero">
       <div class="container hero-grid">
-        <div>
+        <figure class="kv-panel">
+          <img src="image/report-kv.png" alt="牛乳月間2026公開レポート 牛乳パックの向こう側を知りたい" width="1152" height="648">
+          <figcaption class="kv-caption">
+            生活者の自由記述から、牛乳の生産背景・家族の食卓・未来の商品アイデアを読み解く公開レポートです。
+          </figcaption>
+        </figure>
+
+        <div class="hero-copy">
           <p class="kicker">Industry Report</p>
           <h1>牛乳パックの向こう側を知りたい</h1>
           <p class="lead">
@@ -629,25 +694,10 @@
             <li class="pill">2026年7月公開</li>
           </ul>
         </div>
-
-        <div class="form-panel" id="form">
-          <div class="form-panel-head">
-            <h2>レポートを申し込む</h2>
-            <p>対象は、酪農生産者・乳業メーカー・JA・自治体・業界メディア・研究機関などの関係者です。</p>
-          </div>
-          <div class="airtable-wrap">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;" title="牛乳月間2026 業界関係者向けレポート申し込みフォーム"></iframe>
-          </div>
-          <p class="fallback">
-            フォームが表示されない場合は、
-            <a href="https://airtable.com/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" target="_blank" rel="noopener" data-cta="airtable_fallback" data-cta-location="form">こちらの申し込みフォーム</a>
-            を開いてください。
-          </p>
-        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="overview">
       <div class="container">
         <div class="section-head">
           <p class="kicker">What You Get</p>
@@ -722,6 +772,39 @@
             <li><b>引用</b><span>生活者の自由記述コメントの一部抜粋</span></li>
             <li><b>活用</b><span>地域発信、売り場づくり、商品企画、食育企画への示唆</span></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="form">
+      <div class="container form-layout">
+        <div class="form-copy">
+          <p class="kicker">Apply</p>
+          <h2>レポートを申し込む</h2>
+          <p class="lead">
+            フォーム送信後、レポート閲覧に関するご案内をお送りします。
+            対象は、酪農生産者・乳業メーカー・JA・自治体・業界メディア・研究機関などの関係者です。
+          </p>
+          <ul class="hero-meta" aria-label="申込条件">
+            <li class="pill yellow">費用: 無料</li>
+            <li class="pill">業界関係者向け</li>
+            <li class="pill blue">フォーム入力は数分</li>
+          </ul>
+        </div>
+
+        <div class="form-panel">
+          <div class="form-panel-head">
+            <h2>申し込みフォーム</h2>
+            <p>必要事項をご入力ください。フォームが表示されない場合は、下部の直接リンクから開けます。</p>
+          </div>
+          <div class="airtable-wrap">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;" title="牛乳月間2026 業界関係者向けレポート申し込みフォーム"></iframe>
+          </div>
+          <p class="fallback">
+            フォームが表示されない場合は、
+            <a href="https://airtable.com/apprCtybztnPDNCXI/pagM3yfIBDiICtIPB/form" target="_blank" rel="noopener" data-cta="airtable_fallback" data-cta-location="form">こちらの申し込みフォーム</a>
+            を開いてください。
+          </p>
         </div>
       </div>
     </section>
