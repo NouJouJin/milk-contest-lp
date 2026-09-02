@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGHQ2LWHG4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GGHQ2LWHG4');
+    window.mlTrack = function(name, params){
+      try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch(e) {}
+    };
+  </script>
+  <title>らくのうタイムアタック参加登録｜しまね酪農ミルクフェア2026</title>
+  <meta name="description" content="Metagri Milk Farm Eventを遊んだ記録を30秒で登録。ゲーム内ランキング上位の方と抽選当選者へ、島根の牛乳・乳製品などを後日お届けします。">
+  <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/milkfair.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="しまね酪農ミルクフェア2026">
+  <meta property="og:title" content="らくのうタイムアタック参加登録｜しまね酪農ミルクフェア2026">
+  <meta property="og:description" content="今日のスコアを、島根の牧場につなげよう。遊んだ記録を30秒で登録できます。">
+  <meta property="og:url" content="https://world-milk-contest-2026.metagri-labo.com/milkfair.html">
+  <meta property="og:image" content="https://world-milk-contest-2026.metagri-labo.com/image/milkfair/milkfair-og.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Metagri Milk Farm Eventのゲームビジュアル">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="らくのうタイムアタック参加登録｜しまね酪農ミルクフェア2026">
+  <meta name="twitter:description" content="今日のスコアを、島根の牧場につなげよう。遊んだ記録を30秒で登録できます。">
+  <meta name="twitter:image" content="https://world-milk-contest-2026.metagri-labo.com/image/milkfair/milkfair-og.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicon-512.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <style>
+    :root {
+      --sky: #dff5ff;
+      --sky-deep: #0986d7;
+      --field: #13734c;
+      --field-dark: #0c5538;
+      --leaf: #72b936;
+      --sun: #ffd946;
+      --cream: #fffaf0;
+      --milk: #ffffff;
+      --ink: #183126;
+      --muted: #5a7065;
+      --line: #d7e7dd;
+      --orange: #f27b2c;
+      --shadow: 0 18px 55px rgba(21, 82, 56, 0.15);
+      --soft-shadow: 0 10px 30px rgba(21, 82, 56, 0.1);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.75;
+      background: var(--cream);
+    }
+    body::selection { color: #fff; background: var(--field); }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--sun); outline-offset: 4px; }
+
+    .container { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(12, 85, 56, 0.13);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .brand-mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--field);
+      box-shadow: inset 0 0 0 5px rgba(255,255,255,.2);
+      font-size: 19px;
+    }
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--field);
+      box-shadow: 0 8px 0 var(--field-dark), 0 14px 28px rgba(12, 85, 56, .2);
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .01em;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #17855a; }
+    .button:active { transform: translateY(4px); box-shadow: 0 4px 0 var(--field-dark); }
+    .button-small {
+      min-height: 42px;
+      padding: 8px 18px;
+      box-shadow: none;
+      font-size: 14px;
+    }
+    .button-secondary {
+      color: var(--field-dark);
+      border-color: var(--field);
+      background: #fff;
+      box-shadow: none;
+    }
+    .button-secondary:hover { background: #eff9f3; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 0 58px;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.85) 0 8%, transparent 8.5%),
+        linear-gradient(180deg, var(--sky) 0 58%, #c9edac 58% 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 70px;
+      background: linear-gradient(175deg, transparent 47%, var(--cream) 48%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+      align-items: center;
+      gap: clamp(28px, 5vw, 70px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      color: var(--field-dark);
+      background: rgba(255,255,255,.88);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .08em;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(34px, 5.2vw, 66px);
+      line-height: 1.12;
+      letter-spacing: -.045em;
+      font-weight: 950;
+    }
+    .hero-highlight {
+      color: var(--field-dark);
+      text-decoration: underline;
+      text-decoration-color: var(--sun);
+      text-decoration-thickness: .2em;
+      text-underline-offset: .08em;
+      text-decoration-skip-ink: none;
+    }
+    .hero-copy { margin-bottom: 20px; font-size: clamp(16px, 2vw, 20px); font-weight: 700; }
+    .hero-copy strong { color: var(--field-dark); }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 23px; }
+    .event-meta span {
+      padding: 7px 11px;
+      border: 1px solid rgba(12,85,56,.13);
+      border-radius: 10px;
+      background: rgba(255,255,255,.75);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .hero-note { margin: 13px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; }
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      border: 7px solid #fff;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      transform: rotate(1.2deg);
+    }
+    .hero-visual img { width: 100%; height: auto; object-fit: contain; }
+    .hero-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 9px 13px;
+      border-radius: 12px;
+      color: #fff;
+      background: rgba(12,85,56,.92);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .benefits { position: relative; z-index: 2; margin-top: -12px; padding-bottom: 48px; }
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .benefit-card {
+      min-height: 158px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: var(--soft-shadow);
+    }
+    .benefit-number {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      color: var(--field-dark);
+      background: var(--sun);
+      font-weight: 950;
+    }
+    .benefit-card h2 { margin-bottom: 5px; font-size: 18px; line-height: 1.45; }
+    .benefit-card p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .section { padding: 74px 0; }
+    .section-head { max-width: 760px; margin: 0 auto 30px; text-align: center; }
+    .section-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--field);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .section-head h2 { margin-bottom: 10px; font-size: clamp(29px, 4.5vw, 46px); line-height: 1.25; letter-spacing: -.035em; }
+    .section-head p { margin-bottom: 0; color: var(--muted); }
+    .form-section { background: linear-gradient(180deg, var(--cream), #edf8f1); }
+    .form-wrap {
+      overflow: hidden;
+      max-width: 860px;
+      margin-inline: auto;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .form-instruction {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 25px;
+      color: #fff;
+      background: var(--field-dark);
+    }
+    .form-instruction strong { display: block; margin-bottom: 3px; font-size: 18px; }
+    .form-instruction p { margin: 0; color: #d8f4e5; font-size: 13px; }
+    .time-badge { padding: 9px 13px; border-radius: 999px; color: var(--ink); background: var(--sun); font-weight: 950; white-space: nowrap; }
+    .airtable-embed { display: block; width: 100%; min-height: 533px; border: 0; background: transparent; }
+    .form-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 20px 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .form-fallback a { color: var(--field-dark); font-weight: 900; }
+    .show-staff {
+      max-width: 860px;
+      margin: 18px auto 0;
+      padding: 17px 20px;
+      border: 2px dashed var(--orange);
+      border-radius: 16px;
+      color: #7a3c12;
+      background: #fff4e8;
+      text-align: center;
+      font-weight: 900;
+    }
+    .fine-print { max-width: 760px; margin: 18px auto 0; color: var(--muted); font-size: 12px; text-align: center; }
+
+    .continue-section {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      color: #fff;
+      background: var(--field-dark);
+    }
+    .continue-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .13;
+      background-image: radial-gradient(circle, #fff 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+    }
+    .continue-inner { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; }
+    .continue-section .section-kicker { color: #b9eda0; }
+    .continue-section h2 { margin-bottom: 9px; font-size: clamp(30px, 4vw, 46px); line-height: 1.2; letter-spacing: -.03em; }
+    .continue-section p { margin-bottom: 0; color: #d9eee4; }
+    .continue-section .button { color: var(--ink); background: var(--sun); box-shadow: 0 8px 0 #cba616, 0 14px 28px rgba(0,0,0,.2); }
+    .continue-section .button:active { box-shadow: 0 4px 0 #cba616; }
+    .continue-note { display: block; margin-top: 11px; color: #d9eee4; font-size: 12px; text-align: center; }
+
+    .content-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(28px, 5vw, 64px); }
+    .video-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #0d2f22; object-fit: cover; }
+    .video-caption { padding: 13px 17px; color: var(--muted); font-size: 13px; }
+    .copy-block h2 { margin-bottom: 13px; font-size: clamp(30px, 4vw, 44px); line-height: 1.25; letter-spacing: -.035em; }
+    .copy-block > p { color: var(--muted); }
+    .game-steps { display: grid; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
+    .game-steps li { display: grid; grid-template-columns: 34px 1fr; align-items: center; gap: 11px; font-weight: 900; }
+    .game-steps span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; color: var(--field-dark); background: #dff1b7; }
+    .screen-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+    .screen-grid figure { overflow: hidden; margin: 0; border: 4px solid #fff; border-radius: 16px; box-shadow: var(--soft-shadow); }
+    .screen-grid img { display: block; width: 100%; height: auto; object-fit: contain; background: #e7f3f8; }
+    .screen-grid figcaption { padding: 9px 12px; color: var(--muted); background: #fff; font-size: 12px; font-weight: 800; }
+
+    .farm-section { background: #edf8f1; }
+    .farm-photo { overflow: hidden; aspect-ratio: 1 / 1; border-radius: 24px; box-shadow: var(--shadow); }
+    .farm-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .farm-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
+    .farm-facts span { padding: 7px 11px; border-radius: 999px; color: var(--field-dark); background: #fff; font-size: 13px; font-weight: 900; }
+
+    .works-section { background: #fff; }
+    .works-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 9px; margin: 26px 0; }
+    .work-tile {
+      position: relative;
+      overflow: hidden;
+      min-height: 174px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #e6f6eb, #e4f3ff);
+    }
+    .work-tile img { width: 100%; height: 100%; min-height: 174px; object-fit: cover; }
+    .work-placeholder { display: grid; place-items: center; padding: 14px; color: var(--field); text-align: center; font-size: 12px; font-weight: 900; }
+    .works-action { text-align: center; }
+    .works-action p { margin-bottom: 16px; color: var(--muted); }
+
+    .guide-section { background: var(--cream); }
+    .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .guide-card { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+    .guide-card h3 { margin-bottom: 8px; font-size: 17px; }
+    .guide-card p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .guide-card a { color: var(--field-dark); font-weight: 900; }
+
+    .rain-notice {
+      display: none;
+      margin: 16px auto 0;
+      padding: 16px;
+      border: 2px solid #1780ba;
+      border-radius: 14px;
+      color: #0b5278;
+      background: #e9f7ff;
+      text-align: center;
+      font-weight: 800;
+    }
+    .footer { padding: 28px 0 100px; color: #dcece3; background: #113c2b; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 28px; }
+    .footer strong { color: #fff; }
+    .footer p { margin: 8px 0 0; font-size: 12px; }
+    .footer a { color: #fff; }
+    .mobile-cta {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      z-index: 18;
+      display: none;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--field);
+      box-shadow: 0 10px 30px rgba(12,85,56,.34);
+      text-decoration: none;
+      font-weight: 950;
+    }
+
+    @media (max-width: 860px) {
+      .hero { padding-top: 24px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-copy-block { order: 2; }
+      .hero-visual { order: 1; border-width: 5px; border-radius: 20px; transform: none; }
+      .benefit-grid { grid-template-columns: 1fr; }
+      .benefit-card { min-height: auto; }
+      .continue-inner, .content-grid { grid-template-columns: 1fr; }
+      .continue-action { justify-self: start; }
+      .works-grid { grid-template-columns: repeat(3, 1fr); }
+      .guide-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      html { scroll-padding-top: 70px; }
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .site-header .brand span:last-child { max-width: 190px; font-size: 13px; }
+      .site-header .button { display: none; }
+      .hero { padding-bottom: 48px; }
+      h1 { font-size: clamp(34px, 11vw, 48px); }
+      .hero-actions .button { width: 100%; }
+      .hero-note { text-align: center; }
+      .benefits { margin-top: 0; padding-bottom: 22px; }
+      .section { padding: 56px 0; }
+      .form-instruction { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+      .time-badge { justify-self: center; }
+      .airtable-embed { min-height: 590px; }
+      .form-fallback { display: block; }
+      .form-fallback span { display: block; margin-bottom: 5px; }
+      .continue-inner { text-align: center; }
+      .continue-action { justify-self: center; }
+      .continue-action .button { width: 100%; }
+      .screen-grid { grid-template-columns: 1fr; }
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .work-tile, .work-tile img { min-height: 150px; }
+      .footer-inner { display: block; }
+      .mobile-cta { display: flex; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ページ上部へ">
+        <span class="brand-mark" aria-hidden="true">🥛</span>
+        <span>しまね酪農ミルクフェア2026</span>
+      </a>
+      <a class="button button-small" href="#entry" data-cta="entry" data-cta-location="header">30秒で登録</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy-block">
+          <p class="eyebrow">ブース⑮ デジタル酪農体験</p>
+          <h1>今日のスコアを、<br><span class="hero-highlight">島根の牧場</span>につなげよう。</h1>
+          <p class="hero-copy">
+            ゲームで使ったニックネームとメールを登録するだけ。<br>
+            <strong>ランキング上位の方と抽選当選者へ、後日ご連絡します。</strong>
+          </p>
+          <div class="event-meta" aria-label="イベント情報">
+            <span>2026.10.10（土）</span>
+            <span>10:00–15:00</span>
+            <span>入場無料</span>
+            <span>島根県中央家畜市場</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button" href="#entry" data-cta="entry" data-cta-location="hero">30秒で登録する <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://www.roblox.com/games/106627714943728/Metagri-Milk-Farm-Event-feat-kawakami-farm?utm_source=milkfair&amp;utm_medium=lp&amp;utm_campaign=milkfair2026" target="_blank" rel="noopener" data-track-event="play_url_click">Robloxで遊ぶ <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">住所・本名・スコアの入力は不要です</p>
+        </div>
+        <figure class="hero-visual">
+          <img src="image/milkfair/milkfarm-hero-long.webp" width="900" height="1599" alt="集める、調合する、牛のお世話、搾乳、販売を体験できるMilk Farmゲーム" fetchpriority="high">
+          <figcaption class="hero-tag">制限時間6分のタイムアタック</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefit-title">
+      <div class="container">
+        <h2 id="benefit-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">登録特典</h2>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="benefit-number">1</span>
+            <h2>その場で参加特典</h2>
+            <p>登録完了画面をスタッフに見せて、会場で特典を受け取ろう。</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-number">2</span>
+            <h2>抽選で島根のおいしさ</h2>
+            <p>登録した方の中から抽選で、牛乳・乳製品や川上牧場のカヌレを後日発送。</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-number">3</span>
+            <h2>ランキング上位にも特典</h2>
+            <p>順位はゲーム内ランキングで決定。同じニックネームで登録した方が対象です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="entry" class="section form-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Entry / 参加登録</span>
+          <h2>遊んだ記録を登録しよう</h2>
+          <p>ランキング板に出ているニックネームと、結果連絡用メールを入力してください。</p>
+        </div>
+        <div class="form-wrap" data-form-wrap>
+          <div class="form-instruction">
+            <div>
+              <strong>ゲーム画面と同じニックネームで入力</strong>
+              <p>大文字・小文字・記号も、見たまま同じ表記にしてください。</p>
+            </div>
+            <span class="time-badge">入力目安 30秒</span>
+          </div>
+          <iframe class="airtable-embed" src="https://airtable.com/embed/appwM2OGEYIwMClKn/pagefqKTXwvCMfmrC/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 0;" title="らくのうタイムアタック参加登録フォーム" loading="eager"></iframe>
+          <div class="form-fallback">
+            <span>フォームが表示されないときは</span>
+            <a href="https://airtable.com/appwM2OGEYIwMClKn/pagefqKTXwvCMfmrC/form" target="_blank" rel="noopener" data-cta="form_direct" data-cta-location="form_fallback">フォームを別画面で開く</a>
+          </div>
+        </div>
+        <p class="show-staff">送信後に表示される完了画面を、ブーススタッフに見せてください。</p>
+        <p class="fine-print">1人につき1登録です。同じメールアドレスで複数回登録した場合は、最新の1件を有効とします。未成年の方は保護者の同意を得てご登録ください。</p>
+        <div class="rain-notice" data-rain-notice>
+          本日の会場イベントは中止となりました。ゲームはご自宅から遊べます。参加登録と作品ギャラリーも引き続きご利用いただけます。
+        </div>
+      </div>
+    </section>
+
+    <section class="continue-section" aria-labelledby="continue-title">
+      <div class="container continue-inner">
+        <div>
+          <span class="section-kicker">Continue / おうちでも</span>
+          <h2 id="continue-title">もう一度、らくのうに挑戦。</h2>
+          <p>会場で遊んだゲームは、ご自宅のスマホやパソコンからもプレイできます。</p>
+        </div>
+        <div class="continue-action">
+          <a class="button" href="https://www.roblox.com/games/106627714943728/Metagri-Milk-Farm-Event-feat-kawakami-farm?utm_source=milkfair&amp;utm_medium=lp&amp;utm_campaign=milkfair2026" target="_blank" rel="noopener" data-track-event="play_url_click">Robloxでゲームを開く <span aria-hidden="true">↗</span></a>
+          <small class="continue-note">Robloxアプリとアカウントが必要です</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="section">
+      <div class="container content-grid">
+        <div class="video-card">
+          <video controls preload="none" poster="image/milkfair/milkfarm-hero.webp" playsinline data-promo-video>
+            <source src="video/milkfarm-promo.mp4" type="video/mp4">
+            お使いのブラウザでは動画を再生できません。
+          </video>
+          <div class="video-caption">27秒でわかる「Metagri Milk Farm Event」</div>
+        </div>
+        <div class="copy-block">
+          <span class="section-kicker">How to play / 遊び方</span>
+          <h2>6分でめぐる、<br>牛乳ができるまで。</h2>
+          <p>畑で原料を集めてエサを調合。牛のお世話をして、しぼった牛乳を加工・販売し、集めたコインを競います。</p>
+          <ol class="game-steps">
+            <li><span>1</span>原料を集めて、エサを調合</li>
+            <li><span>2</span>牛舎をきれいにして、牛をお世話</li>
+            <li><span>3</span>搾乳・加工・販売でコインを獲得</li>
+          </ol>
+          <div class="screen-grid">
+            <figure>
+              <img src="image/milkfair/game-mix-1.webp" width="720" height="320" loading="lazy" alt="ゲーム内でエサを調合している画面">
+              <figcaption>材料を選んでエサづくり</figcaption>
+            </figure>
+            <figure>
+              <img src="image/milkfair/game-mix-2.webp" width="720" height="320" loading="lazy" alt="ゲーム内のエサ調合結果画面">
+              <figcaption>できたエサを牛舎へ届けよう</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="farm" class="section farm-section">
+      <div class="container content-grid">
+        <div class="copy-block">
+          <span class="section-kicker">Kawakami Farm / 島根の牧場</span>
+          <h2>ゲームの向こうに、<br>本物の牧場がある。</h2>
+          <p>川上牧場は、島根県で日々牛と向き合う酪農家です。ゲームで体験した「集める・調合する・お世話する・しぼる・届ける」は、牛乳が食卓へ届くまでの仕事につながっています。</p>
+          <p>遊びをきっかけに、いつもの牛乳の向こう側を少しだけのぞいてみてください。</p>
+          <div class="farm-facts" aria-label="企画のつながり">
+            <span>島根の酪農</span>
+            <span>牛のお世話</span>
+            <span>食卓へつなぐ</span>
+          </div>
+        </div>
+        <figure class="farm-photo">
+          <img src="image/milkfair/kawakami-with-owner.webp" width="900" height="900" loading="lazy" alt="川上牧場の牛舎で牛を見守る川上さん">
+        </figure>
+      </div>
+    </section>
+
+    <section id="works" class="section works-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">183 Voices / みんなの作品</span>
+          <h2>牛乳の未来を描いた、183作品。</h2>
+          <p>牛乳月間2026に全国から届いた、写真・手描き・イラスト・AI画像を公開しています。</p>
+        </div>
+        <div class="works-grid" data-works-preview aria-live="polite">
+          <div class="work-tile work-placeholder">183作品の<br>ギャラリー</div>
+          <div class="work-tile work-placeholder">写真</div>
+          <div class="work-tile work-placeholder">手描き</div>
+          <div class="work-tile work-placeholder">イラスト</div>
+          <div class="work-tile work-placeholder">AI画像</div>
+          <div class="work-tile work-placeholder">未来の牛乳</div>
+        </div>
+        <div class="works-action">
+          <p>会場のスライドショーで見つけた作品も、オンラインでゆっくり見られます。</p>
+          <a class="button button-secondary" href="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html" data-track-event="gallery_click">183作品ギャラリーを見る <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide-section" aria-labelledby="guide-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Before you go / ご案内</span>
+          <h2 id="guide-title">登録前に、ここだけ確認。</h2>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>順位はゲーム内ランキングが基準</h3>
+            <p>フォームにスコアを入力する必要はありません。ゲームとフォームで同じニックネームを使ってください。</p>
+          </article>
+          <article class="guide-card">
+            <h3>当選時のお届け先は後日確認</h3>
+            <p>当日は本名・住所・電話番号を取得しません。対象の方にメールでご連絡します。</p>
+          </article>
+          <article class="guide-card">
+            <h3>個人情報について</h3>
+            <p>結果連絡・賞品発送・企画運営のために利用します。詳しくは<a href="https://metagri-labo.com/privacy-policy/" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認ください。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>しまね酪農ミルクフェア2026｜デジタル酪農体験</strong>
+        <p>
+          企画・運営：Metagri研究所（株式会社農情人）／協力：川上牧場<br>
+          イベントは雨天中止となる場合があります。最新情報は主催者の案内をご確認ください。
+        </p>
+      </div>
+      <p>
+        <a href="https://metagri-labo.com/privacy-policy/" target="_blank" rel="noopener">個人情報の取り扱い</a><br>
+        <a href="https://world-milk-contest-2026.metagri-labo.com/submitted-works.html">183作品ギャラリー</a><br>
+        <a href="https://metagri-labo.com/contact/" target="_blank" rel="noopener">お問い合わせ</a>
+      </p>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#entry" data-cta="entry" data-cta-location="floating">30秒で登録する</a>
+
+  <script>
+    (() => {
+      const track = (name, params) => window.mlTrack && window.mlTrack(name, params);
+      const formWrap = document.querySelector('[data-form-wrap]');
+      const formFrame = document.querySelector('.airtable-embed');
+      let formSeen = false;
+      let formStarted = false;
+      let entryTracked = false;
+
+      document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[data-cta]');
+        if (link) {
+          const cta = link.getAttribute('data-cta');
+          track(cta === 'form_direct' ? 'form_direct_open' : 'cta_click', {
+            cta_label: cta,
+            cta_location: link.getAttribute('data-cta-location') || 'unknown',
+            cta_target: link.getAttribute('href') || ''
+          });
+        }
+
+        const trackedLink = event.target.closest('a[data-track-event]');
+        if (trackedLink) {
+          track(trackedLink.getAttribute('data-track-event'), {
+            link_url: trackedLink.getAttribute('href') || '',
+            link_text: (trackedLink.textContent || '').trim()
+          });
+        }
+      });
+
+      if ('IntersectionObserver' in window && formWrap) {
+        const observer = new IntersectionObserver((entries) => {
+          if (!formSeen && entries.some((entry) => entry.isIntersecting)) {
+            formSeen = true;
+            track('form_view', { form_name: 'milkfair_2026_entry' });
+            observer.disconnect();
+          }
+        }, { threshold: 0.25 });
+        observer.observe(formWrap);
+      }
+
+      window.addEventListener('blur', () => {
+        window.setTimeout(() => {
+          if (!formStarted && document.activeElement === formFrame) {
+            formStarted = true;
+            track('form_start', { form_name: 'milkfair_2026_entry' });
+          }
+        }, 0);
+      });
+
+      window.addEventListener('message', (event) => {
+        let hostname = '';
+        try { hostname = new URL(event.origin).hostname; } catch(e) {}
+        if (!(hostname === 'airtable.com' || hostname.endsWith('.airtable.com'))) return;
+        let payload = '';
+        try { payload = typeof event.data === 'string' ? event.data : JSON.stringify(event.data); } catch(e) {}
+        if (!entryTracked && /formSubmitted|submissionComplete|submitSuccess|submitted/i.test(payload)) {
+          entryTracked = true;
+          track('entry_submit', { form_name: 'milkfair_2026_entry', source: 'airtable_embed' });
+        }
+      });
+
+      const promoVideo = document.querySelector('[data-promo-video]');
+      if (promoVideo) {
+        promoVideo.addEventListener('play', () => {
+          if (promoVideo.dataset.trackedPlay) return;
+          promoVideo.dataset.trackedPlay = 'true';
+          track('video_play', { video_name: 'milkfarm_promo_27s' });
+        });
+      }
+
+      const worksPreview = document.querySelector('[data-works-preview]');
+      let worksLoaded = false;
+      const loadWorks = async () => {
+        if (worksLoaded || !worksPreview) return;
+        worksLoaded = true;
+        try {
+          const response = await fetch('/api/works', { headers: { Accept: 'application/json' } });
+          if (!response.ok) throw new Error('works request failed');
+          const payload = await response.json();
+          const works = Array.isArray(payload) ? payload : (Array.isArray(payload.works) ? payload.works : []);
+          const visibleWorks = works.filter((work) => work && work.thumb).slice(0, 6);
+          if (!visibleWorks.length) return;
+          worksPreview.replaceChildren(...visibleWorks.map((work) => {
+            const tile = document.createElement('div');
+            tile.className = 'work-tile';
+            const image = document.createElement('img');
+            image.src = work.thumb;
+            image.alt = work.title || '牛乳月間2026 応募作品';
+            image.loading = 'lazy';
+            image.decoding = 'async';
+            tile.appendChild(image);
+            return tile;
+          }));
+        } catch (error) {
+          /* The gallery link remains available when the preview API is unavailable. */
+        }
+      };
+
+      if ('IntersectionObserver' in window && worksPreview) {
+        const worksObserver = new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            worksObserver.disconnect();
+            loadWorks();
+          }
+        }, { rootMargin: '300px' });
+        worksObserver.observe(worksPreview);
+      } else {
+        loadWorks();
+      }
+    })();
+  </script>
+</body>
+</html>
