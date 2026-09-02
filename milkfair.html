@@ -349,12 +349,12 @@
     .game-steps span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; color: var(--field-dark); background: #dff1b7; }
     .screen-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
     .screen-grid figure { overflow: hidden; margin: 0; border: 4px solid #fff; border-radius: 16px; box-shadow: var(--soft-shadow); }
-    .screen-grid img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .screen-grid img { display: block; width: 100%; height: auto; object-fit: contain; background: #e7f3f8; }
     .screen-grid figcaption { padding: 9px 12px; color: var(--muted); background: #fff; font-size: 12px; font-weight: 800; }
 
     .farm-section { background: #edf8f1; }
-    .farm-photo { overflow: hidden; border-radius: 24px; box-shadow: var(--shadow); }
-    .farm-photo img { width: 100%; min-height: 340px; object-fit: cover; }
+    .farm-photo { overflow: hidden; aspect-ratio: 1 / 1; border-radius: 24px; box-shadow: var(--shadow); }
+    .farm-photo img { width: 100%; height: 100%; object-fit: cover; }
     .farm-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
     .farm-facts span { padding: 7px 11px; border-radius: 999px; color: var(--field-dark); background: #fff; font-size: 13px; font-weight: 900; }
 
@@ -485,6 +485,7 @@
           </div>
           <div class="hero-actions">
             <a class="button" href="#entry" data-cta="entry" data-cta-location="hero">30秒で登録する <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://www.roblox.com/games/106627714943728/Metagri-Milk-Farm-Event-feat-kawakami-farm?utm_source=milkfair&amp;utm_medium=lp&amp;utm_campaign=milkfair2026" target="_blank" rel="noopener" data-track-event="play_url_click">Robloxで遊ぶ <span aria-hidden="true">↗</span></a>
           </div>
           <p class="hero-note">住所・本名・スコアの入力は不要です</p>
         </div>
@@ -581,11 +582,11 @@
           </ol>
           <div class="screen-grid">
             <figure>
-              <img src="image/milkfair/game-mix-1.webp" width="720" height="405" loading="lazy" alt="ゲーム内でエサを調合している画面">
+              <img src="image/milkfair/game-mix-1.webp" width="720" height="320" loading="lazy" alt="ゲーム内でエサを調合している画面">
               <figcaption>材料を選んでエサづくり</figcaption>
             </figure>
             <figure>
-              <img src="image/milkfair/game-mix-2.webp" width="720" height="405" loading="lazy" alt="ゲーム内のエサ調合結果画面">
+              <img src="image/milkfair/game-mix-2.webp" width="720" height="320" loading="lazy" alt="ゲーム内のエサ調合結果画面">
               <figcaption>できたエサを牛舎へ届けよう</figcaption>
             </figure>
           </div>
@@ -607,7 +608,7 @@
           </div>
         </div>
         <figure class="farm-photo">
-          <img src="image/milkfair/kawakami-barn.webp" width="1200" height="800" loading="lazy" alt="川上牧場の牛舎と牛たち">
+          <img src="image/milkfair/kawakami-with-owner.webp" width="900" height="900" loading="lazy" alt="川上牧場の牛舎で牛を見守る川上さん">
         </figure>
       </div>
     </section>
