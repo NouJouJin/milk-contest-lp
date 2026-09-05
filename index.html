@@ -208,6 +208,22 @@
       transform: scaleX(1);
     }
 
+    .mobile-milkfair-link {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 9px 16px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      box-shadow: 0 8px 18px rgba(47, 111, 85, 0.22);
+    }
+
     .button {
       position: relative;
       isolation: isolate;
@@ -1581,6 +1597,10 @@
         display: none;
       }
 
+      .mobile-milkfair-link {
+        display: inline-flex;
+      }
+
       .hero-visual {
         min-height: 520px;
         background-position: 28% center;
@@ -1619,6 +1639,11 @@
       .brand {
         min-width: 0;
         font-size: 14px;
+      }
+
+      .mobile-milkfair-link {
+        padding-inline: 14px;
+        font-size: 13px;
       }
 
       .hero-visual {
@@ -1750,6 +1775,7 @@
         <a href="#faq" data-nav="faq">FAQ</a>
         <a class="button" href="report.html" data-cta="report" data-cta-location="nav">レポート申込</a>
       </nav>
+      <a class="mobile-milkfair-link" href="milkfair.html" data-cta="milkfair" data-cta-location="mobile_header">ミルクフェア</a>
     </div>
   </header>
 

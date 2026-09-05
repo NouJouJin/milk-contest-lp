@@ -15,7 +15,7 @@
     };
   </script>
   <title>らくのうタイムアタック参加登録｜しまね酪農ミルクフェア2026</title>
-  <meta name="description" content="Metagri Milk Farm Eventを遊んだ記録を30秒で登録。ゲーム内ランキング上位の方と抽選当選者へ、島根の牛乳・乳製品などを後日お届けします。">
+  <meta name="description" content="Metagri Milk Farm Eventを遊んだ記録を30秒で登録。ゲーム内ランキング上位の方へ、島根の牛乳・乳製品などを後日お届けします。">
   <link rel="canonical" href="https://world-milk-contest-2026.metagri-labo.com/milkfair.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="しまね酪農ミルクフェア2026">
@@ -152,6 +152,28 @@
       height: 70px;
       background: linear-gradient(175deg, transparent 47%, var(--cream) 48%);
       pointer-events: none;
+    }
+    .start-scene {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      margin: 0 auto 34px;
+      border: 7px solid #fff;
+      border-radius: 26px;
+      background: var(--field-dark);
+      box-shadow: var(--shadow);
+    }
+    .start-scene img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+    .start-scene figcaption {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      padding: 9px 13px;
+      border-radius: 12px;
+      color: #fff;
+      background: rgba(12,85,56,.92);
+      font-size: 13px;
+      font-weight: 900;
     }
     .hero-grid {
       position: relative;
@@ -415,6 +437,7 @@
 
     @media (max-width: 860px) {
       .hero { padding-top: 24px; }
+      .start-scene { margin-bottom: 24px; border-width: 5px; border-radius: 20px; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-copy-block { order: 2; }
       .hero-visual { order: 1; border-width: 5px; border-radius: 20px; transform: none; }
@@ -469,13 +492,17 @@
 
   <main>
     <section id="top" class="hero">
+      <figure class="container start-scene">
+        <img src="image/milkfair/kawakami-start-sign-edited.webp" width="1600" height="900" alt="RobloxのMilk Farmスタート地点にある川上牧場コラボ看板と牧場入口" fetchpriority="high">
+        <figcaption>川上牧場コラボのスタート地点</figcaption>
+      </figure>
       <div class="container hero-grid">
         <div class="hero-copy-block">
           <p class="eyebrow">ブース⑮ デジタル酪農体験</p>
           <h1>今日のスコアを、<br><span class="hero-highlight">島根の牧場</span>につなげよう。</h1>
           <p class="hero-copy">
             ゲームで使ったニックネームとメールを登録するだけ。<br>
-            <strong>ランキング上位の方と抽選当選者へ、後日ご連絡します。</strong>
+            <strong>ランキング上位の方へ、後日ご連絡します。</strong>
           </p>
           <div class="event-meta" aria-label="イベント情報">
             <span>2026.10.10（土）</span>
@@ -490,7 +517,7 @@
           <p class="hero-note">住所・本名・スコアの入力は不要です</p>
         </div>
         <figure class="hero-visual">
-          <img src="image/milkfair/milkfarm-hero-long.webp" width="900" height="1599" alt="集める、調合する、牛のお世話、搾乳、販売を体験できるMilk Farmゲーム" fetchpriority="high">
+          <img src="image/milkfair/milkfarm-hero-long.webp" width="900" height="1599" loading="lazy" alt="集める、調合する、牛のお世話、搾乳、販売を体験できるMilk Farmゲーム">
           <figcaption class="hero-tag">制限時間6分のタイムアタック</figcaption>
         </figure>
       </div>
@@ -507,8 +534,8 @@
           </article>
           <article class="benefit-card">
             <span class="benefit-number">2</span>
-            <h2>抽選で島根のおいしさ</h2>
-            <p>登録した方の中から抽選で、牛乳・乳製品や川上牧場のカヌレを後日発送。</p>
+            <h2>ランキング上位に島根のおいしさ</h2>
+            <p>ゲーム内ランキング上位の方へ、牛乳・乳製品や川上牧場のカヌレを後日発送。</p>
           </article>
           <article class="benefit-card">
             <span class="benefit-number">3</span>
